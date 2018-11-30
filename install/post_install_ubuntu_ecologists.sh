@@ -1,5 +1,8 @@
 #!/bin/bash
 
+## repository
+sudo add-apt-repository -y "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran35/"
+
 ## ppas
 sudo add-apt-repository -y ppa:grass/grass-stable
 sudo add-apt-repository -y ppa:alexlarsson/flatpak
@@ -19,6 +22,8 @@ sudo apt install -y\
  libreoffice\
  libproj-dev\
  openjdk-11-jre-headless\
+ r-base\
+ r-base-dev\
  r-cran-curl\
  r-cran-openssl\
  r-cran-xml2\
