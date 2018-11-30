@@ -3,7 +3,7 @@
 ## ppas
 sudo add-apt-repository -y ppa:grass/grass-stable
 sudo add-apt-repository -y ppa:alexlarsson/flatpak
-sudo apt update
+sudo apt update -y
 
 ## apps
 sudo apt install -y\
@@ -32,10 +32,10 @@ sudo apt install -y\
 flatpak remote-add -y --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # qgis
-flatpak install flathub org.qgis.qgis
+flatpak install flathub -y org.qgis.qgis
 
 # gnome games
-flatpak install flathub org.gnome.Games
+flatpak install flathub -y org.gnome.Games
 
 
 ## deb
