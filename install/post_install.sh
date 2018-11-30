@@ -54,6 +54,17 @@ wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo dpkg -iy teamviewer_14.0.14470_amd64.deb
 rm teamviewer_14.0.14470_amd64.deb
 
+# megasync
+wget https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/amd64/megasync-xUbuntu_$(lsb_release -rs)_amd64.deb -O megasync.deb
+sudo dpkg -iy megasync.deb
+sudo dpkg -iy nautilus-megasync.deb
+rm megasync.deb
+rm nautilus-megasync.deb
+
+# skype
+wget https://go.skype.com/skypeforlinux-64.deb
+sudo dpkg -iy skypeforlinux-64.deb
+rm skypeforlinux-64.deb
 
 ## java
 sudo R CMD javareconf -y JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/bin/jar
