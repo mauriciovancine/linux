@@ -15,6 +15,7 @@ sudo apt install -y\
  etcher-electron\
  flatpak\
  gnome-software-plugin-flatpak\
+ gparted\
  grass\
  gimp\
  inkscape\
