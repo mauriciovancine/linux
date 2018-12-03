@@ -2,7 +2,7 @@
 
 ## repository
 sudo add-apt-repository -y "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran35/"
-sudo add-apt-repository -y "deb https://qgis.org/ubuntu-nightly bionic main"
+sudo add-apt-repository -y "deb https://qgis.org/ubuntu-nightly $(lsb_release -cs) main"
 
 ## public keys
 wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
