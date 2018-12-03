@@ -43,6 +43,7 @@ sudo apt install -y\
  r-base-dev\
  r-cran-curl\
  r-cran-openssl\
+ r-cran-rjava\
  r-cran-xml2\
  rhythmbox\
  saga\
