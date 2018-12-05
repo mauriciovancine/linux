@@ -19,7 +19,6 @@ sudo apt update -y
 ## apps
 sudo apt install -y\
  default-jre\
- deluge\
  etcher-electron\
  gparted\
  grass\
@@ -35,6 +34,7 @@ sudo apt install -y\
  libudunits2-dev\
  openjdk-11-jre-headless\
  python-qgis\
+ qbittorrent\
  qgis\
  qgis-plugin-grass\
  r-base\
@@ -49,9 +49,8 @@ sudo apt install -y\
  spyder3\
  stacer\
  teamviwer\
- wps-office\
+ wps-office
  
-
 ## deb
 # rstudio
 wget https://download1.rstudio.org/rstudio-1.1.463-amd64.deb
@@ -59,8 +58,8 @@ sudo dpkg -i rstudio-1.1.463-amd64.deb
 rm rstudio-1.1.463-amd64.deb
 
 ## fix broken
-sudo -y apt-get clean && sudo apt-get -y update
-dpkg --configure -a
+sudo apt-get clean
+sudo apt-get -y update
 sudo apt-get install -f
 sudo apt install -y --fix-broken 
 
