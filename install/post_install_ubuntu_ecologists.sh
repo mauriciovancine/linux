@@ -1,5 +1,8 @@
 #!/bin/bash
 
+## update 
+
+
 ## repository
 sudo add-apt-repository -y "deb https://qgis.org/ubuntu-nightly $(lsb_release -cs) main"
 
@@ -76,7 +79,11 @@ sudo dpkg -i stacer.deb
 rm stacer.deb
 
 ## fix broken
-sudo apt install -yf --fix-broken 
+sudo -y apt-get clean && sudo apt-get -y update
+dpkg --configure -a
+sudo apt-get install -f
+sudo apt install -y --fix-broken 
 
 ## cleanup apt
-sudo apt autoremove -y --purge
+sudo apt autoremove -y
+sudo apt autoclean -y
