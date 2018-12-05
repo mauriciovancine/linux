@@ -1,7 +1,7 @@
 #!/bin/bash
 
-## update 
-
+## upgrade 
+sudo apt dist-upgrade -y
 
 ## repository
 sudo add-apt-repository -y "deb https://qgis.org/ubuntu-nightly $(lsb_release -cs) main"
