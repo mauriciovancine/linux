@@ -16,8 +16,6 @@ sudo apt install -y\
  default-jre\
  deluge\
  etcher-electron\
- flatpak\
- gnome-software-plugin-flatpak\
  gparted\
  grass\
  gimp\
@@ -26,8 +24,6 @@ sudo apt install -y\
  libgdal-dev\
  libjpeg-dev\
  libgmp3-dev\
- libgstreamer0.10-0\
- libgstreamer-plugins-base0.10-0\
  libreoffice\
  libproj-dev\
  libssl-dev\
@@ -46,18 +42,7 @@ sudo apt install -y\
  saga\
  sublime-text\
  speedtest-cli\
- spyder3\
-
-
-## flatpak
-#flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-# qgis
-#flatpak install flathub -y org.qgis.qgis
-
-# gnome games
-#flatpak install flathub -y org.gnome.Games
-
+ spyder3
 
 ## deb
 # wps
@@ -81,17 +66,14 @@ sudo dpkg -i megasync.deb
 rm megasync.deb
 
 # skype
-#wget https://go.skype.com/skypeforlinux-64.deb
-#sudo dpkg -i skypeforlinux-64.deb
-#rm skypeforlinux-64.deb
+wget https://go.skype.com/skypeforlinux-64.deb
+sudo dpkg -i skypeforlinux-64.deb
+rm skypeforlinux-64.deb
 
 # stacer
 wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/stacer_1.0.9_amd64.deb -O stacer.deb
 sudo dpkg -i stacer.deb
 rm stacer.deb
-
-## java
-#sudo R CMD javareconf -y JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/bin/jar
 
 ## fix broken
 sudo apt install -yf --fix-broken 
