@@ -22,4 +22,4 @@ sudo apt-mark hold libgstreamer-plugins-base0.10-0
 sudo apt-mark hold libgstreamer0.10
 
 # install rstudio
-sudo gdebi rstudio-1.1.463-amd64.deb
+sudo gdebi -y rstudio-1.1.463-amd64.deb
