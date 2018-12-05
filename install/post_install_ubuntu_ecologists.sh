@@ -1,7 +1,6 @@
 #!/bin/bash
 
 ## repository
-sudo add-apt-repository -y "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran35/"
 sudo add-apt-repository -y "deb https://qgis.org/ubuntu-nightly $(lsb_release -cs) main"
 
 ## public keys
@@ -10,7 +9,6 @@ gpg --fingerprint CAEB3DC3BDF7FB45
 gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
 
 ## ppas
-sudo add-apt-repository -y ppa:grass/grass-stable
 sudo apt update -y
 
 ## apps
