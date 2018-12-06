@@ -21,6 +21,7 @@ sudo apt install -y\
  default-jre\
  deluge\
  etcher-electron\
+ gdebi\
  gparted\
  grass\
  gimp\
@@ -54,6 +55,11 @@ sudo apt install -y\
 wget http://kdl.cc.ksosoft.com/wps-community/download/6757/wps-office_10.1.0.6757_amd64.deb
 sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
 rm wps-office_10.1.0.6757_amd64.deb
+
+# freeoffice
+wget https://www.softmaker.net/down/softmaker-freeoffice-2018_942-01_amd64.deb
+sudo gdebi softmaker-freeoffice-2018_942-01_amd64.deb
+rm softmaker-freeoffice-2018_942-01_amd64.deb
 
 # rstudio
 wget https://download1.rstudio.org/rstudio-1.1.463-amd64.deb
