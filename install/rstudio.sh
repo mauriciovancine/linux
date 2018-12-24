@@ -1,11 +1,11 @@
 # install rstudio
 
 # links
-https://stackoverflow.com/questions/40413323/rstudio-install-on-ubuntu-16-10-fails-due-to-libgstreamer
-https://mikewilliamson.wordpress.com/2016/11/14/installing-r-studio-on-ubuntu-16-10/
+# https://stackoverflow.com/questions/40413323/rstudio-install-on-ubuntu-16-10-fails-due-to-libgstreamer
+# https://mikewilliamson.wordpress.com/2016/11/14/installing-r-studio-on-ubuntu-16-10/
 
 # get rstudio .deb
-https://www.rstudio.org/download/daily/desktop/ubuntu64/
+# https://www.rstudio.org/download/daily/desktop/ubuntu64/
 wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-1.1.463-amd64.deb
 
 # install dependencies
