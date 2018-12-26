@@ -5,7 +5,8 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt dist-upgrade -y
 
-## repository
+## repositories
+sudo add-apt-repository ppa:tista/adapta -y
 sudo add-apt-repository -y "deb https://qgis.org/ubuntu $(lsb_release -cs) main"
 
 ## public keys
@@ -18,10 +19,12 @@ sudo apt update -y
 
 ## apps
 sudo apt install -y\
+ adapta-gtk-theme\
+ chromium-browser\
  default-jre\
- deluge\
  etcher-electron\
- gdebi\
+ gnome-tweak-tool\
+ gnome-shell-extensions\
  gparted\
  grass\
  gimp\
@@ -52,19 +55,14 @@ sudo apt install -y\
 
 ## deb
 # wps
-wget http://kdl.cc.ksosoft.com/wps-community/download/6757/wps-office_10.1.0.6757_amd64.deb
-sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
-rm wps-office_10.1.0.6757_amd64.deb
+#wget http://kdl.cc.ksosoft.com/wps-community/download/6757/wps-office_10.1.0.6757_amd64.deb
+#sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
+#rm wps-office_10.1.0.6757_amd64.deb
 
 # freeoffice
-wget https://www.softmaker.net/down/softmaker-freeoffice-2018_942-01_amd64.deb
-sudo gdebi softmaker-freeoffice-2018_942-01_amd64.deb
-rm softmaker-freeoffice-2018_942-01_amd64.deb
-
-# rstudio
-wget https://download1.rstudio.org/rstudio-1.1.463-amd64.deb
-sudo dpkg -i rstudio-1.1.463-amd64.deb
-rm rstudio-1.1.463-amd64.deb
+#wget https://www.softmaker.net/down/softmaker-freeoffice-2018_942-01_amd64.deb
+#sudo gdebi softmaker-freeoffice-2018_942-01_amd64.deb
+#rm softmaker-freeoffice-2018_942-01_amd64.deb
 
 # teamviwer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
