@@ -6,7 +6,7 @@ sudo apt upgrade -y
 sudo apt dist-upgrade -y
 
 ## repository
-sudo add-apt-repository -y "deb https://qgis.org/ubuntu-nightly $(lsb_release -cs) main"
+sudo add-apt-repository -y "deb https://qgis.org/ubuntu $(lsb_release -cs) main"
 
 ## public keys
 wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
