@@ -20,6 +20,7 @@ sudo apt update -y
 ## apps
 sudo apt install -y\
  adapta-gtk-theme\
+ adapta-backgrounds\
  chromium-browser\
  default-jre\
  etcher-electron\
