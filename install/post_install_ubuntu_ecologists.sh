@@ -75,10 +75,20 @@ wget https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/amd64/megasync-xU
 sudo dpkg -i megasync.deb
 rm megasync.deb
 
-# skype
-wget https://go.skype.com/skypeforlinux-64.deb
-sudo dpkg -i skypeforlinux-64.deb
-rm skypeforlinux-64.deb
+# rstudio
+wget http://ftp.ca.debian.org/debian/pool/main/g/gstreamer0.10/libgstreamer0.10-0_0.10.36-1.5_amd64.deb
+sudo dpkg -i libgstreamer0.10-0_0.10.36-1.5_amd64.deb
+sudo apt-mark hold libgstreamer-plugins-base0.10-0
+rm libgstreamer0.10-0_0.10.36-1.5_amd64.deb
+
+wget http://ftp.ca.debian.org/debian/pool/main/g/gst-plugins-base0.10/libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
+sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
+sudo apt-mark hold libgstreamer0.10
+rm libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
+
+wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-1.1.463-amd64.deb
+sudo gdebi rstudio-1.1.463-amd64.deb
+rm rstudio-1.1.463-amd64.deb
 
 # stacer
 wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/stacer_1.0.9_amd64.deb -O stacer.deb
