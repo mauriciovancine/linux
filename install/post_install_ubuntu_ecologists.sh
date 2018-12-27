@@ -96,9 +96,9 @@ sudo dpkg -i stacer.deb
 rm stacer.deb
 
 ## fix broken
-sudo -y apt-get clean && sudo apt-get -y update
-dpkg --configure -a
-sudo apt-get install -f
+sudo apt clean && sudo apt update
+sudo dpkg --configure -a
+sudo apt install -f
 sudo apt install -y --fix-broken 
 
 ## cleanup apt
