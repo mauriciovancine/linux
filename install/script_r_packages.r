@@ -2,6 +2,11 @@
 
 ###-------------------------------------------------------------------------------------###
 
+## github
+if(!require(devtools)) install.packages("devtools")
+
+###-------------------------------------------------------------------------------------###
+
 ## ecological analysis
 if(!require(ade4)) install.packages("ade4")
 if(!require(adespatial)) install.packages("adespatial")
@@ -14,6 +19,12 @@ if(!require(vegan)) install.packages("vegan")
 ## tidyverse
 if(!require(tidyverse)) install.packages("tidyverse") # sudo apt install libssl-dev
 if(!require(writexl)) install.packages("writexl")
+
+###-------------------------------------------------------------------------------------###
+
+## presentation
+if(!require(xaringan)) install.packages("xaringan")
+if(!require(xaringanthemer)) devtools::install_github("gadenbuie/xaringanthemer")
 
 ###-------------------------------------------------------------------------------------###
 
