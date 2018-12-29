@@ -11,6 +11,8 @@ if(!require(devtools)) install.packages("devtools")
 if(!require(ade4)) install.packages("ade4")
 if(!require(adespatial)) install.packages("adespatial")
 if(!require(betapart)) install.packages("betapart")
+if(!require(factoextra)) install.packages("factoextra")
+if(!require(FactoMineR)) install.packages("FactoMineR")
 if(!require(spdeb)) install.packages("spdeb")
 if(!require(vegan)) install.packages("vegan")
 
