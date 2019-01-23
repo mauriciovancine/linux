@@ -6,7 +6,7 @@ sudo apt upgrade -y
 sudo apt dist-upgrade -y
 
 ## repositories
-sudo add-apt-repository ppa:tista/adapta -y
+sudo add-apt-repository ppa:papirus/papirus
 sudo add-apt-repository -y "deb https://qgis.org/ubuntu $(lsb_release -cs) main"
 
 ## public keys
@@ -21,7 +21,7 @@ sudo apt update -y
 sudo apt install -y\
  adapta-gtk-theme\
  adapta-backgrounds\
- chromium-browser\
+ google-chrome-stable\
  default-jre\
  etcher-electron\
  gnome-tweak-tool\
@@ -39,6 +39,7 @@ sudo apt install -y\
  libssl-dev\
  libudunits2-dev\
  openjdk-11-jre-headless\
+ papirus-icon-theme\
  python-qgis\
  qgis\
  qgis-plugin-grass\
