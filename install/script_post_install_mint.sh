@@ -52,6 +52,9 @@ sudo apt install -y\
  speedtest-cli\
  spyder3
 
+wget http://kdl.cc.ksosoft.com/wps-community/download/6757/wps-office_10.1.0.6757_amd64.deb
+sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
+rm wps-office_10.1.0.6757_amd64.deb
 
 # freeoffice
 wget https://www.softmaker.net/down/softmaker-freeoffice-2018_942-01_amd64.deb
@@ -79,7 +82,7 @@ sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
 sudo apt-mark hold libgstreamer0.10
 rm libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
 
-wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-1.1.463-amd64.deb
+wget https://download1.rstudio.org/rstudio-1.1.463-amd64.deb
 sudo gdebi rstudio-1.1.463-amd64.deb
 rm rstudio-1.1.463-amd64.deb
 
