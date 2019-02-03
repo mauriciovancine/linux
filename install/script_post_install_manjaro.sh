@@ -12,7 +12,7 @@ sudo pacman -Sy\
  gcc-fortran\
  qgis\
  rhythmbox\
- 
+ spyder3
 
 # install app from yaourt 
 yaourt -Sy\
@@ -24,9 +24,9 @@ yaourt -Sy\
  sublime-text-dev\
  wps-office\
  wps-office-extension-portuguese-brazilian-dictionary\
- teamviewer
+ teamviewer\
+ simplenote-electron-bin
  
 # install enables
 sudo systemctl start teamviewerd
 sudo systemctl enable teamviewerd  
-
