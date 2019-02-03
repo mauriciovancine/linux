@@ -26,11 +26,6 @@ yaourt -Sy\
  wps-office-extension-portuguese-brazilian-dictionary\
  teamviewer
  
-
-yaourt -Sy wps-office\
- wps-office-extension-portuguese-brazilian-dictionary\
- teamviewer
-
 # install enables
 sudo systemctl start teamviewerd
 sudo systemctl enable teamviewerd  
