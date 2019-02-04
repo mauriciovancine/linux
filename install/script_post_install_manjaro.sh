@@ -17,6 +17,7 @@ sudo pacman -S\
 
 # install app from yaourt 
 yaourt -S\
+ papirus-icon-theme-kde\
  google-chrome\
  rstudio-desktop-bin\
  openblas-lapack\
