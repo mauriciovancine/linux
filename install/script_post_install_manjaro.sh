@@ -8,6 +8,7 @@ sudo pacman -Syyu
 
 # install app from repository
 sudo pacman -S\
+ yaourt\
  r\
  gcc-fortran\
  qgis\
