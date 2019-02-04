@@ -20,6 +20,7 @@ if(!require(vegan)) install.packages("vegan")
 
 ## tidyverse
 if(!require(tidyverse)) install.packages("tidyverse") # sudo apt install libssl-dev
+if(!require(readxl)) install.packages("readxl")
 if(!require(writexl)) install.packages("writexl")
 
 ###-------------------------------------------------------------------------------------###
