@@ -7,7 +7,7 @@
 sudo pacman -Syyu
 
 # install app from repository
-sudo pacman -Sy\
+sudo pacman -S\
  r\
  gcc-fortran\
  qgis\
@@ -15,18 +15,24 @@ sudo pacman -Sy\
  spyder3
 
 # install app from yaourt 
-yaourt -Sy\
+yaourt -S\
  google-chrome\
  rstudio-desktop-bin\
  openblas-lapack\
+ udunits\
  grass\
  inkscape\
  sublime-text-dev\
  wps-office\
  wps-office-extension-portuguese-brazilian-dictionary\
  teamviewer\
- simplenote-electron-bin
+ simplenote-electron-bin\
+ etcher
  
 # install enables
 sudo systemctl start teamviewerd
 sudo systemctl enable teamviewerd  
+
+# java
+export JAVA_LIBS="$JAVA_LIBS -ldl"
+sudo R CMD javareconf
