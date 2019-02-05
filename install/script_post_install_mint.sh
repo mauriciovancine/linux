@@ -3,12 +3,11 @@
 ## upgrade 
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt dist-upgrade -y
 
 ## repositories
 sudo add-apt-repository ppa:papirus/papirus
-sudo add-apt-repository -y "deb     https://qgis.org/debian bionic main"
-sudo add-apt-repository -y "deb-src https://qgis.org/debian bionic main"
+sudo add-apt-repository "deb     https://qgis.org/debian bionic main"
+sudo add-apt-repository "deb-src https://qgis.org/debian bionic main"
 
 ## public keys
 wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
@@ -20,7 +19,6 @@ sudo apt update -y
 
 ## apps
 sudo apt install -y\
- google-chrome-stable\
  default-jre\
  etcher-electron\
  gparted\
@@ -52,14 +50,10 @@ sudo apt install -y\
  speedtest-cli\
  spyder3
 
+# wps
 wget http://kdl.cc.ksosoft.com/wps-community/download/6757/wps-office_10.1.0.6757_amd64.deb
 sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
 rm wps-office_10.1.0.6757_amd64.deb
-
-# freeoffice
-wget https://www.softmaker.net/down/softmaker-freeoffice-2018_942-01_amd64.deb
-sudo gdebi softmaker-freeoffice-2018_942-01_amd64.deb
-rm softmaker-freeoffice-2018_942-01_amd64.deb
 
 # teamviwer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
