@@ -7,15 +7,12 @@ sudo apt upgrade -y
 ## repositories
 sudo add-apt-repository "deb     https://qgis.org/debian bionic main"
 sudo add-apt-repository "deb-src https://qgis.org/debian bionic main"
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
 sudo add-apt-repository ppa:papirus/papirus
 
 ## public keys
 wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
 gpg --fingerprint CAEB3DC3BDF7FB45
 gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
-
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 
 ## ppas
 sudo apt update -y
