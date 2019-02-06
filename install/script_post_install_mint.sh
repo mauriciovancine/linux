@@ -5,11 +5,9 @@ sudo apt update -y
 sudo apt upgrade -y
 
 ## repositories
-sudo add-apt-repository "deb     https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
 sudo add-apt-repository "deb     https://qgis.org/debian bionic main"
 sudo add-apt-repository "deb-src https://qgis.org/debian bionic main"
 sudo add-apt-repository ppa:papirus/papirus
-sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 
 ## public keys
 wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
