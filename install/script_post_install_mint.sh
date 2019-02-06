@@ -54,6 +54,11 @@ sudo apt install -y\
  speedtest-cli\
  spyder3
 
+# simplenote
+wget https://github.com/Automattic/simplenote-electron/releases/download/v1.4.0/Simplenote-linux-1.4.0-amd64.deb
+sudo dpkg -i Simplenote-linux-1.4.0-amd64.deb
+rm Simplenote-linux-1.4.0-amd64.deb
+
 # wps
 wget http://kdl.cc.ksosoft.com/wps-community/download/6757/wps-office_10.1.0.6757_amd64.deb
 sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
