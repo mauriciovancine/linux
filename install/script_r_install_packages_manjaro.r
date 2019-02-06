@@ -1,4 +1,4 @@
-### install packages ###
+### install packages - manjaro ###
 
 # github ------------------------------------------------------------------
 if(!require("devtools")) install.packages("devtools")
