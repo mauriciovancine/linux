@@ -21,6 +21,7 @@ sudo apt update -y
 sudo apt install -y\
  default-jre\
  gedit\
+ git\
  gparted\
  grass\
  gimp\
