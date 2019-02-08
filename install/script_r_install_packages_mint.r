@@ -30,6 +30,7 @@ if(!require("tibble")) install.packages("tibble")
 if(!require("tidyr")) install.packages("tidyr")      
 if(!require("xml2")) install.packages("xml2")
 if(!require("tidyverse")) install.packages("tidyverse") # sudo apt install libssl-dev
+if(!require("writexl")) install.packages("writexl")
 if(!require("tidylog")) devtools::install_github("elbersb/tidylog")
 
 tidyverse_packages(include_self = TRUE)
