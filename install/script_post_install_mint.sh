@@ -19,6 +19,7 @@ sudo apt update -y
 
 ## apps
 sudo apt install -y\
+ brasero\
  default-jre\
  gedit\
  git\
