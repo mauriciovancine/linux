@@ -6,12 +6,15 @@ sudo apt upgrade -y
 
 ## repositories
 sudo add-apt-repository ppa:papirus/papirus
-sudo add-apt-repository -y "deb https://qgis.org/ubuntu $(lsb_release -cs) main"
+sudo apt-add-repository ppa:tista/adapta
+sudo add-apt-repository "deb https://qgis.org/ubuntu $(lsb_release -cs) main"
+sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
 
 ## public keys
 wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
 gpg --fingerprint CAEB3DC3BDF7FB45
 gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 
 ## ppas
 sudo apt update -y
@@ -20,7 +23,6 @@ sudo apt update -y
 sudo apt install -y\
  adapta-gtk-theme\
  adapta-backgrounds\
- google-chrome-stable\
  default-jre\
  etcher-electron\
  gnome-tweak-tool\
