@@ -9,12 +9,16 @@ sudo add-apt-repository ppa:papirus/papirus
 sudo apt-add-repository ppa:tista/adapta
 sudo add-apt-repository "deb https://qgis.org/ubuntu $(lsb_release -cs) main"
 sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
+sudo add-apt-repository ppa:marutter/c2d4u3.5
 
 ## public keys
 wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
 gpg --fingerprint CAEB3DC3BDF7FB45
 gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+gpg --keyserver keyserver.ubuntu.com --recv-key E298A3A825C0D65DFD57CBB651716619E084DAB9
+gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
 
 ## ppas
 sudo apt update -y
