@@ -7,9 +7,10 @@ sudo apt upgrade -y
 ## repositories
 sudo add-apt-repository ppa:papirus/papirus
 sudo apt-add-repository ppa:tista/adapta
-sudo add-apt-repository "deb https://qgis.org/ubuntu $(lsb_release -cs) main"
+sudo add-apt-repository "deb https://qgis.org/ubuntu bionic main"
 sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
+sudo apt install gdebi
+"deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
 sudo add-apt-repository ppa:marutter/c2d4u3.5
 
 ## public keys
