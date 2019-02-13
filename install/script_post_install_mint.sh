@@ -69,6 +69,10 @@ wget http://kdl.cc.ksosoft.com/wps-community/download/6757/wps-office_10.1.0.675
 sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
 rm wps-office_10.1.0.6757_amd64.deb
 
+wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
+sudo dpkg -i wps-office-fonts_1.0_all.deb
+rm wps-office-fonts_1.0_all.deb
+
 # teamviwer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo dpkg -i teamviewer_amd64.deb
