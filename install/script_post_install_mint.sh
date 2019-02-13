@@ -73,6 +73,8 @@ wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0
 sudo dpkg -i wps-office-fonts_1.0_all.deb
 rm wps-office-fonts_1.0_all.deb
 
+ sudo apt-get install ttf-mscorefonts-installer
+
 # teamviwer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo dpkg -i teamviewer_amd64.deb
