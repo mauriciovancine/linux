@@ -39,7 +39,6 @@ sudo apt install -y\
  libgdal-dev\
  libjpeg-dev\
  libgmp3-dev\
- libreoffice\
  libproj-dev\
  libssl-dev\
  libudunits2-dev\
