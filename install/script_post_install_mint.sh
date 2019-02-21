@@ -81,7 +81,7 @@ sudo dpkg -i teamviewer_amd64.deb
 rm teamviewer_amd64.deb
 
 # megasync
-wget https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/amd64/megasync-xUbuntu_$(lsb_release -rs)_amd64.deb -O megasync.deb
+wget https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb -O megasync.deb
 sudo dpkg -i megasync.deb
 rm megasync.deb
 
