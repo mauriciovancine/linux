@@ -74,7 +74,7 @@ if(!require("tmap")) install.packages("tmap")
 if(!require("leaflet")) install.packages("leaflet")
 if(!require("cartography")) install.packages("cartography")
 if(!require("RStoolbox")) install.packages("RStoolbox")
-if(!require("whitebox")) install.packages("whitebox")
+if(!require("whitebox")) devtools::install_github("giswqs/whiteboxR")
 
 # ecological niche modeling -----------------------------------------------
 if(!require("adehabitatHS")) install.packages("adehabitatHS")
