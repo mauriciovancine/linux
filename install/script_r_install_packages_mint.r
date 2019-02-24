@@ -73,6 +73,8 @@ if(!require("mapview")) install.packages("mapview")
 if(!require("tmap")) install.packages("tmap")
 if(!require("leaflet")) install.packages("leaflet")
 if(!require("cartography")) install.packages("cartography")
+if(!require("RStoolbox")) install.packages("RStoolbox")
+if(!require("whitebox")) install.packages("whitebox")
 
 # ecological niche modeling -----------------------------------------------
 if(!require("adehabitatHS")) install.packages("adehabitatHS")
