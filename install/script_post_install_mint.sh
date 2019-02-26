@@ -8,6 +8,7 @@ sudo apt upgrade -y
 sudo add-apt-repository ppa:papirus/papirus
 sudo apt-add-repository ppa:tista/adapta
 sudo add-apt-repository ppa:marutter/c2d4u3.5
+sudo add-apt-repository ppa:oguzhaninan/stacer
 sudo apt install gedit
 # sudo gedit /etc/apt/sources.list
 deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/
@@ -55,6 +56,7 @@ sudo apt install -y\
  r-cran-xml2\
  rhythmbox\
  saga\
+ stacer\
  sublime-text\
  speedtest-cli\
  spyder3
