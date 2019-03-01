@@ -31,7 +31,7 @@ sudo apt install -y\
  brasero\
  default-jre\
  gedit\
- git\
+ git-all\
  gparted\
  grass\
  gimp\
