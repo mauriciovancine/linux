@@ -103,9 +103,14 @@ sudo gdebi rstudio-1.1.463-amd64.deb
 rm rstudio-1.1.463-amd64.deb
 
 # stacer
-wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/stacer_1.0.9_amd64.deb -O stacer.deb
-sudo dpkg -i stacer.deb
-rm stacer.deb
+wget https://sourceforge.net/projects/stacer/files/v1.0.9/stacer_1.0.9_amd64.deb
+sudo dpkg -i stacer_1.0.9_amd64.deb
+rm stacer_1.0.9_amd64.deb
+
+# gitkkraken
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+sudo dpkg -i gitkraken-amd64.deb
+rm gitkraken-amd64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update
