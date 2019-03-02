@@ -58,6 +58,7 @@ if(!require("data.table")) install.packages("data.table")
 # spatial analysis --------------------------------------------------------
 if(!require("sp")) install.packages("sp")
 if(!require("raster")) install.packages("raster")
+if(!require("terra")) devtools::install_github("rspatial/terra")
 if(!require("rgdal")) install.packages("rgdal") # sudo apt install libgdal-dev libproj-dev
 if(!require("rgeos")) install.packages("rgeos")
 if(!require("RStoolbox")) install.packages("RStoolbox")
