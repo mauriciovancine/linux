@@ -14,6 +14,7 @@ sudo apt install gedit
 deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/
 deb https://qgis.org/ubuntu bionic main
 deb https://download.sublimetext.com/ apt/stable/
+deb https://typora.io/linux ./
 
 ## public keys
 wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
@@ -22,6 +23,7 @@ gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 gpg --keyserver keyserver.ubuntu.com --recv-key E298A3A825C0D65DFD57CBB651716619E084DAB9
 gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
 
 ## ppas
 sudo apt update -y
@@ -59,7 +61,9 @@ sudo apt install -y\
  stacer\
  sublime-text\
  speedtest-cli\
- spyder3
+ spyder3\
+ typora
+ 
 
 # simplenote
 wget https://github.com/Automattic/simplenote-electron/releases/download/v1.4.0/Simplenote-linux-1.4.0-amd64.deb
