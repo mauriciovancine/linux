@@ -43,6 +43,7 @@ if(!require("factoextra")) install.packages("factoextra")
 if(!require("FactoMineR")) install.packages("FactoMineR")
 if(!require("spdeb")) install.packages("spdeb")
 if(!require("vegan")) install.packages("vegan")
+if(!require("ggvegan")) devtools::install_github("gavinsimpson/ggvegan")
 
 # presentation ------------------------------------------------------------
 if(!require("xaringan")) install.packages("xaringan")
