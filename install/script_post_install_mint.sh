@@ -9,6 +9,8 @@ sudo add-apt-repository ppa:papirus/papirus
 sudo apt-add-repository ppa:tista/adapta
 sudo add-apt-repository ppa:marutter/c2d4u3.5
 sudo add-apt-repository ppa:oguzhaninan/stacer
+
+## repositories to edit sourcelist
 sudo apt install gedit
 # sudo gedit /etc/apt/sources.list
 deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/
@@ -105,11 +107,6 @@ rm libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
 wget https://download1.rstudio.org/rstudio-1.1.463-amd64.deb
 sudo gdebi rstudio-1.1.463-amd64.deb
 rm rstudio-1.1.463-amd64.deb
-
-# stacer
-wget https://sourceforge.net/projects/stacer/files/v1.0.9/stacer_1.0.9_amd64.deb
-sudo dpkg -i stacer_1.0.9_amd64.deb
-rm stacer_1.0.9_amd64.deb
 
 # gitkkraken
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
