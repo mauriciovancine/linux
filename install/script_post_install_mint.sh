@@ -60,6 +60,7 @@ sudo apt install -y\
  qgis\
  qgis-plugin-grass\
  r-base\
+ r-base-core\
  r-base-dev\
  r-cran-curl\
  r-cran-openssl\
@@ -71,6 +72,7 @@ sudo apt install -y\
  sublime-text\
  speedtest-cli\
  spyder3\
+ texlive-full\
  typora
  
 # simplenote
