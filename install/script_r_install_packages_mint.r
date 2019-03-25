@@ -121,5 +121,8 @@ if(!require("shinyjs")) install.packages("shinyjs")
 if(!require("shinydashboard")) install.packages("shinydashboard")
 if(!require("DT")) install.packages("DT")
 
+# internet ----------------------------------------------------------------
+if(!require("Rcpp")) install.packages("Rcpp")
+if(!require("httpuv")) install.packages("httpuv")
 
 # end ---------------------------------------------------------------------
