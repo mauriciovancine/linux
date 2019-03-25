@@ -18,14 +18,20 @@ deb https://qgis.org/ubuntu bionic main
 deb https://typora.io/linux ./
 
 ## public keys
+# r
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 gpg --keyserver keyserver.ubuntu.com --recv-key E298A3A825C0D65DFD57CBB651716619E084DAB9
 gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
 
+# rstudio
+gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
+
+# qgis
 wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
 gpg --fingerprint CAEB3DC3BDF7FB45
 gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
 
+# typora
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
 
 ## update ppas
@@ -67,7 +73,6 @@ sudo apt install -y\
  spyder3\
  typora
  
-
 # simplenote
 wget https://github.com/Automattic/simplenote-electron/releases/download/v1.4.0/Simplenote-linux-1.4.0-amd64.deb
 sudo dpkg -i Simplenote-linux-1.4.0-amd64.deb
@@ -82,7 +87,7 @@ wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0
 sudo dpkg -i wps-office-fonts_1.0_all.deb
 rm wps-office-fonts_1.0_all.deb
 
- sudo apt-get install ttf-mscorefonts-installer
+sudo apt-get install ttf-mscorefonts-installer
 
 # teamviwer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
@@ -105,14 +110,21 @@ sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
 sudo apt-mark hold libgstreamer0.10
 rm libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
 
-wget https://download1.rstudio.org/rstudio-1.1.463-amd64.deb
-sudo gdebi rstudio-1.1.463-amd64.deb
+wget https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb
+sudo apt install dpkg-sig
+dpkg-sig --verify rstudio-1.1.463-amd64.deb
+sudo dpkg -i rstudio-1.1.463-amd64.deb
 rm rstudio-1.1.463-amd64.deb
 
 # gitkkraken
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 sudo dpkg -i gitkraken-amd64.deb
 rm gitkraken-amd64.deb
+
+# stacer
+wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/stacer_1.0.9_amd64.deb
+sudo dpkg -i stacer_1.0.9_amd64.deb
+rm stacer_1.0.9_amd64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update
