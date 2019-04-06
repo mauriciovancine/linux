@@ -2,6 +2,7 @@
 
 # github ------------------------------------------------------------------
 if(!require("devtools")) install.packages("devtools")
+devtools::install_github("r-lib/devtools")
 
 # tidyverse ---------------------------------------------------------------
 if(!require("broom")) install.packages("broom")
