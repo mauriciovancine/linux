@@ -133,9 +133,9 @@ rm libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
 
 wget https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb
 sudo apt install dpkg-sig
-dpkg-sig --verify rstudio-1.1.463-amd64.deb
-sudo dpkg -i rstudio-1.1.463-amd64.deb
-rm rstudio-1.1.463-amd64.deb
+dpkg-sig --verify /rstudio-xenial-1.1.463-amd64.deb
+sudo dpkg -i /rstudio-xenial-1.1.463-amd64.deb
+rm /rstudio-xenial-1.1.463-amd64.deb
 
 # gitkkraken
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
