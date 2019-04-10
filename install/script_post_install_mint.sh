@@ -8,7 +8,6 @@ sudo apt upgrade -y
 sudo add-apt-repository ppa:papirus/papirus
 sudo apt-add-repository ppa:tista/adapta
 sudo add-apt-repository ppa:marutter/c2d4u3.5
-sudo add-apt-repository ppa:oguzhaninan/stacer
 
 ## repositories to edit sourcelist
 sudo apt install gedit
