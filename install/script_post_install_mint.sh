@@ -33,6 +33,10 @@ gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
 # typora
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
 
+# sublime
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+
 ## update ppas
 sudo apt update -y
 
@@ -55,7 +59,6 @@ sudo apt install -y\
  libudunits2-dev\
  openjdk-11-jre-headless\
  papirus-icon-theme\
- python-qgis\
  qgis\
  qgis-plugin-grass\
  r-base\
@@ -65,7 +68,6 @@ sudo apt install -y\
  r-cran-openssl\
  r-cran-rjava\
  r-cran-xml2\
- rhythmbox\
  saga\
  stacer\
  sublime-text\
@@ -95,15 +97,25 @@ rm wps-office-fonts_1.0_all.deb
 
 sudo apt-get install ttf-mscorefonts-installer
 
+# libreoffice
+wget https://www.libreoffice.org/donate/dl/deb-x86_64/6.2.2/en-US/LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
+tar -xf LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
+rm LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
+
 # teamviwer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo dpkg -i teamviewer_amd64.deb
 rm teamviewer_amd64.deb
 
+# overgrive
+wget https://www.thefanclub.co.za/sites/all/modules/pubdlcnt/pubdlcnt.php?file=https://www.thefanclub.co.za/sites/default/files/public/overgrive/overgrive_3.2.3_all.deb
+sudo dpkg -i overgrive_3.2.3_all.deb
+rm overgrive_3.2.3_all.deb
+
 # megasync
-wget https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb -O megasync.deb
-sudo dpkg -i megasync.deb
-rm megasync.deb
+# wget https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb -O megasync.deb
+# sudo dpkg -i megasync.deb
+# rm megasync.deb
 
 # rstudio
 wget http://ftp.ca.debian.org/debian/pool/main/g/gstreamer0.10/libgstreamer0.10-0_0.10.36-1.5_amd64.deb
@@ -126,6 +138,11 @@ rm rstudio-1.1.463-amd64.deb
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 sudo dpkg -i gitkraken-amd64.deb
 rm gitkraken-amd64.deb
+
+# sublime merge
+wget https://download.sublimetext.com/sublime-merge_build-1107_amd64.deb
+sudo apt dpkg -i sublime-merge_build-1107_amd64.deb
+rm sublime-merge_build-1107_amd64.deb
 
 # stacer
 wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/stacer_1.0.9_amd64.deb
