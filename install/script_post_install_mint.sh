@@ -99,7 +99,7 @@ rm wps-office-fonts_1.0_all.deb
 sudo apt install ttf-mscorefonts-installer
 
 # libreoffice
-wget https://www.libreoffice.org/donate/dl/deb-x86_64/6.2.2/en-US/LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
+wget https://download.documentfoundation.org/libreoffice/stable/6.2.2/deb/x86_64/LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
 tar -xf LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
 rm LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
 
