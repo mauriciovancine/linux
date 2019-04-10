@@ -77,9 +77,9 @@ sudo apt install -y\
  typora
  
 # simplenote
-wget https://github.com/Automattic/simplenote-electron/releases/download/v1.4.0/Simplenote-linux-1.4.0-amd64.deb
-sudo dpkg -i Simplenote-linux-1.4.0-amd64.deb
-rm Simplenote-linux-1.4.0-amd64.deb
+wget https://github.com/Automattic/simplenote-electron/releases/download/v1.5.0/Simplenote-linux-1.5.0-amd64.deb
+sudo dpkg -i Simplenote-linux-1.5.0-amd64.deb
+rm Simplenote-linux-1.5.0-amd64.deb
 
 # tusk
 wget https://github.com/klaussinani/tusk/releases/download/v0.22.0/tusk_0.22.0_amd64.deb
