@@ -121,21 +121,21 @@ rm overgrive_3.2.3_all.deb
 # rm megasync.deb
 
 # rstudio
-wget http://ftp.ca.debian.org/debian/pool/main/g/gstreamer0.10/libgstreamer0.10-0_0.10.36-1.5_amd64.deb
-sudo dpkg -i libgstreamer0.10-0_0.10.36-1.5_amd64.deb
-sudo apt-mark hold libgstreamer-plugins-base0.10-0
-rm libgstreamer0.10-0_0.10.36-1.5_amd64.deb
+# wget http://ftp.ca.debian.org/debian/pool/main/g/gstreamer0.10/libgstreamer0.10-0_0.10.36-1.5_amd64.deb
+# sudo dpkg -i libgstreamer0.10-0_0.10.36-1.5_amd64.deb
+# sudo apt-mark hold libgstreamer-plugins-base0.10-0
+# rm libgstreamer0.10-0_0.10.36-1.5_amd64.deb
 
-wget http://ftp.ca.debian.org/debian/pool/main/g/gst-plugins-base0.10/libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
-sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
-sudo apt-mark hold libgstreamer0.10
-rm libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
+# wget http://ftp.ca.debian.org/debian/pool/main/g/gst-plugins-base0.10/libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
+# sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
+# sudo apt-mark hold libgstreamer0.10
+# rm libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
 
-wget https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
 sudo apt install dpkg-sig
-dpkg-sig --verify /rstudio-xenial-1.1.463-amd64.deb
-sudo dpkg -i /rstudio-xenial-1.1.463-amd64.deb
-rm /rstudio-xenial-1.1.463-amd64.deb
+dpkg-sig --verify rstudio-1.2.1335-amd64.deb
+sudo dpkg -i rstudio-1.2.1335-amd64.deb
+rm rstudio-1.2.1335-amd64.deb
 
 # gitkkraken
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
