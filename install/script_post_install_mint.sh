@@ -9,6 +9,7 @@ sudo add-apt-repository ppa:papirus/papirus
 sudo apt-add-repository ppa:tista/adapta
 sudo add-apt-repository ppa:marutter/c2d4u3.5
 
+
 ## repositories to edit sourcelist
 sudo apt install gedit
 # sudo gedit /etc/apt/sources.list
@@ -87,15 +88,15 @@ sudo dpkg -i tusk_0.22.0_amd64.deb
 rm tusk_0.22.0_amd64.deb
 
 # wps
-wget http://kdl.cc.ksosoft.com/wps-community/download/6757/wps-office_10.1.0.6757_amd64.deb
-sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
-rm wps-office_10.1.0.6757_amd64.deb
+wget http://kdl.cc.ksosoft.com/wps-community/download/8372/wps-office_11.1.0.8372_amd64.deb
+sudo dpkg -i wps-office_11.1.0.8372_amd64.deb
+rm wps-office_11.1.0.8372_amd64.deb
 
 wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
 sudo dpkg -i wps-office-fonts_1.0_all.deb
 rm wps-office-fonts_1.0_all.deb
 
-sudo apt-get install ttf-mscorefonts-installer
+sudo apt install ttf-mscorefonts-installer
 
 # libreoffice
 wget https://www.libreoffice.org/donate/dl/deb-x86_64/6.2.2/en-US/LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
