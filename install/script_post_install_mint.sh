@@ -113,7 +113,7 @@ sudo dpkg -i teamviewer_amd64.deb
 rm teamviewer_amd64.deb
 
 # overgrive
-wget https://www.thefanclub.co.za/sites/all/modules/pubdlcnt/pubdlcnt.php?file=https://www.thefanclub.co.za/sites/default/files/public/overgrive/overgrive_3.2.3_all.deb
+wget https://www.thefanclub.co.za/sites/all/modules/pubdlcnt/pubdlcnt.php?file=https://www.thefanclub.co.za/sites/default/files/public/overgrive/overgrive_3.2.3_all.deb&nid=168
 sudo dpkg -i overgrive_3.2.3_all.deb
 rm overgrive_3.2.3_all.deb
 
