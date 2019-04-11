@@ -9,7 +9,6 @@ sudo add-apt-repository ppa:papirus/papirus
 sudo apt-add-repository ppa:tista/adapta
 sudo add-apt-repository ppa:marutter/c2d4u3.5
 
-
 ## repositories to edit sourcelist
 sudo apt install gedit
 # sudo gedit /etc/apt/sources.list
@@ -106,6 +105,11 @@ sudo dpkg -i *.deb
 cd ..; cd ..
 rm -r LibreOffice_6.2.2.2_Linux_x86-64_deb
 rm LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
+
+# mendeley
+wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
+sudo dpkg -i mendeleydesktop-latest
+rm mendeleydesktop-latest
 
 # teamviwer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
