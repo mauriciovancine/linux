@@ -42,7 +42,7 @@ if(!require("adespatial")) install.packages("adespatial")
 if(!require("betapart")) install.packages("betapart")
 if(!require("factoextra")) install.packages("factoextra")
 if(!require("FactoMineR")) install.packages("FactoMineR")
-if(!require("spdeo")) install.packages("spdep")
+if(!require("spdep")) install.packages("spdep")
 if(!require("vegan")) install.packages("vegan")
 if(!require("ggvegan")) devtools::install_github("gavinsimpson/ggvegan")
 
@@ -52,7 +52,7 @@ if(!require("xaringanthemer")) devtools::install_github("gadenbuie/xaringantheme
 
 # plot --------------------------------------------------------------------
 if(!require("GGally")) install.packages("GGally")
-
+if(!require("ggpubr")) install.packages("ggpubr")
 
 # data table --------------------------------------------------------------
 if(!require("data.table")) install.packages("data.table")
