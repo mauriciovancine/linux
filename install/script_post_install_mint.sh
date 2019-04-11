@@ -146,7 +146,7 @@ rm gitkraken-amd64.deb
 
 # sublime merge
 wget https://download.sublimetext.com/sublime-merge_build-1107_amd64.deb
-sudo apt dpkg -i sublime-merge_build-1107_amd64.deb
+sudo dpkg -i sublime-merge_build-1107_amd64.deb
 rm sublime-merge_build-1107_amd64.deb
 
 # stacer
