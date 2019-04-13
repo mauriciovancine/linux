@@ -113,6 +113,7 @@ if(!require("reshape2")) install.packages("reshape2")
 if(!require("rJava")) install.packages("rJava") # sudo apt install r-cran-rjava 
 if(!require("rpart")) install.packages("rpart")
 if(!require("sdm")) install.packages("sdm")
+if(!require("sdm")) install.packages("sdmpredictors")
 if(!require("snowfall")) install.packages("snowfall")
 if(!require("spocc")) install.packages("spocc")
 if(!require("usdm")) install.packages("usdm")
