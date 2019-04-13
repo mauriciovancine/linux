@@ -111,6 +111,11 @@ wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-l
 sudo dpkg -i mendeleydesktop-latest
 rm mendeleydesktop-latest
 
+# anydesk
+wget https://download.anydesk.com/linux/anydesk_4.0.1-1_amd64.deb
+sudo dpkg -i anydesk_4.0.1-1_amd64.deb
+rm anydesk_4.0.1-1_amd64.deb
+
 # teamviwer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo dpkg -i teamviewer_amd64.deb
