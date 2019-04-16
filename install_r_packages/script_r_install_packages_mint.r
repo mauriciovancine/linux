@@ -58,6 +58,9 @@ if(!require("ggpubr")) install.packages("ggpubr")
 # data table --------------------------------------------------------------
 if(!require("data.table")) install.packages("data.table")
 
+# googledrive -------------------------------------------------------------
+if(!require("googledrive")) install.packages("googledrive")
+
 # spatial analysis --------------------------------------------------------
 if(!require("sp")) install.packages("sp")
 if(!require("raster")) install.packages("raster")
@@ -117,7 +120,6 @@ if(!require("sdm")) install.packages("sdmpredictors")
 if(!require("snowfall")) install.packages("snowfall")
 if(!require("spocc")) install.packages("spocc")
 if(!require("usdm")) install.packages("usdm")
-
 
 # shiny -------------------------------------------------------------------
 if(!require("shiny")) install.packages("shiny")
