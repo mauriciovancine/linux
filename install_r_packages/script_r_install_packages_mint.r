@@ -54,6 +54,8 @@ if(!require("xaringanthemer")) devtools::install_github("gadenbuie/xaringantheme
 # plot --------------------------------------------------------------------
 if(!require("GGally")) install.packages("GGally")
 if(!require("ggpubr")) install.packages("ggpubr")
+if(!require("cowplot")) install.packages("cowplot")
+if(!require("gridExtra")) install.packages("gridExtra")
 
 # data table --------------------------------------------------------------
 if(!require("data.table")) install.packages("data.table")
