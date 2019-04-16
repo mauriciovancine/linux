@@ -87,9 +87,9 @@ sudo dpkg -i tusk_0.22.0_amd64.deb
 rm tusk_0.22.0_amd64.deb
 
 # wps
-wget http://kdl.cc.ksosoft.com/wps-community/download/8372/wps-office_11.1.0.8372_amd64.deb
-sudo dpkg -i wps-office_11.1.0.8372_amd64.deb
-rm wps-office_11.1.0.8372_amd64.deb
+wget http://kdl.cc.ksosoft.com/wps-community/download/8392/wps-office_11.1.0.8392_amd64.deb
+sudo dpkg -i wps-office_11.1.0.8392_amd64.deb
+rm wps-office_11.1.0.8392_amd64.deb
 
 wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
 sudo dpkg -i wps-office-fonts_1.0_all.deb
