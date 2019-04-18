@@ -84,7 +84,8 @@ if(!require("leaflet")) install.packages("leaflet")
 if(!require("cartography")) install.packages("cartography")
 if(!require("RStoolbox")) install.packages("RStoolbox")
 if(!require("whitebox")) devtools::install_github("giswqs/whiteboxR")
-if(!require("fasterize")) devtools::install_github("ecohealthalliance/fasterize")
+if(!require("fasterize")) install.packages("fasterize")
+if(!require("leaflet")) install.packages("leaflet")
 
 # ecological niche modeling -----------------------------------------------
 if(!require("adehabitatHS")) install.packages("adehabitatHS")
