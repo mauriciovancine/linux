@@ -95,7 +95,7 @@ sudo apt install ttf-mscorefonts-installer
 
 # libreoffice
 wget https://download.documentfoundation.org/libreoffice/stable/6.2.3/deb/x86_64/LibreOffice_6.2.3_Linux_x86-64_deb.tar.gz
-tar -fvx LibreOffice_6.2.3_Linux_x86-64_deb.tar.gz
+tar -xzvf LibreOffice_6.2.3_Linux_x86-64_deb.tar.gz
 cd ~/LibreOffice_6.2.2.3_Linux_x86-64_deb/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
