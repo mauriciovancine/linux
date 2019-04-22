@@ -44,7 +44,6 @@ sudo apt update -y
 sudo apt install -y\
  brasero\
  default-jre\
- gedit\
  git-all\
  gparted\
  grass\
@@ -99,12 +98,12 @@ sudo apt install ttf-mscorefonts-installer
 
 # libreoffice
 wget https://download.documentfoundation.org/libreoffice/stable/6.2.2/deb/x86_64/LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
-tar -fvx LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
-cd ~/LibreOffice_6.2.2.2_Linux_x86-64_deb/DEBS
+tar -fvx LibreOffice_6.2.3_Linux_x86-64_deb.tar.gz
+cd ~/LibreOffice_6.2.3.2_Linux_x86-64_deb/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
-rm -r LibreOffice_6.2.2.2_Linux_x86-64_deb
-rm LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
+rm -r LibreOffice_6.2.3.2_Linux_x86-64_deb
+rm LibreOffice_6.2.3_Linux_x86-64_deb.tar.gz
 
 # mendeley
 wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
