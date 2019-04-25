@@ -56,6 +56,7 @@ sudo apt install -y\
  libproj-dev\
  libssl-dev\
  libudunits2-dev\
+ mpv\
  openjdk-11-jre-headless\
  papirus-icon-theme\
  qgis\
