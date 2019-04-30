@@ -7,18 +7,30 @@
 sudo pacman -Syyu
 
 # install app from repository
-sudo pacman -S\
- yaourt\
+sudo pacman -Sy\
  r\
- gcc-fortran\
  qgis\
  rhythmbox
 
+# install yaourt
+# https://www.ostechnix.com/install-yaourt-arch-linux/
+sudo pacman -S --needed base-devel git wget yajl
+
+git clone https://aur.archlinux.org/package-query.git
+cd package-query/
+makepkg -si
+cd ..
+
+git clone https://aur.archlinux.org/yaourt.git
+cd yaourt/
+makepkg -si
+cd ..
+sudo rm -dR yaourt/ package-query/
+
 # install app from yaourt 
-yaourt -S\
+# https://www.thekerneltrip.com/manjaro/install-r-studio-manjaro/
+yaourt -Sy\
  rstudio-desktop-bin\
- openblas-lapack\
- udunits\
  grass\
  inkscape\
  sublime-text-dev\
