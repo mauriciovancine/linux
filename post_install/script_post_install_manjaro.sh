@@ -1,7 +1,7 @@
 ### script post install manjaro ###
 
 # mauricio vancine
-# 03-02-2019
+# 30-04-2019
 
 # update repository and system
 sudo pacman -Syyu
@@ -12,13 +12,10 @@ sudo pacman -S\
  r\
  gcc-fortran\
  qgis\
- rhythmbox\
- spyder3
+ rhythmbox
 
 # install app from yaourt 
 yaourt -S\
- papirus-icon-theme-kde\
- google-chrome\
  rstudio-desktop-bin\
  openblas-lapack\
  udunits\
@@ -28,8 +25,7 @@ yaourt -S\
  wps-office\
  wps-office-extension-portuguese-brazilian-dictionary\
  teamviewer\
- simplenote-electron-bin\
- etcher
+ simplenote-electron-bin
  
 # install enables
 sudo systemctl start teamviewerd
