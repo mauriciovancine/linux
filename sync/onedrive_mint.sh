@@ -3,6 +3,9 @@
 # mauricio vancine
 # 07-05-2019
 
+# infortion
+# https://github.com/abraunegg/onedrive
+
 # install ---------------------------------------------
 sudo apt install build-essential
 sudo apt install libcurl4-openssl-dev
