@@ -5,7 +5,7 @@
 
 # information
 # http://mcmc-jags.sourceforge.net/
-# install: https://leobastos.wordpress.com/2018/02/18/instalando-o-jags/
+# https://leobastos.wordpress.com/2018/02/18/instalando-o-jags/
 
 # download
 wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/jags/4.3.0-2build1/jags_4.3.0.orig.tar.gz
