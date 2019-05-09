@@ -14,19 +14,20 @@ chmod +x gdrive-linux-x64
 sudo install gdrive /usr/local/bin/gdrive-linux-x64
 
 # use -----------------------------------------------------------
-gdrive
+gdrive about
 
 # copy the link from terminal to browser
 # make login
 # copy the link from browser to terminal
 
-# testing your configuration ------------------------------------
-gdrive changes
+# configuration -------------------------------------------------
+gdrive about
 
-# show your configuration ---------------------------------------
+# sync ----------------------------------------------------------
+mkdir test
 gdrive 
 
-# performing a selective directory sync -------------------------
-gdrive 
+# change user
+rm -rf ~/.gdrive
 
 # end -----------------------------------------------------------
