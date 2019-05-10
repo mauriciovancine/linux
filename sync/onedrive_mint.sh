@@ -35,6 +35,6 @@ onedrive --synchronize --verbose --dry-run
 onedrive --display-config
 
 # performing a selective directory sync ---------------
-onedrive --synchronize --syncdir /media/mude/data/onedrive
+onedrive --synchronize --syncdir o/caminho/da/sua/pasta
 
 # end -------------------------------------------------
