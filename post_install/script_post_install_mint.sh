@@ -8,12 +8,13 @@ sudo apt upgrade -y
 sudo add-apt-repository ppa:papirus/papirus
 sudo apt-add-repository ppa:tista/adapta
 sudo add-apt-repository ppa:marutter/c2d4u3.5
+sudo add-apt-repository ppa:ubuntugis/ppa
 
 ## repositories to edit sourcelist
 sudo apt install gedit
 # sudo gedit /etc/apt/sources.list
+# deb https://qgis.org/ubuntu bionic main
 deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/
-deb https://qgis.org/ubuntu bionic main
 deb https://typora.io/linux ./
 
 ## public keys
@@ -26,9 +27,9 @@ gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
 gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
 
 # qgis
-wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
-gpg --fingerprint CAEB3DC3BDF7FB45
-gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
+# wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
+# gpg --fingerprint CAEB3DC3BDF7FB45
+# gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
 
 # typora
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
@@ -44,6 +45,7 @@ sudo apt update -y
 sudo apt install -y\
  brasero\
  default-jre\
+ gdal\
  git-all\
  gparted\
  grass\
@@ -82,9 +84,9 @@ sudo dpkg -i Simplenote-linux-1.5.0-amd64.deb
 rm Simplenote-linux-1.5.0-amd64.deb
 
 # tusk
-wget https://github.com/klaussinani/tusk/releases/download/v0.22.0/tusk_0.22.0_amd64.deb
-sudo dpkg -i tusk_0.22.0_amd64.deb
-rm tusk_0.22.0_amd64.deb
+# wget https://github.com/klaussinani/tusk/releases/download/v0.22.0/tusk_0.22.0_amd64.deb
+# sudo dpkg -i tusk_0.22.0_amd64.deb
+# rm tusk_0.22.0_amd64.deb
 
 # wps
 wget http://kdl.cc.ksosoft.com/wps-community/download/8392/wps-office_11.1.0.8392_amd64.deb
