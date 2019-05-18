@@ -13,7 +13,6 @@ sudo add-apt-repository ppa:ubuntugis/ppa
 ## repositories to edit sourcelist
 sudo apt install gedit
 # sudo gedit /etc/apt/sources.list
-# deb https://qgis.org/ubuntu bionic main
 deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/
 deb https://typora.io/linux ./
 
@@ -25,11 +24,6 @@ gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
 
 # rstudio
 gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
-
-# qgis
-# wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
-# gpg --fingerprint CAEB3DC3BDF7FB45
-# gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
 
 # typora
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
@@ -83,11 +77,6 @@ wget https://github.com/Automattic/simplenote-electron/releases/download/v1.5.0/
 sudo dpkg -i Simplenote-linux-1.5.0-amd64.deb
 rm Simplenote-linux-1.5.0-amd64.deb
 
-# tusk
-# wget https://github.com/klaussinani/tusk/releases/download/v0.22.0/tusk_0.22.0_amd64.deb
-# sudo dpkg -i tusk_0.22.0_amd64.deb
-# rm tusk_0.22.0_amd64.deb
-
 # wps
 wget http://kdl.cc.ksosoft.com/wps-community/download/8392/wps-office_11.1.0.8392_amd64.deb
 sudo dpkg -i wps-office_11.1.0.8392_amd64.deb
@@ -128,22 +117,7 @@ wget https://www.thefanclub.co.za/sites/all/modules/pubdlcnt/pubdlcnt.php?file=h
 sudo dpkg -i overgrive_3.2.3_all.deb
 rm overgrive_3.2.3_all.deb
 
-# megasync
-# wget https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb -O megasync.deb
-# sudo dpkg -i megasync.deb
-# rm megasync.deb
-
 # rstudio
-# wget http://ftp.ca.debian.org/debian/pool/main/g/gstreamer0.10/libgstreamer0.10-0_0.10.36-1.5_amd64.deb
-# sudo dpkg -i libgstreamer0.10-0_0.10.36-1.5_amd64.deb
-# sudo apt-mark hold libgstreamer-plugins-base0.10-0
-# rm libgstreamer0.10-0_0.10.36-1.5_amd64.deb
-
-# wget http://ftp.ca.debian.org/debian/pool/main/g/gst-plugins-base0.10/libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
-# sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
-# sudo apt-mark hold libgstreamer0.10
-# rm libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
-
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
 sudo apt install dpkg-sig
 dpkg-sig --verify rstudio-1.2.1335-amd64.deb
