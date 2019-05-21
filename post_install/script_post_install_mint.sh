@@ -64,6 +64,22 @@ sudo apt install -y\
  r-cran-openssl\
  r-cran-rjava\
  r-cran-xml2\
+ r-cran-boot\
+ r-cran-class\
+ r-cran-cluster\
+ r-cran-codetools\
+ r-cran-foreign\
+ r-cran-kernsmooth\
+ r-cran-lattice\
+ r-cran-mass\
+ r-cran-matrix\
+ r-cran-mgcv\
+ r-cran-nlme\
+ r-cran-nnet\
+ r-cran-rpart\
+ r-cran-spatial\
+ r-cran-survival\
+ r-cran-rodbc\
  saga\
  stacer\
  sublime-text\
