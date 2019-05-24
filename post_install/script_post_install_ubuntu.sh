@@ -8,12 +8,12 @@ sudo apt upgrade -y
 sudo add-apt-repository ppa:papirus/papirus
 sudo apt-add-repository ppa:tista/adapta
 sudo add-apt-repository ppa:marutter/c2d4u3.5
+sudo add-apt-repository ppa:ubuntugis/ppa
 
 ## repositories to edit sourcelist
 sudo apt install gedit
 # sudo gedit /etc/apt/sources.list
 deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/
-deb https://qgis.org/ubuntu bionic main
 deb https://typora.io/linux ./
 
 ## public keys
@@ -24,11 +24,6 @@ gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
 
 # rstudio
 gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
-
-# qgis
-wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
-gpg --fingerprint CAEB3DC3BDF7FB45
-gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
 
 # typora
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
@@ -43,6 +38,7 @@ sudo apt update -y
 ## apps
 sudo apt install -y\
  default-jre\
+ gdal\
  git-all\
  grass\
  gimp\
@@ -54,6 +50,7 @@ sudo apt install -y\
  libproj-dev\
  libssl-dev\
  libudunits2-dev\
+ mpv\
  openjdk-11-jre-headless\
  papirus-icon-theme\
  qgis\
@@ -65,9 +62,26 @@ sudo apt install -y\
  r-cran-openssl\
  r-cran-rjava\
  r-cran-xml2\
+ r-cran-boot\
+ r-cran-class\
+ r-cran-cluster\
+ r-cran-codetools\
+ r-cran-foreign\
+ r-cran-kernsmooth\
+ r-cran-lattice\
+ r-cran-mass\
+ r-cran-matrix\
+ r-cran-mgcv\
+ r-cran-nlme\
+ r-cran-nnet\
+ r-cran-rpart\
+ r-cran-spatial\
+ r-cran-survival\
+ r-cran-rodbc\
  saga\
+ stacer\
  sublime-text\
- speedtest\
+ speedtest-cli\
  spyder3\
  texlive-full\
  typora
@@ -76,11 +90,6 @@ sudo apt install -y\
 wget https://github.com/Automattic/simplenote-electron/releases/download/v1.5.0/Simplenote-linux-1.5.0-amd64.deb
 sudo dpkg -i Simplenote-linux-1.5.0-amd64.deb
 rm Simplenote-linux-1.5.0-amd64.deb
-
-# tusk
-wget https://github.com/klaussinani/tusk/releases/download/v0.22.0/tusk_0.22.0_amd64.deb
-sudo dpkg -i tusk_0.22.0_amd64.deb
-rm tusk_0.22.0_amd64.deb
 
 # wps
 wget http://kdl.cc.ksosoft.com/wps-community/download/8392/wps-office_11.1.0.8392_amd64.deb
@@ -94,8 +103,8 @@ rm wps-office-fonts_1.0_all.deb
 sudo apt install ttf-mscorefonts-installer
 
 # libreoffice
-wget https://download.documentfoundation.org/libreoffice/stable/6.2.3/deb/x86_64/LibreOffice_6.2.3_Linux_x86-64_deb.tar.gz
-tar -xzvf LibreOffice_6.2.3_Linux_x86-64_deb.tar.gz
+wget https://download.documentfoundation.org/libreoffice/stable/6.2.2/deb/x86_64/LibreOffice_6.2.2_Linux_x86-64_deb.tar.gz
+tar -fvx LibreOffice_6.2.3_Linux_x86-64_deb.tar.gz
 cd ~/LibreOffice_6.2.3.2_Linux_x86-64_deb/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
@@ -122,6 +131,7 @@ wget https://www.thefanclub.co.za/sites/all/modules/pubdlcnt/pubdlcnt.php?file=h
 sudo dpkg -i overgrive_3.2.3_all.deb
 rm overgrive_3.2.3_all.deb
 
+# rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
 sudo apt install dpkg-sig
 dpkg-sig --verify rstudio-1.2.1335-amd64.deb
@@ -132,6 +142,11 @@ rm rstudio-1.2.1335-amd64.deb
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 sudo dpkg -i gitkraken-amd64.deb
 rm gitkraken-amd64.deb
+
+# sublime merge
+wget https://download.sublimetext.com/sublime-merge_build-1107_amd64.deb
+sudo dpkg -i sublime-merge_build-1107_amd64.deb
+rm sublime-merge_build-1107_amd64.deb
 
 # stacer
 wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/stacer_1.0.9_amd64.deb
