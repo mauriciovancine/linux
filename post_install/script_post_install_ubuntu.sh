@@ -11,10 +11,10 @@ sudo add-apt-repository ppa:marutter/c2d4u3.5
 sudo add-apt-repository ppa:ubuntugis/ppa
 
 ## repositories to edit sourcelist
-sudo apt install gedit
 # sudo gedit /etc/apt/sources.list
-deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/
+deb https://cloud.r-project.org/bin/linux/ubuntu disco-cran35/
 deb https://typora.io/linux ./
+deb http://ppa.launchpad.net/ubuntugis/ppa/ubuntu disco main 
 
 ## public keys
 # r
@@ -142,11 +142,6 @@ rm rstudio-1.2.1335-amd64.deb
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 sudo dpkg -i gitkraken-amd64.deb
 rm gitkraken-amd64.deb
-
-# sublime merge
-wget https://download.sublimetext.com/sublime-merge_build-1107_amd64.deb
-sudo dpkg -i sublime-merge_build-1107_amd64.deb
-rm sublime-merge_build-1107_amd64.deb
 
 # stacer
 wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/stacer_1.0.9_amd64.deb
