@@ -38,7 +38,7 @@ sudo apt update -y
 ## apps
 sudo apt install -y\
  default-jre\
- gdal\
+ gdal-bin\
  git-all\
  gparted\
  grass\
