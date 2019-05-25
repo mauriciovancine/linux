@@ -103,7 +103,7 @@ sudo apt install ttf-mscorefonts-installer
 
 # libreoffice
 wget https://download.documentfoundation.org/libreoffice/stable/6.2.4/deb/x86_64/LibreOffice_6.2.4_Linux_x86-64_deb.tar.gz
-tar -fvx LibreOffice_6.2.4_Linux_x86-64_deb.tar.gz
+tar -xvzf LibreOffice_6.2.4_Linux_x86-64_deb.tar.gz
 cd ~/LibreOffice_6.2.4.2_Linux_x86-64_deb/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
@@ -142,15 +142,10 @@ wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 sudo dpkg -i gitkraken-amd64.deb
 rm gitkraken-amd64.deb
 
-# sublime merge
-wget https://download.sublimetext.com/sublime-merge_build-1107_amd64.deb
-sudo dpkg -i sublime-merge_build-1107_amd64.deb
-rm sublime-merge_build-1107_amd64.deb
-
 # stacer
-wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/stacer_1.0.9_amd64.deb
-sudo dpkg -i stacer_1.0.9_amd64.deb
-rm stacer_1.0.9_amd64.deb
+wget https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0_amd64.deb
+sudo dpkg -i stacer_1.1.0_amd64.deb
+rm stacer_1.1.0_amd64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update
