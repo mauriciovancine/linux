@@ -55,28 +55,11 @@ sudo apt install -y\
  qgis\
  qgis-plugin-grass\
  r-base\
- r-base-core\
  r-base-dev\
  r-cran-curl\
  r-cran-openssl\
  r-cran-rjava\
  r-cran-xml2\
- r-cran-boot\
- r-cran-class\
- r-cran-cluster\
- r-cran-codetools\
- r-cran-foreign\
- r-cran-kernsmooth\
- r-cran-lattice\
- r-cran-mass\
- r-cran-matrix\
- r-cran-mgcv\
- r-cran-nlme\
- r-cran-nnet\
- r-cran-rpart\
- r-cran-spatial\
- r-cran-survival\
- r-cran-rodbc\
  saga\
  stacer\
  sublime-text\
@@ -115,20 +98,10 @@ wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-l
 sudo dpkg -i mendeleydesktop-latest
 rm mendeleydesktop-latest
 
-# anydesk
-wget https://download.anydesk.com/linux/anydesk_4.0.1-1_amd64.deb
-sudo dpkg -i anydesk_4.0.1-1_amd64.deb
-rm anydesk_4.0.1-1_amd64.deb
-
 # teamviwer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo dpkg -i teamviewer_amd64.deb
 rm teamviewer_amd64.deb
-
-# overgrive
-wget https://www.thefanclub.co.za/sites/all/modules/pubdlcnt/pubdlcnt.php?file=https://www.thefanclub.co.za/sites/default/files/public/overgrive/overgrive_3.2.3_all.deb&nid=168
-sudo dpkg -i overgrive_3.2.3_all.deb
-rm overgrive_3.2.3_all.deb
 
 # rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
