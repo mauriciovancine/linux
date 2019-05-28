@@ -9,6 +9,7 @@ sudo add-apt-repository ppa:papirus/papirus
 sudo apt-add-repository ppa:tista/adapta
 sudo add-apt-repository ppa:marutter/c2d4u3.5
 sudo add-apt-repository ppa:ubuntugis/ppa
+sudo add-apt-repository ppa:slimbook/slimbook
 
 ## repositories to edit sourcelist
 sudo apt install gedit
@@ -61,6 +62,7 @@ sudo apt install -y\
  r-cran-rjava\
  r-cran-xml2\
  saga\
+ slimbookbattery\
  stacer\
  sublime-text\
  speedtest-cli\
