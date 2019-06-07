@@ -11,6 +11,7 @@ sudo add-apt-repository ppa:marutter/c2d4u3.5
 sudo add-apt-repository ppa:ubuntugis/ppa
 sudo add-apt-repository ppa:slimbook/slimbook
 
+
 ## repositories to edit sourcelist
 sudo apt install gedit
 # sudo gedit /etc/apt/sources.list
@@ -26,6 +27,10 @@ gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
 # rstudio
 gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
 
+# spotify
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+
 # typora
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
 
@@ -38,6 +43,7 @@ sudo apt update -y
 
 ## apps
 sudo apt install -y\
+ chromium-browser\
  default-jre\
  gdal-bin\
  git-all\
@@ -63,10 +69,11 @@ sudo apt install -y\
  r-cran-xml2\
  saga\
  slimbookbattery\
- stacer\
+ spotify-client\
  sublime-text\
  speedtest-cli\
  spyder3\
+ steam-installer\
  texlive-full\
  typora
  
