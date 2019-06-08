@@ -45,6 +45,7 @@ sudo apt update -y
 sudo apt install -y\
  chromium-browser\
  default-jre\
+ flatpak\
  gdal-bin\
  git-all\
  gparted\
@@ -76,6 +77,9 @@ sudo apt install -y\
  steam-installer\
  texlive-full\
  typora
+ 
+# opendrive
+snap install --edge odrive
  
 # simplenote
 wget https://github.com/Automattic/simplenote-electron/releases/download/v1.5.0/Simplenote-linux-1.5.0-amd64.deb
