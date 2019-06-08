@@ -68,7 +68,6 @@ sudo apt install -y\
  r-cran-rjava\
  r-cran-xml2\
  saga\
- slimbookbattery\
  spotify-client\
  sublime-text\
  speedtest-cli\
