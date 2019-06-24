@@ -7,9 +7,11 @@
 # https://github.com/abraunegg/onedrive
 
 # install ---------------------------------------------
-sudo apt install build-essential
-sudo apt install libcurl4-openssl-dev
-sudo apt install libsqlite3-dev
+sudo apt install -y\
+  build-essential\
+  libcurl4-openssl-dev\
+  libsqlite3-dev
+
 curl -fsS https://dlang.org/install.sh | bash -s dmd
 
 source ~/dlang/dmd-2.086.0/activate
