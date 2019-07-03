@@ -134,6 +134,9 @@ wget https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0
 sudo dpkg -i stacer_1.1.0_amd64.deb
 rm stacer_1.1.0_amd64.deb
 
+# evernote
+# https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
+
 ## fix broken
 sudo apt clean && sudo apt update
 sudo dpkg --configure -a
