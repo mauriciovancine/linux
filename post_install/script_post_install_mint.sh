@@ -5,12 +5,9 @@ sudo apt update -y
 sudo apt upgrade -y
 
 ## repositories
-sudo add-apt-repository ppa:papirus/papirus
-sudo apt-add-repository ppa:tista/adapta
 sudo add-apt-repository ppa:marutter/c2d4u3.5
 sudo add-apt-repository ppa:ubuntugis/ppa
 sudo add-apt-repository ppa:slimbook/slimbook
-
 
 ## repositories to edit sourcelist
 sudo apt install gedit
@@ -50,6 +47,7 @@ sudo apt install -y\
  git-all\
  gparted\
  grass\
+ '*icon-theme*'\
  inkscape\
  libcairo2-dev\
  libgdal-dev\
@@ -59,7 +57,6 @@ sudo apt install -y\
  libssl-dev\
  libudunits2-dev\
  openjdk-11-jre-headless\
- papirus-icon-theme\
  qgis\
  qgis-plugin-grass\
  r-base\
@@ -69,6 +66,7 @@ sudo apt install -y\
  r-cran-rjava\
  r-cran-xml2\
  saga\
+ screenfetch\
  snapd\
  spotify-client\
  sublime-text\
@@ -78,8 +76,11 @@ sudo apt install -y\
  texlive-full\
  typora
  
+# whatsapp desktop
+sudo snap install whatsdesk
+ 
 # opendrive
-snap install --edge odrive
+sudo snap install --edge odrive
  
 # simplenote
 wget https://github.com/Automattic/simplenote-electron/releases/download/v1.5.0/Simplenote-linux-1.5.0-amd64.deb
