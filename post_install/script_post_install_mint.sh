@@ -88,9 +88,9 @@ sudo dpkg -i Simplenote-linux-1.5.0-amd64.deb
 rm Simplenote-linux-1.5.0-amd64.deb
 
 # wps
-wget http://kdl.cc.ksosoft.com/wps-community/download/8392/wps-office_11.1.0.8392_amd64.deb
-sudo dpkg -i wps-office_11.1.0.8392_amd64.deb
-rm wps-office_11.1.0.8392_amd64.deb
+wget http://kdl.cc.ksosoft.com/wps-community/download/8722/wps-office_11.1.0.8722_amd64.deb
+sudo dpkg -i wps-office_11.1.0.8722_amd64.deb
+rm wps-office_11.1.0.8722_amd64.deb
 
 wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
 sudo dpkg -i wps-office-fonts_1.0_all.deb
@@ -99,13 +99,13 @@ rm wps-office-fonts_1.0_all.deb
 sudo apt install ttf-mscorefonts-installer
 
 # libreoffice
-wget https://download.documentfoundation.org/libreoffice/stable/6.2.4/deb/x86_64/LibreOffice_6.2.4_Linux_x86-64_deb.tar.gz
-tar -xvzf LibreOffice_6.2.4_Linux_x86-64_deb.tar.gz
-cd ~/LibreOffice_6.2.4.2_Linux_x86-64_deb/DEBS
+wget https://download.documentfoundation.org/libreoffice/stable/6.2.5/deb/x86_64/LibreOffice_6.2.5_Linux_x86-64_deb.tar.gz
+tar -xvzf LibreOffice_6.2.5_Linux_x86-64_deb.tar.gz
+cd ~/LibreOffice_6.2.5.2_Linux_x86-64_deb/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
-rm -r LibreOffice_6.2.4.2_Linux_x86-64_deb
-rm LibreOffice_6.2.4_Linux_x86-64_deb.tar.gz
+rm -r LibreOffice_6.2.5.2_Linux_x86-64_deb
+rm LibreOffice_6.2.5_Linux_x86-64_deb.tar.gz
 
 # mendeley
 wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
