@@ -47,7 +47,13 @@ sudo apt install -y qgis qgis-plugin-grass
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
 sudo apt update
-sudo apt install -y r-base-core
+sudo apt install -y\
+ r-base-core\
+ r-base-dev\
+ r-cran-curl\
+ r-cran-openssl\
+ r-cran-rjava\
+ r-cran-xml2
 
 # fonts
 sudo apt install -y ubuntu-restricted-extras
