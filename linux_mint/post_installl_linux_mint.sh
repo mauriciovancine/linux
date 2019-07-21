@@ -84,14 +84,18 @@ sudo snap install typora-alanzanattadev
 # sublime
 sudo snap install sublime-text --classic
 
-# wps
-sudo snap install wps-office
-sudo snap install wps-office-multilang
-sudo snap install wps-office-all-lang-no-internet
-
 ## dpkgs --------------------------------------------------------------------------------------
+wget http://kdl.cc.ksosoft.com/wps-community/download/8722/wps-office_11.1.0.8722_amd64.deb
+sudo dpkg -i wps-office_11.1.0.8722_amd64.deb
+rm wps-office_11.1.0.8722_amd64.deb
+
+wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
+sudo dpkg -i wps-office-fonts_1.0_all.deb
+rm wps-office-fonts_1.0_all.deb
+
+sudo apt install ttf-mscorefonts-installer
+
 # rstudio
-sudo apt install libssl-dev libapparmor-dev apparmor-utils
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
 sudo dpkg -i rstudio-1.2.1335-amd64.deb
 sudo apt install -fy
