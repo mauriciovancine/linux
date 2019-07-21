@@ -59,13 +59,10 @@ rm rstudio-1.2.1335-amd64.deb
 sudo apt install ubuntu-restricted-extras -y
 
 # icons
-sudo add-apt-repository ppa:papirus/papirus
+sudo add-apt-repository ppa:papirus/papirus && sudo apt update
 sudo apt install papirus-icon-theme
 
 ## snaps --------------------------------------------------------------------------------------
-# snap
-sudo apt install -y snapd
-
 # opendrive
 sudo snap install odrive-unofficial
 
