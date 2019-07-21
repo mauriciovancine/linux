@@ -56,13 +56,16 @@ sudo dpkg -i rstudio-1.2.1335-amd64.deb
 rm rstudio-1.2.1335-amd64.deb
 
 # fonts
-sudo apt install ubuntu-restricted-extras -y
+sudo apt install -y ubuntu-restricted-extras
 
 # icons
 sudo add-apt-repository ppa:papirus/papirus && sudo apt update
 sudo apt install papirus-icon-theme
 
 ## snaps --------------------------------------------------------------------------------------
+# snap
+sudo apt install -y snap snapd 
+
 # opendrive
 sudo snap install odrive-unofficial
 
