@@ -53,6 +53,7 @@ sudo apt install -y r-base-core
 sudo apt install libssl-dev libapparmor-dev apparmor-utils
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
 sudo dpkg -i rstudio-1.2.1335-amd64.deb
+sudo apt install -fy
 rm rstudio-1.2.1335-amd64.deb
 
 # fonts
@@ -105,6 +106,7 @@ rm mendeleydesktop-latest
 # teamviewer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo dpkg -i teamviewer_amd64.deb
+sudo apt install -fy
 rm teamviewer_amd64.deb
 
 # stacer
