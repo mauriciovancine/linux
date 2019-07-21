@@ -7,7 +7,6 @@ sudo apt upgrade -y
 ## repositories
 sudo add-apt-repository ppa:marutter/c2d4u3.5
 sudo add-apt-repository ppa:ubuntugis/ppa
-sudo add-apt-repository ppa:slimbook/slimbook
 
 ## repositories to edit sourcelist
 sudo apt install gedit
