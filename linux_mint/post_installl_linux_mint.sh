@@ -49,13 +49,6 @@ sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic
 sudo apt update
 sudo apt install -y r-base-core
 
-# rstudio
-sudo apt install libssl-dev libapparmor-dev apparmor-utils
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
-sudo dpkg -i rstudio-1.2.1335-amd64.deb
-sudo apt install -fy
-rm rstudio-1.2.1335-amd64.deb
-
 # fonts
 sudo apt install -y ubuntu-restricted-extras
 
@@ -97,6 +90,12 @@ sudo snap install wps-office-multilang
 sudo snap install wps-office-all-lang-no-internet
 
 ## dpkgs --------------------------------------------------------------------------------------
+# rstudio
+sudo apt install libssl-dev libapparmor-dev apparmor-utils
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
+sudo dpkg -i rstudio-1.2.1335-amd64.deb
+sudo apt install -fy
+rm rstudio-1.2.1335-amd64.deb
 
 # mendeley
 wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
