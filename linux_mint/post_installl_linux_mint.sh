@@ -49,7 +49,8 @@ sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic
 sudo apt update
 sudo apt install -y\
  r-base-core\
- r-base-dev
+ r-base-dev\
+ libudunits2-dev
 
 # fonts
 sudo apt install -y ubuntu-restricted-extras
