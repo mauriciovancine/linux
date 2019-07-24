@@ -52,6 +52,9 @@ sudo apt install -y\
  r-base-core\
  r-base-dev\
  libudunits2-dev
+ 
+# python
+sudo apt install python-numpy python-scipy python-matplotlib ipython python-pandas python-sympy python-nose
 
 # fonts
 sudo apt install -y ubuntu-restricted-extras
