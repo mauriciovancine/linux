@@ -27,7 +27,9 @@ sudo apt install -y speedtest-cli
 sudo apt install -y spyder3
 
 # java
-sudo apt install -y default-jre default-jdk
+sudo apt install -y\
+ default-jre \
+ default-jdk
 sudo R CMD javareconf
 
 # git
@@ -42,7 +44,9 @@ sudo apt install -y grass
 
 # qgis
 sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt update
-sudo apt install -y qgis qgis-plugin-grass
+sudo apt install -y\
+  qgis\
+  qgis-plugin-grass
 
 # r
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
@@ -54,14 +58,21 @@ sudo apt install -y\
  libudunits2-dev
  
 # python
-sudo apt install python-numpy python-scipy python-matplotlib ipython python-pandas python-sympy python-nose
+sudo apt install -y\
+  python-numpy\
+  python-scipy\
+  python-matplotlib\
+  python-pandas\
+  python-sympy\
+  python-nose\
+  ipython
 
 # fonts
 sudo apt install -y ubuntu-restricted-extras
 
 # icons
 sudo add-apt-repository ppa:papirus/papirus && sudo apt update
-sudo apt install papirus-icon-theme
+sudo apt install -y papirus-icon-theme
 
 ## snaps --------------------------------------------------------------------------------------
 # snap
