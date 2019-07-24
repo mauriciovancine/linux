@@ -27,7 +27,8 @@ sudo apt install -y speedtest-cli
 sudo apt install -y spyder3
 
 # java
-sudo apt install -y default-jre openjdk-11-jre-headless
+sudo apt install -y default-jre default-jdk
+sudo R CMD javareconf
 
 # git
 sudo apt install -y git-all
@@ -75,9 +76,6 @@ sudo snap install spotify
 # skype
 sudo snap install skype --classic
 
-# qgis
-sudo snap install qgsrepo
-
 # gitkraken
 sudo snap install gitkraken
 
@@ -86,6 +84,9 @@ sudo snap install typora-alanzanattadev
 
 # sublime
 sudo snap install sublime-text --classic
+
+# whatsapp desktop
+sudo snap install whatsdesk
 
 ## dpkgs --------------------------------------------------------------------------------------
 wget http://kdl.cc.ksosoft.com/wps-community/download/8722/wps-office_11.1.0.8722_amd64.deb
