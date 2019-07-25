@@ -106,6 +106,7 @@ sudo snap install sublime-text --classic
 sudo snap install whatsdesk
 
 ## dpkgs --------------------------------------------------------------------------------------
+# wps
 wget http://kdl.cc.ksosoft.com/wps-community/download/8722/wps-office_11.1.0.8722_amd64.deb
 sudo dpkg -i wps-office_11.1.0.8722_amd64.deb
 rm wps-office_11.1.0.8722_amd64.deb
