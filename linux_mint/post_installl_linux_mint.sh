@@ -52,14 +52,15 @@ sudo apt install -y\
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
 sudo apt update
-sudo apt install -y\
- r-base-core\
- r-base-dev\
- libssl-dev\
- libxml2-dev\
- libcurl4-openssl-dev\
- libudunits2-dev
- 
+sudo apt install -y r-base-core # r
+sudo apt install -y r-base-dev # devtools
+sudo apt install -y libssl-dev # tidyverse
+sudo apt install -y libxml2-dev # tidyverse
+sudo apt install -y libcurl4-openssl-dev # tidyverse
+sudo apt install -y libgdal-dev # gdal
+sudo apt install -y libproj-dev # gdal
+sudo apt install -y libudunits2-dev # 
+
 # python
 sudo apt install -y\
   python-numpy\
