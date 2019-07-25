@@ -56,6 +56,8 @@ sudo apt install -y\
  r-base-core\
  r-base-dev\
  libssl-dev\
+ libxml2-dev\
+ libcurl4-openssl-dev\
  libudunits2-dev
  
 # python
