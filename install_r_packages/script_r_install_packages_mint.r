@@ -4,6 +4,10 @@
 if(!require("devtools")) install.packages("devtools")
 devtools::install_github("r-lib/devtools")
 
+# internet ----------------------------------------------------------------
+if(!require("Rcpp")) install.packages("Rcpp")
+if(!require("httpuv")) install.packages("httpuv")
+
 # tidyverse ---------------------------------------------------------------
 if(!require("broom")) install.packages("broom")
 if(!require("cli")) install.packages("cli")         
@@ -66,7 +70,6 @@ if(!require("googledrive")) install.packages("googledrive")
 # spatial analysis --------------------------------------------------------
 if(!require("sp")) install.packages("sp")
 if(!require("raster")) install.packages("raster")
-if(!require("terra")) devtools::install_github("rspatial/terra")
 if(!require("rgdal")) install.packages("rgdal") # sudo apt install libgdal-dev libproj-dev
 if(!require("rgeos")) install.packages("rgeos")
 if(!require("RStoolbox")) install.packages("RStoolbox")
@@ -87,7 +90,7 @@ if(!require("whitebox")) devtools::install_github("giswqs/whiteboxR")
 if(!require("fasterize")) install.packages("fasterize")
 if(!require("leaflet")) install.packages("leaflet")
 
-# ecological niche modeling -----------------------------------------------
+# species distribution modeling -----------------------------------------------
 if(!require("adehabitatHS")) install.packages("adehabitatHS")
 if(!require("ape")) install.packages("ape")
 if(!require("biomod2")) install.packages("biomod2")
@@ -130,8 +133,10 @@ if(!require("shinyjs")) install.packages("shinyjs")
 if(!require("shinydashboard")) install.packages("shinydashboard")
 if(!require("DT")) install.packages("DT")
 
-# internet ----------------------------------------------------------------
-if(!require("Rcpp")) install.packages("Rcpp")
-if(!require("httpuv")) install.packages("httpuv")
+# email -------------------------------------------------------------------
+if(!require("")) install.packages("")
+
+# beep --------------------------------------------------------------------
+if(!require("beepr")) install.packages("beepr")
 
 # end ---------------------------------------------------------------------
