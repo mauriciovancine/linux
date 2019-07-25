@@ -134,7 +134,7 @@ if(!require("shinydashboard")) install.packages("shinydashboard")
 if(!require("DT")) install.packages("DT")
 
 # email -------------------------------------------------------------------
-if(!require("")) install.packages("")
+if(!require("gmailr")) install.packages("gmailr")
 
 # beep --------------------------------------------------------------------
 if(!require("beepr")) install.packages("beepr")
