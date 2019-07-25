@@ -55,6 +55,7 @@ sudo apt update
 sudo apt install -y\
  r-base-core\
  r-base-dev\
+ libssl-dev\
  libudunits2-dev
  
 # python
