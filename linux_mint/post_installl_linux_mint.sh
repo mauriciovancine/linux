@@ -60,6 +60,7 @@ sudo apt install -y libcurl4-openssl-dev # tidyverse
 sudo apt install -y libgdal-dev # gdal
 sudo apt install -y libproj-dev # gdal
 sudo apt install -y libudunits2-dev # 
+sudo apt install -y libcairo2-dev # mapview
 
 # python
 sudo apt install -y\
