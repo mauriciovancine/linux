@@ -61,6 +61,7 @@ sudo apt install -y libgdal-dev # gdal
 sudo apt install -y libproj-dev # gdal
 sudo apt install -y libudunits2-dev # 
 sudo apt install -y libcairo2-dev # mapview
+sudo apt install -y libgmp3-dev # betapart
 
 # python
 sudo apt install -y\
