@@ -108,9 +108,6 @@ sudo snap install gitkraken
 # typora
 sudo snap install typora-alanzanattadev
 
-# sublime
-sudo snap install sublime-text --classic
-
 # whatsapp desktop
 sudo snap install whatsdesk
 
