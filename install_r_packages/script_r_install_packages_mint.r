@@ -44,7 +44,7 @@ tidyverse_packages(include_self = TRUE)
 # ecological analysis -----------------------------------------------------
 if(!require("ade4")) install.packages("ade4")
 if(!require("adespatial")) install.packages("adespatial")
-if(!require("betapart")) install.packages("betapart")
+if(!require("betapart")) install.packages("betapart") # sudo apt install libgmp3-dev
 if(!require("factoextra")) install.packages("factoextra")
 if(!require("FactoMineR")) install.packages("FactoMineR")
 if(!require("spdep")) install.packages("spdep")
