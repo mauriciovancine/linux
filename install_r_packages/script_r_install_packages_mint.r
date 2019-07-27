@@ -130,14 +130,15 @@ if(!require("shinydashboard")) install.packages("shinydashboard")
 if(!require("DT")) install.packages("DT")
 
 # markdown ----------------------------------------------------------------
-if(!require("blogdown")) remotes::install_github('rstudio/blogdown')
-if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
-if(!require("bookdown")) devtools::install_github('rstudio/bookdown')
-if(!require("xaringan")) remotes::install_github('yihui/xaringan')
+if(!require("rmarkdown")) remotes::install_github("rstudio/rmarkdown")
+if(!require("tinytex")) install.packages("tinytex"); tinytex::install_tinytex()
+if(!require("blogdown")) remotes::install_github("rstudio/blogdown")
+if(!require("pagedown")) remotes::install_github("rstudio/pagedown")
+if(!require("bookdown")) devtools::install_github("rstudio/bookdown")
+if(!require("posterown")) devtools::install_github("Shedimus/posterdown")
+if(!require("xaringan")) remotes::install_github("yihui/xaringan")
 if(!require("xaringanthemer")) devtools::install_github("gadenbuie/xaringanthemer")
 if(!require("icon")) devtools::install_github("ropenscilabs/icon")
-if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
-if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
 
 # email -------------------------------------------------------------------
 if(!require("gmailr")) install.packages("gmailr")
