@@ -133,6 +133,13 @@ if(!require("shinyjs")) install.packages("shinyjs")
 if(!require("shinydashboard")) install.packages("shinydashboard")
 if(!require("DT")) install.packages("DT")
 
+# markdown ----------------------------------------------------------------
+if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
+if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
+if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
+if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
+if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
+
 # email -------------------------------------------------------------------
 if(!require("gmailr")) install.packages("gmailr")
 
