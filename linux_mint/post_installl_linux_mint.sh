@@ -68,6 +68,11 @@ sudo apt install -y libproj-dev # gdal
 sudo apt install -y libudunits2-dev # 
 sudo apt install -y libcairo2-dev # mapview
 sudo apt install -y libgmp3-dev # betapart
+sudo apt install -y libgtk2.0-dev # cairo
+sudo apt install -y xvfb # cairo 
+sudo apt install -y xauth # cairo 
+sudo apt install -y xfonts-base # cairo 
+sudo apt install -y libxt-dev # cairo
 
 # python
 sudo apt install -y\
