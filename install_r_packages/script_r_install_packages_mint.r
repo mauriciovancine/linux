@@ -51,10 +51,6 @@ if(!require("spdep")) install.packages("spdep")
 if(!require("vegan")) install.packages("vegan")
 if(!require("ggvegan")) devtools::install_github("gavinsimpson/ggvegan")
 
-# presentation ------------------------------------------------------------
-if(!require("xaringan")) install.packages("xaringan")
-if(!require("xaringanthemer")) devtools::install_github("gadenbuie/xaringanthemer")
-
 # plot --------------------------------------------------------------------
 if(!require("GGally")) install.packages("GGally")
 if(!require("ggpubr")) install.packages("ggpubr")
@@ -134,9 +130,12 @@ if(!require("shinydashboard")) install.packages("shinydashboard")
 if(!require("DT")) install.packages("DT")
 
 # markdown ----------------------------------------------------------------
+if(!require("blogdown")) remotes::install_github('rstudio/blogdown')
 if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
-if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
-if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
+if(!require("bookdown")) devtools::install_github('rstudio/bookdown')
+if(!require("xaringan")) remotes::install_github('yihui/xaringan')
+if(!require("xaringanthemer")) devtools::install_github("gadenbuie/xaringanthemer")
+if(!require("icon")) devtools::install_github("ropenscilabs/icon")
 if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
 if(!require("pagedown")) remotes::install_github('rstudio/pagedown')
 
