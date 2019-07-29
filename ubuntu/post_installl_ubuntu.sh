@@ -6,6 +6,8 @@ sudo apt update && sudo apt upgrade -y
 ## apts --------------------------------------------------------------------------------------
 # tweeks
 sudo apt install gnome-tweaks
+sudo apt install gnome-shell-extensions
+sudo apt install chrome-gnome-shell
 
 # dash-to-panel
 git clone https://github.com/home-sweet-gnome/dash-to-panel.git
