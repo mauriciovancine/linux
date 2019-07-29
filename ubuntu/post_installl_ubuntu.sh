@@ -7,6 +7,10 @@ sudo apt update && sudo apt upgrade -y
 # tweeks
 sudo apt install gnome-tweaks
 
+# dash-to-panel
+git clone https://github.com/home-sweet-gnome/dash-to-panel.git
+make install
+
 # nvidia
 sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
 sudo ubuntu-drivers autoinstall
@@ -28,6 +32,11 @@ sudo apt install -y speedtest-cli
 
 # spyder
 sudo apt install -y spyder3
+
+# tilix
+sudo add-apt-repository ppa:webupd8team/terminix
+sudo apt-get update
+sudo apt install tilix
 
 # java
 sudo apt install -y\
