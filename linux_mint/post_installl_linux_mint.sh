@@ -23,9 +23,6 @@ sudo apt install -y steam-installer
 # speedtest
 sudo apt install -y speedtest-cli
 
-# spyder
-sudo apt install -y spyder3
-
 # java
 sudo apt install -y\
  default-jre \
@@ -84,7 +81,10 @@ sudo apt install -y\
   python-pandas\
   python-sympy\
   python-nose\
-  ipython
+  ipyth
+
+# spyder
+sudo apt install -y spyder3
 
 # fonts
 sudo apt install -y ubuntu-restricted-extras
@@ -127,8 +127,6 @@ rm wps-office_11.1.0.8722_amd64.deb
 wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
 sudo dpkg -i wps-office-fonts_1.0_all.deb
 rm wps-office-fonts_1.0_all.deb
-
-sudo apt install ttf-mscorefonts-installer -y
 
 # rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
