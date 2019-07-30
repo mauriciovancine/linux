@@ -30,9 +30,8 @@ sudo apt install -y\
 sudo R CMD javareconf
 
 # git
-sudo add-apt-repository ppa:git-core/ppa
-sudo apt update
-sudo apt install git
+sudo add-apt-repository ppa:git-core/ppa && sudo apt update
+sudo apt install -y git
     
 # gdal
 sudo apt install -y gdal-bin
