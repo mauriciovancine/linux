@@ -13,6 +13,12 @@ sudo apt install -y chromium-browser
 
 # gparted
 sudo apt install -y gparted
+
+# gedit
+sudo apt install -y gedit
+
+# screenfetch
+sudo apt install -y screenfetch
  
 # inkscape
 sudo apt install -y inkscape
@@ -42,9 +48,7 @@ sudo apt install -y grass
 
 # qgis
 sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt update
-sudo apt install -y\
-  qgis\
-  qgis-plugin-grass
+sudo apt install -y qgis qgis-plugin-grass
   
 # sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
