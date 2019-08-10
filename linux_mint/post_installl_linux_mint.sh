@@ -109,6 +109,10 @@ sudo apt install -y papirus-icon-theme
 # snap
 sudo apt install -y snap snapd 
 
+# libreoffice
+sudo apt remove libreoffice* -y
+sudo snap install libreoffice
+
 # opendrive
 sudo snap install odrive-unofficial
 
@@ -142,16 +146,6 @@ rm wps-office_11.1.0.8722_amd64.deb
 wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
 sudo dpkg -i wps-office-fonts_1.0_all.deb
 rm wps-office-fonts_1.0_all.deb
-
-# libreoffice
-sudo apt remove libreoffice* -y
-wget https://download.documentfoundation.org/libreoffice/stable/6.3.0/deb/x86_64/LibreOffice_6.3.0_Linux_x86-64_deb.tar.gz
-tar -xvzf LibreOffice_6.3.0_Linux_x86-64_deb.tar.gz
-cd ~/LibreOffice_6.3.0.4_Linux_x86-64_deb/DEBS
-sudo dpkg -i *.deb 
-cd ..; cd ..
-rm -r LibreOffice_6.3.0.4_Linux_x86-64_deb
-rm LibreOffice_6.3.0_Linux_x86-64_deb.tar.gz
 
 # rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
