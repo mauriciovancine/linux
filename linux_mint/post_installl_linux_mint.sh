@@ -151,7 +151,7 @@ cd ~/LibreOffice_6.3.0.4_Linux_x86-64_deb/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
 rm -r LibreOffice_6.3.0.4_Linux_x86-64_deb
-rm LibreOffice_6.2.5_Linux_x86-64_deb.tar.gz
+rm LibreOffice_6.3.0_Linux_x86-64_deb.tar.gz
 
 # rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
