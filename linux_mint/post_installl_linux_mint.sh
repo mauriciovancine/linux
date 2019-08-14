@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # upgrade 
-sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 ## apts --------------------------------------------------------------------------------------
 # nvidia
