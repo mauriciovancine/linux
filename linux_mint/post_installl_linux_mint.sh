@@ -144,10 +144,12 @@ sudo snap install slack --classic
 # wps
 wget http://kdl.cc.ksosoft.com/wps-community/download/8722/wps-office_11.1.0.8722_amd64.deb
 sudo dpkg -i wps-office_11.1.0.8722_amd64.deb
+sudo apt install -fy
 rm wps-office_11.1.0.8722_amd64.deb
 
 wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
 sudo dpkg -i wps-office-fonts_1.0_all.deb
+sudo apt install -fy
 rm wps-office-fonts_1.0_all.deb
 
 # rstudio
@@ -157,15 +159,15 @@ sudo apt install -fy
 rm rstudio-1.2.1335-amd64.deb
 
 # google earth
-wget https://www.google.com/intl/pt-PT_ALL/earth/versions/download-thank-you/?usagestats=1&linuxos=deb
-sudo dpkg -i rstudio-1.2.1335-amd64.deb
+wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
+sudo dpkg -i google-earth-pro-stable_current_amd64.deb
 sudo apt install -fy
-rm rstudio-1.2.1335-amd64.deb
-
+rm google-earth-pro-stable_current_amd64.deb
 
 # mendeley
 wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
 sudo dpkg -i mendeleydesktop-latest
+sudo apt install -fy
 rm mendeleydesktop-latest
 
 # teamviewer
@@ -177,6 +179,7 @@ rm teamviewer_amd64.deb
 # stacer
 wget https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0_amd64.deb
 sudo dpkg -i stacer_1.1.0_amd64.deb
+sudo apt install -fy
 rm stacer_1.1.0_amd64.deb
 
 # evernote
