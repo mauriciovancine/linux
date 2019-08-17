@@ -113,6 +113,9 @@ sudo apt install -y snap snapd
 sudo apt remove libreoffice* -y
 sudo snap install libreoffice
 
+# googletools
+sudo snap install googletools-desktop
+
 # opendrive
 sudo snap install odrive-unofficial
 
@@ -152,6 +155,13 @@ wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.d
 sudo dpkg -i rstudio-1.2.1335-amd64.deb
 sudo apt install -fy
 rm rstudio-1.2.1335-amd64.deb
+
+# google earth
+wget https://www.google.com/intl/pt-PT_ALL/earth/versions/download-thank-you/?usagestats=1&linuxos=deb
+sudo dpkg -i rstudio-1.2.1335-amd64.deb
+sudo apt install -fy
+rm rstudio-1.2.1335-amd64.deb
+
 
 # mendeley
 wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
