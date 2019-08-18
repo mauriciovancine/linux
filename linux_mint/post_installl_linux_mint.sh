@@ -84,7 +84,9 @@ sudo apt install -y\
   python-pandas\
   python-sympy\
   python-nose\
-  ipyth
+  ipyth\
+  python3-matplotlib\
+  python3-scipy
 
 # spyder
 sudo apt install -y spyder3
