@@ -14,7 +14,7 @@ sudo apt install -y\
 
 curl -fsS https://dlang.org/install.sh | bash -s dmd
 
-source ~/dlang/dmd-2.087.0/activate
+source ~/dlang/dmd-2.087.1/activate # can change - see the output
 
 git clone https://github.com/abraunegg/onedrive.git
 cd onedrive
