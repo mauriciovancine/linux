@@ -1,5 +1,4 @@
-# script install onedrive mint #
-
+# script install onedrive - debian derivatives #
 # mauricio vancine
 # 07-05-2019
 
