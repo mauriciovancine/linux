@@ -40,6 +40,9 @@ e/n/d/r/c/s/q> q       # quit config
 # show your configuration -----------------------------
 rclone config show
 
+# confer ----------------------------------------------
+rclone -v --drive-impersonate seu_email@gmail.com lsf gdrive_mude:uma_pasta_qualquer
+
 # testing your configuration --------------------------
 rclone sync gdrive: o/caminho/da/sua/pasta -P --dry-run
 
