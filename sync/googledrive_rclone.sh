@@ -6,9 +6,15 @@
 # https://rclone.org/
 
 # install ---------------------------------------------
+# rclone
 wget https://downloads.rclone.org/v1.49.1/rclone-v1.49.1-linux-amd64.deb
-
 sudo dpkg -i rclone-v1.49.1-linux-amd64.deb
+rm rclone-v1.49.1-linux-amd64.deb
+
+# rclone browser
+wget https://github.com/mmozeiko/RcloneBrowser/releases/download/1.2/rclone-browser_1.2_amd64.deb
+sudo dpkg -i rclone-browser_1.2_amd64.deb
+rm rclone-browser_1.2_amd64.deb
 
 # use -------------------------------------------------
 rclone config
@@ -74,7 +80,6 @@ Use auto config?
 y) Yes
 n) No
 y/n> y
-
 
 If your browser doesn`t open automatically go to the following link: http://127.0.0.1:53682/auth
 Log in and authorize rclone for access
