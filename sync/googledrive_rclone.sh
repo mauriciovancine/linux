@@ -4,6 +4,7 @@
 
 # infortion
 # https://rclone.org/
+# https://github.com/mmozeiko/RcloneBrowser
 
 # install ---------------------------------------------
 # rclone
