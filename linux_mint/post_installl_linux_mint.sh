@@ -118,8 +118,8 @@ sudo snap install libreoffice
 # googletools
 sudo snap install googletools-desktop
 
-# opendrive
-sudo snap install odrive-unofficial
+# brave
+sudo snap install brave
 
 # simplenote
 sudo snap install simplenote
