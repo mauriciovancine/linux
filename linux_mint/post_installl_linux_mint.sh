@@ -8,9 +8,6 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
 sudo ubuntu-drivers autoinstall
 
-# chromium
-sudo apt install -y chromium-browser
-
 # gparted
 sudo apt install -y gparted
 
@@ -19,6 +16,9 @@ sudo apt install -y gedit
 
 # screenfetch
 sudo apt install -y screenfetch
+
+# tilix
+sudo apt install -y tilix
  
 # inkscape
 sudo apt install -y inkscape
