@@ -17,12 +17,6 @@ sudo apt install -y gedit
 # screenfetch
 sudo apt install -y screenfetch
 
-# tilix
-sudo apt install -y tilix
- 
-# inkscape
-sudo apt install -y inkscape
-
 # steam
 sudo apt install -y steam-installer
 
@@ -111,6 +105,12 @@ sudo apt install -y papirus-icon-theme
 # snap
 sudo apt install -y snap snapd 
 
+# chromium
+sudo snap install chromium
+
+# inkscape
+sudo snap install inkscape
+
 # libreoffice
 sudo apt remove libreoffice* -y
 sudo snap install libreoffice
@@ -141,6 +141,10 @@ sudo snap install whatsdesk
 
 # slack
 sudo snap install slack --classic
+
+# evernote
+sudo snap install evernote-web-client
+# https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
 
 ## dpkgs --------------------------------------------------------------------------------------
 # wps
@@ -183,9 +187,6 @@ wget https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0
 sudo dpkg -i stacer_1.1.0_amd64.deb
 sudo apt install -fy
 rm stacer_1.1.0_amd64.deb
-
-# evernote
-# https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
 
 ## fix broken
 sudo apt clean && sudo apt update
