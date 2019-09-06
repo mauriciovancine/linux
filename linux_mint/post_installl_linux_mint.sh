@@ -108,6 +108,9 @@ sudo apt install -y snap snapd
 # chromium
 sudo snap install chromium
 
+# wps
+sudo snap install wps-office wps-office-multilang wps-office-all-lang-no-internet
+
 # inkscape
 sudo snap install inkscape
 
