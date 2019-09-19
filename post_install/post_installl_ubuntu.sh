@@ -13,56 +13,34 @@ sudo apt install chrome-gnome-shell
 git clone https://github.com/home-sweet-gnome/dash-to-panel.git
 make install
 
-# nvidia
-sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
-sudo ubuntu-drivers autoinstall
-
-# chromium
-sudo apt install -y chromium-browser
-
+## apts --------------------------------------------------------------------------------------
 # gparted
 sudo apt install -y gparted
- 
-# inkscape
-sudo apt install -y inkscape
 
-# steam
-sudo apt install -y steam-installer
+# screenfetch
+sudo apt install -y screenfetch
 
 # speedtest
 sudo apt install -y speedtest-cli
 
-# spyder
-sudo apt install -y spyder3
-
-# tilix
-sudo add-apt-repository ppa:webupd8team/terminix
-sudo apt-get update
-sudo apt install tilix
-
-# java
-sudo apt install -y\
- default-jre \
- default-jdk
-sudo R CMD javareconf
-
 # git
-sudo add-apt-repository ppa:git-core/ppa
-sudo apt update
-sudo apt install git
+sudo add-apt-repository ppa:git-core/ppa && sudo apt update
+sudo apt install -y git
     
 # gdal
 sudo apt install -y gdal-bin
 
 # grass
-sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt update
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B827C12C2D425E227EDCA75089EBE08314DF160
+sudo add-apt-repository "deb http://ppa.launchpad.net/ubuntugis/ppa/ubuntu bionic main"
+sudo apt update
 sudo apt install -y grass
 
 # qgis
-sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt update
-sudo apt install -y\
-  qgis\
-  qgis-plugin-grass
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B827C12C2D425E227EDCA75089EBE08314DF160
+sudo add-apt-repository "deb http://ppa.launchpad.net/ubuntugis/ppa/ubuntu bionic main"
+sudo apt update
+sudo apt install -y qgis qgis-plugin-grass
   
 # sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -72,7 +50,7 @@ sudo apt install -y sublime-text
 
 # r
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu disco-cran35/"
 sudo apt update
 sudo apt install -y r-base-core # r
 sudo apt install -y r-base-dev # devtools
@@ -90,16 +68,6 @@ sudo apt install -y xauth # cairo
 sudo apt install -y xfonts-base # cairo 
 sudo apt install -y libxt-dev # cairo
 
-# python
-sudo apt install -y\
-  python-numpy\
-  python-scipy\
-  python-matplotlib\
-  python-pandas\
-  python-sympy\
-  python-nose\
-  ipython
-
 # fonts
 sudo apt install -y ubuntu-restricted-extras
 
@@ -111,14 +79,18 @@ sudo apt install -y papirus-icon-theme
 # snap
 sudo apt install -y snap snapd 
 
-# opendrive
-sudo snap install odrive-unofficial
+# inkscape
+sudo snap install inkscape
+
+# libreoffice
+sudo apt remove libreoffice* -y
+sudo snap install libreoffice
+
+# googletools
+sudo snap install googletools-desktop
 
 # simplenote
 sudo snap install simplenote
-
-# spotify
-sudo snap install spotify
 
 # skype
 sudo snap install skype --classic
@@ -126,34 +98,24 @@ sudo snap install skype --classic
 # gitkraken
 sudo snap install gitkraken
 
-# typora
-sudo snap install typora-alanzanattadev
-
 # whatsapp desktop
 sudo snap install whatsdesk
 
+# slack
+sudo snap install slack --classic
+
 ## dpkgs --------------------------------------------------------------------------------------
-# wps
-wget http://kdl.cc.ksosoft.com/wps-community/download/8722/wps-office_11.1.0.8722_amd64.deb
-sudo dpkg -i wps-office_11.1.0.8722_amd64.deb
-rm wps-office_11.1.0.8722_amd64.deb
-
-wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
-sudo dpkg -i wps-office-fonts_1.0_all.deb
-rm wps-office-fonts_1.0_all.deb
-
-sudo apt install ttf-mscorefonts-installer -y
-
 # rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
 sudo dpkg -i rstudio-1.2.1335-amd64.deb
 sudo apt install -fy
 rm rstudio-1.2.1335-amd64.deb
 
-# mendeley
-wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
-sudo dpkg -i mendeleydesktop-latest
-rm mendeleydesktop-latest
+# google earth
+wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
+sudo dpkg -i google-earth-pro-stable_current_amd64.deb
+sudo apt install -fy
+rm google-earth-pro-stable_current_amd64.deb
 
 # teamviewer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
@@ -164,10 +126,8 @@ rm teamviewer_amd64.deb
 # stacer
 wget https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0_amd64.deb
 sudo dpkg -i stacer_1.1.0_amd64.deb
+sudo apt install -fy
 rm stacer_1.1.0_amd64.deb
-
-# evernote
-# https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
 
 ## fix broken
 sudo apt clean && sudo apt update
