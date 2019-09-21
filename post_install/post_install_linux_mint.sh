@@ -50,6 +50,10 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt update
 sudo apt install -y sublime-text
 
+# stacer
+sudo add-apt-repository ppa:oguzhaninan/stacer && sudo apt-get update
+sudo apt install stacer
+
 # r
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
@@ -150,22 +154,11 @@ sudo snap install evernote-web-client
 # https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
 
 ## dpkgs --------------------------------------------------------------------------------------
-# wps
-wget http://kdl.cc.ksosoft.com/wps-community/download/8722/wps-office_11.1.0.8722_amd64.deb
-sudo dpkg -i wps-office_11.1.0.8722_amd64.deb
-sudo apt install -fy
-rm wps-office_11.1.0.8722_amd64.deb
-
-wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
-sudo dpkg -i wps-office-fonts_1.0_all.deb
-sudo apt install -fy
-rm wps-office-fonts_1.0_all.deb
-
 # rstudio
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
-sudo dpkg -i rstudio-1.2.1335-amd64.deb
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5001-amd64.deb
+sudo dpkg -i rstudio-1.2.5001-amd64.deb
 sudo apt install -fy
-rm rstudio-1.2.1335-amd64.deb
+rm rstudio-1.2.5001-amd64.deb
 
 # google earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
@@ -184,12 +177,6 @@ wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo dpkg -i teamviewer_amd64.deb
 sudo apt install -fy
 rm teamviewer_amd64.deb
-
-# stacer
-wget https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0_amd64.deb
-sudo dpkg -i stacer_1.1.0_amd64.deb
-sudo apt install -fy
-rm stacer_1.1.0_amd64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update

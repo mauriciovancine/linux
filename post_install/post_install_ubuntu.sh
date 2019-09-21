@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # upgrade 
-sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 
 ## apts --------------------------------------------------------------------------------------
 # tweeks
@@ -47,6 +47,10 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt update
 sudo apt install -y sublime-text
+
+# stacer
+sudo add-apt-repository ppa:oguzhaninan/stacer && sudo apt-get update
+sudo apt install stacer
 
 # r
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
@@ -106,10 +110,10 @@ sudo snap install slack --classic
 
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
-sudo dpkg -i rstudio-1.2.1335-amd64.deb
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5001-amd64.deb
+sudo dpkg -i rstudio-1.2.5001-amd64.deb
 sudo apt install -fy
-rm rstudio-1.2.1335-amd64.deb
+rm rstudio-1.2.5001-amd64.deb
 
 # google earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
