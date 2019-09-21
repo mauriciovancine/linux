@@ -50,10 +50,6 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt update
 sudo apt install -y sublime-text
 
-# stacer
-sudo add-apt-repository ppa:oguzhaninan/stacer && sudo apt-get update
-sudo apt install stacer
-
 # r
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
@@ -177,6 +173,12 @@ wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo dpkg -i teamviewer_amd64.deb
 sudo apt install -fy
 rm teamviewer_amd64.deb
+
+# stacer
+wget https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0_amd64.deb
+sudo dpkg -i stacer_1.1.0_amd64.deb
+sudo apt install -fy
+rm stacer_1.1.0_amd64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update
