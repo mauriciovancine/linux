@@ -68,6 +68,11 @@ sudo apt install -y xauth # cairo
 sudo apt install -y xfonts-base # cairo 
 sudo apt install -y libxt-dev # cairo
 
+# stacer
+sudo add-apt-repository ppa:oguzhaninan/stacer
+sudo apt update
+sudo apt install stacer
+
 # fonts
 sudo apt install -y ubuntu-restricted-extras
 
@@ -122,12 +127,6 @@ wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo dpkg -i teamviewer_amd64.deb
 sudo apt install -fy
 rm teamviewer_amd64.deb
-
-# stacer
-wget https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0_amd64.deb
-sudo dpkg -i stacer_1.1.0_amd64.deb
-sudo apt install -fy
-rm stacer_1.1.0_amd64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update
