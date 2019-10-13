@@ -94,6 +94,11 @@ echo -e '[Desktop Entry]\n Version=1.0\n Name=trello\n Exec=/opt/trello/Trello\n
 sudo chmod +x /usr/share/applications/trello.desktop
 cp /usr/share/applications/trello.desktop ~/Desktop
 
+# stacer
+sudo add-apt-repository ppa:oguzhaninan/stacer
+sudo apt update
+sudo apt install stacer
+
 # fonts
 sudo apt install -y ubuntu-restricted-extras
 
@@ -173,12 +178,6 @@ wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo dpkg -i teamviewer_amd64.deb
 sudo apt install -fy
 rm teamviewer_amd64.deb
-
-# stacer
-wget https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0_amd64.deb
-sudo dpkg -i stacer_1.1.0_amd64.deb
-sudo apt install -fy
-rm stacer_1.1.0_amd64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update
