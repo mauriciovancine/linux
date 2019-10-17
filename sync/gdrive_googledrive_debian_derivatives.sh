@@ -8,10 +8,9 @@
 # https://olivermarshall.net/how-to-upload-a-file-to-google-drive-from-the-command-line/
 
 # install -------------------------------------------------------
-wget https://drive.google.com/uc?id=1Ej8VgsW5RgK66Btb9p74tSdHMH3p4UNb&export=download
-mv uc?id=1Ej8VgsW5RgK66Btb9p74tSdHMH3p4UNb gdrive-linux-x64
+wget https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64
 chmod +x gdrive-linux-x64
-sudo install gdrive /usr/local/bin/gdrive-linux-x64
+sudo install gdrive-linux-x64 /usr/local/bin/gdrive-linux-x64
 
 # use -----------------------------------------------------------
 gdrive about
