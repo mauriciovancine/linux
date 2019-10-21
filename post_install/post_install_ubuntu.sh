@@ -78,7 +78,7 @@ sudo apt install -y ubuntu-restricted-extras
 
 # icons
 sudo add-apt-repository ppa:papirus/papirus && sudo apt update
-sudo apt install -y papirus-icon-theme
+sudo apt install -y papirus-icon-theme libreoffice-style-papirus
 
 ## snaps --------------------------------------------------------------------------------------
 # snap
