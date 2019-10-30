@@ -7,45 +7,40 @@
 sudo pacman -Syyu
 
 # install r
-sudo pacman -Syy r
+sudo pacman -Sy r
 
 # install qgis
-sudo pacman -Syy qgis
+sudo pacman -Sy qgis
 
 # install rhythmbox
-sudo pacman -Syy rhythmbox
+sudo pacman -Sy rhythmbox
 
-# install yaourt
-# https://www.ostechnix.com/install-yaourt-arch-linux/
-sudo pacman -S --needed base-devel git wget yajl
+# install rstudio
+pamac build -Sy rstudio-desktop
 
-git clone https://aur.archlinux.org/package-query.git
-cd package-query/
-makepkg -si
-cd ..
+# install grass
+pamac build -Sy grass
 
-git clone https://aur.archlinux.org/yaourt.git
-cd yaourt/
-makepkg -si
-cd ..
-sudo rm -dR yaourt/ package-query/
+# install google chrome
+pamac build -Sy google-chrome
 
-# install app from yaourt 
-# https://www.thekerneltrip.com/manjaro/install-r-studio-manjaro/
-yaourt -Sy\
- google-chrome
- rstudio-desktop-bin\
- grass\
- inkscape\
+# install grass
+pamac build -Sy grass
+
+# install rstudio
+pamac build -Sy rstudio-desktop
+
+# install rstudio
+pamac build -Sy rstudio-desktop
+
+# install inkscape
+pamac build -Sy inkscape
+
+# install 
  sublime-text-dev\
  wps-office\
  wps-office-extension-portuguese-brazilian-dictionary\
- teamviewer\
  simplenote-electron-bin
- 
-# install enables
-sudo systemctl start teamviewerd
-sudo systemctl enable teamviewerd  
 
 # java
 export JAVA_LIBS="$JAVA_LIBS -ldl"
