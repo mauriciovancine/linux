@@ -6,11 +6,14 @@
 # update repository and system
 sudo pacman -Syyu
 
-# install app from repository
-sudo pacman -Sy\
- r\
- qgis\
- rhythmbox
+# install r
+sudo pacman -Syy r
+
+# install qgis
+sudo pacman -Syy qgis
+
+# install rhythmbox
+sudo pacman -Syy rhythmbox
 
 # install yaourt
 # https://www.ostechnix.com/install-yaourt-arch-linux/
@@ -30,6 +33,7 @@ sudo rm -dR yaourt/ package-query/
 # install app from yaourt 
 # https://www.thekerneltrip.com/manjaro/install-r-studio-manjaro/
 yaourt -Sy\
+ google-chrome
  rstudio-desktop-bin\
  grass\
  inkscape\
