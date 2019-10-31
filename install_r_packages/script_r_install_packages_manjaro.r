@@ -1,7 +1,12 @@
-### install packages - manjaro ###
+### install r packages - linux mint ###
 
 # github ------------------------------------------------------------------
 if(!require("devtools")) install.packages("devtools")
+devtools::install_github("r-lib/devtools")
+
+# internet ----------------------------------------------------------------
+if(!require("Rcpp")) install.packages("Rcpp")
+if(!require("httpuv")) install.packages("httpuv")
 
 # tidyverse ---------------------------------------------------------------
 if(!require("broom")) install.packages("broom")
@@ -19,6 +24,7 @@ if(!require("lubridate")) install.packages("lubridate")
 if(!require("magrittr")) install.packages("magrittr")
 if(!require("modelr")) install.packages("modelr")
 if(!require("purrr")) install.packages("purrr")
+if(!require("readODS")) install.packages("readODS")
 if(!require("readr")) install.packages("readr")
 if(!require("readxl")) install.packages("readxl")
 if(!require("reprex")) install.packages("reprex")
@@ -30,6 +36,7 @@ if(!require("tibble")) install.packages("tibble")
 if(!require("tidyr")) install.packages("tidyr")      
 if(!require("xml2")) install.packages("xml2")
 if(!require("tidyverse")) install.packages("tidyverse")
+if(!require("writexl")) install.packages("writexl")
 if(!require("tidylog")) devtools::install_github("elbersb/tidylog")
 
 tidyverse_packages(include_self = TRUE)
@@ -37,43 +44,50 @@ tidyverse_packages(include_self = TRUE)
 # ecological analysis -----------------------------------------------------
 if(!require("ade4")) install.packages("ade4")
 if(!require("adespatial")) install.packages("adespatial")
-if(!require("betapart")) install.packages("betapart")
+if(!require("betapart")) install.packages("betapart") # sudo apt install libgmp3-dev
 if(!require("factoextra")) install.packages("factoextra")
 if(!require("FactoMineR")) install.packages("FactoMineR")
-if(!require("spdeb")) install.packages("spdeb")
+if(!require("spdep")) install.packages("spdep")
 if(!require("vegan")) install.packages("vegan")
-
-# presentation ------------------------------------------------------------
-if(!require("xaringan")) install.packages("xaringan")
-if(!require("xaringanthemer")) devtools::install_github("gadenbuie/xaringanthemer")
+if(!require("ggvegan")) devtools::install_github("gavinsimpson/ggvegan")
+if(!require("ggord")) devtools::install_github("fawda123/ggord")
 
 # plot --------------------------------------------------------------------
 if(!require("GGally")) install.packages("GGally")
-
+if(!require("ggpubr")) install.packages("ggpubr")
+if(!require("cowplot")) install.packages("cowplot")
+if(!require("gridExtra")) install.packages("gridExtra")
 
 # data table --------------------------------------------------------------
 if(!require("data.table")) install.packages("data.table")
 
+# googledrive -------------------------------------------------------------
+if(!require("googledrive")) install.packages("googledrive")
+
 # spatial analysis --------------------------------------------------------
 if(!require("sp")) install.packages("sp")
 if(!require("raster")) install.packages("raster")
-if(!require("rgdal")) install.packages("rgdal") # sudo apt install libgdal-dev libproj-dev
+if(!require("rgdal")) install.packages("rgdal")
 if(!require("rgeos")) install.packages("rgeos")
 if(!require("RStoolbox")) install.packages("RStoolbox")
 if(!require("foreign")) install.packages("foreign")
 if(!require("maptools")) install.packages("maptools")
 if(!require("units")) install.packages("units")
-if(!require("udunits2")) install.packages("udunits2") # sudo apt install libudunits2-dev
+if(!require("udunits2")) install.packages("udunits2")
 if(!require("sf")) install.packages("sf")
 if(!require("tmaptools")) install.packages("tmaptools")
-if(!require("gdtools")) install.packages("gdtools") # sudo apt install libcairo2-dev
+if(!require("gdtools")) install.packages("gdtools")
 if(!require("svglite")) install.packages("svglite")
 if(!require("mapview")) install.packages("mapview")
 if(!require("tmap")) install.packages("tmap")
 if(!require("leaflet")) install.packages("leaflet")
 if(!require("cartography")) install.packages("cartography")
+if(!require("RStoolbox")) install.packages("RStoolbox")
+if(!require("whitebox")) devtools::install_github("giswqs/whiteboxR")
+if(!require("fasterize")) install.packages("fasterize")
+if(!require("leaflet")) install.packages("leaflet")
 
-# ecological niche modeling -----------------------------------------------
+# species distribution modeling -----------------------------------------------
 if(!require("adehabitatHS")) install.packages("adehabitatHS")
 if(!require("ape")) install.packages("ape")
 if(!require("biomod2")) install.packages("biomod2")
@@ -102,13 +116,13 @@ if(!require("pROC")) install.packages("pROC")
 if(!require("randomForest")) install.packages("randomForest")
 if(!require("rasterVis")) install.packages("rasterVis")
 if(!require("reshape2")) install.packages("reshape2")
-if(!require("rJava")) install.packages("rJava") # sudo apt install r-cran-rjava 
+if(!require("rJava")) install.packages("rJava") # sudo pacman -Sy jdk8-openjdk
 if(!require("rpart")) install.packages("rpart")
 if(!require("sdm")) install.packages("sdm")
+if(!require("sdm")) install.packages("sdmpredictors")
 if(!require("snowfall")) install.packages("snowfall")
 if(!require("spocc")) install.packages("spocc")
 if(!require("usdm")) install.packages("usdm")
-
 
 # shiny -------------------------------------------------------------------
 if(!require("shiny")) install.packages("shiny")
@@ -116,5 +130,21 @@ if(!require("shinyjs")) install.packages("shinyjs")
 if(!require("shinydashboard")) install.packages("shinydashboard")
 if(!require("DT")) install.packages("DT")
 
+# markdown ----------------------------------------------------------------
+if(!require("rmarkdown")) remotes::install_github("rstudio/rmarkdown")
+if(!require("tinytex")) install.packages("tinytex"); tinytex::install_tinytex()
+if(!require("blogdown")) remotes::install_github("rstudio/blogdown")
+if(!require("pagedown")) remotes::install_github("rstudio/pagedown")
+if(!require("bookdown")) devtools::install_github("rstudio/bookdown")
+if(!require("posterdown")) devtools::install_github("Shedimus/posterdown")
+if(!require("xaringan")) remotes::install_github("yihui/xaringan")
+if(!require("xaringanthemer")) devtools::install_github("gadenbuie/xaringanthemer")
+if(!require("icon")) devtools::install_github("ropenscilabs/icon")
+
+# email -------------------------------------------------------------------
+if(!require("gmailr")) install.packages("gmailr")
+
+# beep --------------------------------------------------------------------
+if(!require("beepr")) install.packages("beepr")
 
 # end ---------------------------------------------------------------------
