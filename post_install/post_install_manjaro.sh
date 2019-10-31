@@ -8,6 +8,7 @@ sudo pacman -Syyu
 
 # install r
 sudo pacman -Sy r
+pamac build udunits # sf
 
 # install qgis
 sudo pacman -Sy qgis
