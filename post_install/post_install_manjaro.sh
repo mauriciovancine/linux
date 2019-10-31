@@ -14,11 +14,17 @@ sudo pacman -Sy rhythmbox
 # install r
 sudo pacman -Sy r
 
+# r packages
+sudo pacman -Sy gcc # gfortran
+
 # install qgis
 sudo pacman -Sy qgis
 
 
 # aur
+# r packages
+pamac build udunits # units
+
 # install google chrome
 pamac build -Sy google-chrome
 
