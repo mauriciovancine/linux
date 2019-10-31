@@ -50,6 +50,7 @@ if(!require("FactoMineR")) install.packages("FactoMineR")
 if(!require("spdep")) install.packages("spdep")
 if(!require("vegan")) install.packages("vegan")
 if(!require("ggvegan")) devtools::install_github("gavinsimpson/ggvegan")
+if(!require("ggord")) devtools::install_github("fawda123/ggord")
 
 # plot --------------------------------------------------------------------
 if(!require("GGally")) install.packages("GGally")
