@@ -26,7 +26,7 @@ sudo pacman -Sy qgis
 pamac build udunits # units
 
 # install google chrome
-pamac build -google-chrome
+pamac build google-chrome
 
 # install simplenote
 pamac build simplenote-electron-bin
