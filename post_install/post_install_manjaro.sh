@@ -55,7 +55,3 @@ pamac build grass
 
 # install wps-office
 pamac build wps-office ttf-wps-fonts wps-office-extension-portuguese-brazilian-dictionary
-
-# java
-export JAVA_LIBS="$JAVA_LIBS -ldl"
-sudo R CMD javareconf
