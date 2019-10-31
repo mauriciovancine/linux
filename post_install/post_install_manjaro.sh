@@ -16,6 +16,8 @@ sudo pacman -Sy r
 
 # r packages
 sudo pacman -Sy gcc # gfortran
+sudo pacman -S jdk8-openjdk # java
+sudo R CMD javareconf # java
 
 # install qgis
 sudo pacman -Sy qgis
