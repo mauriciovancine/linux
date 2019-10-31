@@ -19,9 +19,6 @@ sudo pacman -Sy gcc # gfortran
 sudo pacman -S jdk8-openjdk # java
 sudo R CMD javareconf # java
 
-# install qgis
-sudo pacman -Sy qgis
-
 # install inkscape
 sudo pacman -Sy inkscape
 
@@ -49,6 +46,13 @@ pamac build sublime-text-dev
 
 # install gitkraken
 pamac build gitkraken
+
+# install qgis
+pamac build qgis-ltr
+
+# python for qgis
+sudo pacman -Sy python-pyaml python-psycopg2 python-owslib python-pygments
+pamac build python-pyjade
 
 # install grass
 pamac build grass
