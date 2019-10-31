@@ -22,6 +22,11 @@ sudo R CMD javareconf # java
 # install qgis
 sudo pacman -Sy qgis
 
+# install inkscape
+sudo pacman -Sy inkscape
+
+# install gimp
+sudo pacman -Sy gimp
 
 # aur
 # r packages
@@ -47,9 +52,6 @@ pamac build gitkraken
 
 # install grass
 pamac build grass
-
-# install inkscape
-pamac build inkscape
 
 # install wps-office
 pamac build wps-office ttf-wps-fonts wps-office-extension-portuguese-brazilian-dictionary
