@@ -26,31 +26,31 @@ sudo pacman -Sy qgis
 pamac build udunits # units
 
 # install google chrome
-pamac build -Sy google-chrome
+pamac build -google-chrome
 
 # install simplenote
-pamac build -Sy simplenote-electron-bin
+pamac build simplenote-electron-bin
 
 # install rstudio
-pamac build -Sy rstudio-desktop
+pamac build rstudio-desktop
 
 # r packages
 pamac build udunits # sf
 
 # install sublime text
-pamac build -Sy sublime-text-dev
+pamac build sublime-text-dev
 
 # install gitkraken
-pamac build -Sy gitkraken
+pamac build gitkraken
 
 # install grass
-pamac build -Sy grass
+pamac build grass
 
 # install inkscape
-pamac build -Sy inkscape
+pamac build inkscape
 
 # install wps-office
-pamac build -Sy wps-office ttf-wps-fonts wps-office-extension-portuguese-brazilian-dictionary
+pamac build wps-office ttf-wps-fonts wps-office-extension-portuguese-brazilian-dictionary
 
 # java
 export JAVA_LIBS="$JAVA_LIBS -ldl"
