@@ -8,6 +8,9 @@ sudo pacman -Syyu
 
 
 # packages
+# install chromium
+sudo pacman -Sy chromium
+
 # install rhythmbox
 sudo pacman -Sy rhythmbox
 
@@ -24,6 +27,10 @@ sudo pacman -Sy inkscape
 
 # install gimp
 sudo pacman -Sy gimp
+
+# install speedtest-cli
+sudo pacman -Sy speedtest-cli
+
 
 # aur
 # r packages
@@ -59,3 +66,9 @@ pamac build grass
 
 # install wps-office
 pamac build wps-office ttf-wps-fonts wps-office-extension-portuguese-brazilian-dictionary
+
+# install slack-desktop
+pamac build slack-desktop
+
+# install whatsapp
+pamac build whatsapp-nativefier
