@@ -72,3 +72,6 @@ pamac build slack-desktop
 
 # install whatsapp
 pamac build whatsapp-nativefier
+
+# install etcher
+pamac build balena-etcher
