@@ -152,6 +152,23 @@ sudo snap install evernote-web-client
 # https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
 
 ## dpkgs --------------------------------------------------------------------------------------
+# libreoffice
+wget https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86_64/LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
+tar -xvzf LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
+cd ~/LibreOffice_6.3.3.2_Linux_x86-64_deb/DEBS
+sudo dpkg -i *.deb 
+cd ..; cd ..
+rm -r LibreOffice_6.3.3.2_Linux_x86-64_deb
+rm LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
+
+wget https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86_64/LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
+tar -xvzf LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
+cd ~/LibreOffice_6.3.3.2_Linux_x86-64_deb_langpack_pt/DEBS
+sudo dpkg -i *.deb 
+cd ..; cd ..
+rm -r LibreOffice_6.3.3.2_Linux_x86-64_deb_langpack_pt
+rm LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
+
 # rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5001-amd64.deb
 sudo dpkg -i rstudio-1.2.5001-amd64.deb
