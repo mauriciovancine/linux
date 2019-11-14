@@ -104,7 +104,7 @@ sudo apt update
 sudo apt install stacer
 
 # fonts
-sudo apt install -y ubuntu-restricted-extras
+sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
 
 # icons
 sudo add-apt-repository ppa:papirus/papirus && sudo apt update
