@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# remove lock apt
+sudo rm /var/lib/dpkg/lock-frontend
+sudo rm /var/cache/apt/archives/lock
+
 # upgrade 
-sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+sudo apt update && sudo apt upgrade -y
 
 ## apts --------------------------------------------------------------------------------------
 # nvidia
@@ -116,19 +120,6 @@ sudo snap install chromium
 # inkscape
 sudo snap install inkscape
 
-# libreoffice
-sudo apt remove libreoffice* -y
-sudo snap install libreoffice
-
-# googletools
-sudo snap install googletools-desktop
-
-# brave
-sudo snap install brave
-
-# simplenote
-sudo snap install simplenote
-
 # spotify
 sudo snap install spotify
 
@@ -152,6 +143,11 @@ sudo snap install evernote-web-client
 # https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
 
 ## dpkgs --------------------------------------------------------------------------------------
+# google chrome
+wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome-stable_current_amd64.deb
+rm google-chrome-stable_current_amd64.deb
+
 # libreoffice
 wget https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86_64/LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
 tar -xvzf LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
@@ -182,16 +178,20 @@ sudo apt install -fy
 rm google-earth-pro-stable_current_amd64.deb
 
 # mendeley
-wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
+wget -c https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
 sudo dpkg -i mendeleydesktop-latest
 sudo apt install -fy
 rm mendeleydesktop-latest
 
-# teamviewer
-wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
-sudo dpkg -i teamviewer_amd64.deb
-sudo apt install -fy
-rm teamviewer_amd64.deb
+# simplenote
+wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.8.0/Simplenote-linux-1.8.0-amd64.deb
+sudo dpkg -i Simplenote-linux-1.8.0-amd64.deb
+rm Simplenote-linux-1.8.0-amd64.deb
+
+# anydesk
+wget -c https://download.anydesk.com/linux/anydesk_5.4.1-1_amd64.deb
+sudo dpkg -i anydesk_5.4.1-1_amd64.deb
+rm anydesk_5.4.1-1_amd64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update
@@ -201,7 +201,7 @@ sudo apt install -y --fix-broken
 
 ## cleanup apt
 sudo apt update
+sudo apt autoclean
 sudo apt autoremove -y
-sudo apt autoclean -y
 
 # end ----------------------------------------------------------------------
