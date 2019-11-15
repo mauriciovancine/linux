@@ -73,6 +73,7 @@ sudo apt install -y xvfb # cairo
 sudo apt install -y xauth # cairo 
 sudo apt install -y xfonts-base # cairo 
 sudo apt install -y libxt-dev # cairo
+sudo apt install -y libgsl-dev # gsl
 
 # python
 sudo apt install -y\
