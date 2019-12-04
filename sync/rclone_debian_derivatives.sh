@@ -49,7 +49,7 @@ rclone sync gdrive: o/caminho/da/sua/pasta -P --dry-run
 # sync from drive to folder ---------------------------
 rclone sync gdrive: o/caminho/da/sua/pasta -P
 
-# sync from drive to folder ---------------------------
+# sync from folder to drive ---------------------------
 rclone sync o/caminho/da/sua/pasta gdrive: -P
 
 # end -------------------------------------------------
