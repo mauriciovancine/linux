@@ -40,14 +40,27 @@ sudo apt install -y git
 # gdal
 sudo apt install -y gdal-bin
 
-# grass
-sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt update
-sudo apt install -y grass
+# gedit
+sudo apt install gedit
 
 # qgis
-sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt update
+sudo gedit /etc/apt/sources.list
+
+deb         https://qgis.org/ubuntu bionic main
+deb-src     https://qgis.org/ubuntu bionic main
+
+wget -O - https://qgis.org/downloads/qgis-2019.gpg.key | gpg --import
+gpg --fingerprint 51F523511C7028C3
+gpg --export --armor 51F523511C7028C3 | sudo apt-key add -
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
+
+sudo apt update
+
 sudo apt install -y qgis qgis-plugin-grass
-  
+
+# grass
+sudo apt install -y grass
+
 # sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
