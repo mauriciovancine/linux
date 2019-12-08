@@ -180,10 +180,10 @@ rm -r LibreOffice_6.3.3.2_Linux_x86-64_deb_langpack_pt
 rm LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
 
 # rstudio
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5001-amd64.deb
-sudo dpkg -i rstudio-1.2.5001-amd64.deb
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5019-amd64.deb
+sudo dpkg -i rstudio-1.2.5019-amd64.deb
 sudo apt install -fy
-rm rstudio-1.2.5001-amd64.deb
+rm rstudio-1.2.5019-amd64.deb
 
 # google earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
@@ -198,14 +198,14 @@ sudo apt install -fy
 rm mendeleydesktop-latest
 
 # simplenote
-wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.8.0/Simplenote-linux-1.8.0-amd64.deb
-sudo dpkg -i Simplenote-linux-1.8.0-amd64.deb
-rm Simplenote-linux-1.8.0-amd64.deb
+wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.12.0/Simplenote-linux-1.12.0-amd64.deb
+sudo dpkg -i Simplenote-linux-1.12.0-amd64.deb
+rm Simplenote-linux-1.12.0-amd64.deb
 
 # anydesk
-wget -c https://download.anydesk.com/linux/anydesk_5.4.1-1_amd64.deb
-sudo dpkg -i anydesk_5.4.1-1_amd64.deb
-rm anydesk_5.4.1-1_amd64.deb
+wget -c https://download.anydesk.com/linux/anydesk_5.5.1-1_amd64.deb
+sudo dpkg -i anydesk_5.5.1-1_amd64.deb
+rm anydesk_5.5.1-1_amd64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update
