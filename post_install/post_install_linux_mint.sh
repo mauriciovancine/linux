@@ -35,6 +35,9 @@ sudo apt install -y screenfetch
 # speedtest
 sudo apt install -y speedtest-cli
 
+# htop
+sudo apt install htop
+
 # inkscape
 sudo apt install -y inkscape
 
@@ -54,12 +57,12 @@ sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic
 sudo apt update
 sudo apt install -y r-base-core # r
 sudo apt install -y r-base-dev # devtools
-sudo apt install -y libssl-dev # tidyverse
-sudo apt install -y libxml2-dev # tidyverse
-sudo apt install -y libcurl4-openssl-dev # tidyverse
+sudo apt install -y libxml2-dev # devtools
+sudo apt install -y libssl-dev # devtools
+sudo apt install -y libcurl4-openssl-dev # devtools
 sudo apt install -y libgdal-dev # gdal
 sudo apt install -y libproj-dev # gdal
-sudo apt install -y libudunits2-dev # 
+sudo apt install -y libudunits2-dev # units
 sudo apt install -y libcairo2-dev # mapview
 sudo apt install -y libgmp3-dev # betapart
 sudo apt install -y libgtk2.0-dev # cairo
@@ -131,9 +134,6 @@ flatpak install -y flathub com.leinardi.gwe
 # mendeley
 flatpak install -y flathub com.elsevier.MendeleyDesktop
 
-# anydesk
-flatpak install -y flathub com.anydesk.Anydesk
-
 # games
 flatpak install -y flathub org.gnome.Games
 
@@ -159,6 +159,11 @@ wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.1
 sudo dpkg -i Simplenote-linux-1.12.0-amd64.deb
 rm Simplenote-linux-1.12.0-amd64.deb
 
+# anydesk
+wget -c https://download.anydesk.com/linux/anydesk_5.5.1-1_amd64.deb
+sudo dpkg -i anydesk_5.5.1-1_amd64.deb
+rm anydesk_5.5.1-1_amd64.deb
+
 ## fix broken
 sudo apt install -f
 
@@ -168,7 +173,7 @@ flatpak update -y
 sudo apt autoclean
 sudo apt autoremove -y
 
-# outhers ------------------------------------------------------------------
+# others ------------------------------------------------------------------
 # evernote
 sudo snap install evernote-web-client
 # https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
