@@ -9,24 +9,22 @@ sudo apt install gnome-tweaks
 sudo apt install gnome-shell-extensions
 sudo apt install chrome-gnome-shell
 
-# dash-to-panel
-git clone https://github.com/home-sweet-gnome/dash-to-panel.git
+# git
+sudo add-apt-repository ppa:git-core/ppa && sudo apt update
+sudo apt install -y git
+
+# dash-to-dock
+git clone https://github.com/micheleg/dash-to-dock.git
+make
 make install
 
 ## apts --------------------------------------------------------------------------------------
-# gparted
-sudo apt install -y gparted
-
 # screenfetch
 sudo apt install -y screenfetch
 
 # speedtest
 sudo apt install -y speedtest-cli
-
-# git
-sudo add-apt-repository ppa:git-core/ppa && sudo apt update
-sudo apt install -y git
-    
+  
 # gdal
 sudo apt install -y gdal-bin
 
