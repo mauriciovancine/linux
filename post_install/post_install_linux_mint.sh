@@ -39,18 +39,9 @@ sudo apt install -y speedtest-cli
 # inkscape
 sudo apt install -y inkscape
 
-# gimp
-
-
 # git
 sudo add-apt-repository ppa:git-core/ppa && sudo apt update
 sudo apt install -y git
-
-# sublime
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt update
-sudo apt install -y sublime-text
 
 # java
 sudo apt install -y\
@@ -123,20 +114,24 @@ sudo apt update
 sudo apt install -fy
 sudo apt install -y flatpak
 
+# libreoffice
+sudo apt remove libreoffice*
+flatpak install -y flathub org.libreoffice.LibreOffice
+
+# sublime
+flatpak install -y flathub com.sublimetext.three
+
 # skype
 flatpak install -y flathub com.skype.Client
 
 # slack
 flatpak install -y flathub com.slack.Slack
 
-# libreoffice
-flatpak install -y flathub org.libreoffice.LibreOffice
-
 # gimp
 flatpak install -y flathub org.gimp.GIMP
 
-# qgis
-flatpak install -y flathub org.qgis.qgis
+# telegram
+flatpak install -y flathub org.telegram.desktop
 
 # nvidia
 flatpak install -y flathub com.leinardi.gwe
@@ -147,6 +142,9 @@ flatpak install -y flathub com.elsevier.MendeleyDesktop
 # anydesk
 flatpak install -y flathub com.anydesk.Anydesk
 
+# qgis
+flatpak install -y flathub org.qgis.qgis
+
 # games
 flatpak install -y flathub org.gnome.Games
 
@@ -155,24 +153,6 @@ flatpak install -y flathub org.gnome.Games
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
-
-# libreoffice
-sudo apt remove -y libreoffice*
-wget https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86_64/LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
-tar -xvzf LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
-cd ~/LibreOffice_6.3.3.2_Linux_x86-64_deb/DEBS
-sudo dpkg -i *.deb 
-cd ..; cd ..
-rm -r LibreOffice_6.3.3.2_Linux_x86-64_deb
-rm LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
-
-wget https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86_64/LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
-tar -xvzf LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
-cd ~/LibreOffice_6.3.3.2_Linux_x86-64_deb_langpack_pt/DEBS
-sudo dpkg -i *.deb 
-cd ..; cd ..
-rm -r LibreOffice_6.3.3.2_Linux_x86-64_deb_langpack_pt
-rm LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
 
 # rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5019-amd64.deb
@@ -186,21 +166,10 @@ sudo dpkg -i google-earth-pro-stable_current_amd64.deb
 sudo apt install -fy
 rm google-earth-pro-stable_current_amd64.deb
 
-# mendeley
-wget -c https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
-sudo dpkg -i mendeleydesktop-latest
-sudo apt install -fy
-rm mendeleydesktop-latest
-
 # simplenote
 wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.12.0/Simplenote-linux-1.12.0-amd64.deb
 sudo dpkg -i Simplenote-linux-1.12.0-amd64.deb
 rm Simplenote-linux-1.12.0-amd64.deb
-
-# anydesk
-wget -c https://download.anydesk.com/linux/anydesk_5.5.1-1_amd64.deb
-sudo dpkg -i anydesk_5.5.1-1_amd64.deb
-rm anydesk_5.5.1-1_amd64.deb
 
 ## fix broken
 sudo apt install -f
@@ -212,9 +181,6 @@ sudo apt autoclean
 sudo apt autoremove -y
 
 # outhers ------------------------------------------------------------------
-# steam
-sudo apt install -y steam-installer
-
 # evernote
 sudo snap install evernote-web-client
 # https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
@@ -225,14 +191,8 @@ sudo snap install chromium
 # gdal
 sudo apt install -y gdal-bin
 
-# gitkraken
-sudo snap install gitkraken
-
 # typora
 sudo snap install typora-alanzanattadev
-
-# spotify
-sudo snap install spotify
 
 # trello
 wget https://github.com/danielchatfield/trello-desktop/releases/download/v0.1.9/Trello-linux-0.1.9.zip -O trello.zip
