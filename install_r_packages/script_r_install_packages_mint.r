@@ -2,7 +2,6 @@
 
 # github ------------------------------------------------------------------
 if(!require("devtools")) install.packages("devtools")
-devtools::install_github("r-lib/devtools")
 
 # internet ----------------------------------------------------------------
 if(!require("Rcpp")) install.packages("Rcpp")
@@ -24,7 +23,6 @@ if(!require("lubridate")) install.packages("lubridate")
 if(!require("magrittr")) install.packages("magrittr")
 if(!require("modelr")) install.packages("modelr")
 if(!require("purrr")) install.packages("purrr")
-if(!require("readODS")) install.packages("readODS")
 if(!require("readr")) install.packages("readr")
 if(!require("readxl")) install.packages("readxl")
 if(!require("reprex")) install.packages("reprex")
