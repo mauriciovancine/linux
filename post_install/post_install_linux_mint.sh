@@ -20,8 +20,7 @@ sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
 sudo ubuntu-drivers autoinstall
 
 # stacer
-sudo add-apt-repository ppa:oguzhaninan/stacer
-sudo apt update
+sudo add-apt-repository ppa:oguzhaninan/stacer && sudo apt update
 sudo apt install stacer
 
 # gparted
@@ -108,9 +107,7 @@ sudo snap install whatsdesk
 
 ## flatpaks -----------------------------------------------------------------------------------
 # flatpak
-sudo add-apt-repository ppa:alexlarsson/flatpak
-sudo apt update
-sudo apt install -fy
+sudo add-apt-repository ppa:alexlarsson/flatpak && sudo apt update
 sudo apt install -y flatpak
 
 # libreoffice
