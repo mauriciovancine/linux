@@ -81,15 +81,8 @@ sudo apt install -y\
   python3-pandas
   
 # qgis
-sudo gedit /etc/apt/sources.list
-
-deb         https://qgis.org/ubuntu bionic main
-deb-src     https://qgis.org/ubuntu bionic main
-
-wget -O - https://qgis.org/downloads/qgis-2019.gpg.key | gpg --import gpg --fingerprint 51F523511C7028C3
-gpg --export --armor 51F523511C7028C3 | sudo apt-key add -
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
-
+sudo add-apt-repository "deb https://qgis.org/ubuntu bionic main"
 sudo apt update
 
 sudo apt install -y qgis qgis-plugin-grass
