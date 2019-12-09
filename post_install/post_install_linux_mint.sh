@@ -113,14 +113,42 @@ sudo apt install -y grass
 # snap
 sudo apt install -y snap snapd 
 
-# skype
-sudo snap install skype --classic
-
 # whatsapp desktop
 sudo snap install whatsdesk
 
+## flatpaks -----------------------------------------------------------------------------------
+# flatpak
+sudo add-apt-repository ppa:alexlarsson/flatpak
+sudo apt update
+sudo apt install -fy
+sudo apt install -y flatpak
+
+# skype
+flatpak install -y flathub com.skype.Client
+
 # slack
-sudo snap install slack --classic
+flatpak install -y flathub com.slack.Slack
+
+# libreoffice
+flatpak install -y flathub org.libreoffice.LibreOffice
+
+# gimp
+flatpak install -y flathub org.gimp.GIMP
+
+# qgis
+flatpak install -y flathub org.qgis.qgis
+
+# nvidia
+flatpak install -y flathub com.leinardi.gwe
+
+# mendeley
+flatpak install -y flathub com.elsevier.MendeleyDesktop
+
+# anydesk
+flatpak install -y flathub com.anydesk.Anydesk
+
+# games
+flatpak install -y flathub org.gnome.Games
 
 ## dpkgs --------------------------------------------------------------------------------------
 # google chrome
