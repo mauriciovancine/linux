@@ -8,6 +8,21 @@ sudo rm /var/cache/apt/archives/lock
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 ## apts --------------------------------------------------------------------------------------
+# fonts
+sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
+
+# icons
+sudo add-apt-repository ppa:papirus/papirus && sudo apt update
+sudo apt install -y papirus-icon-theme libreoffice-style-papirus
+
+# nvidia
+sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
+sudo ubuntu-drivers autoinstall
+
+# stacer
+sudo add-apt-repository ppa:oguzhaninan/stacer
+sudo apt update
+sudo apt install stacer
 
 # gparted
 sudo apt install -y gparted
@@ -21,37 +36,21 @@ sudo apt install -y screenfetch
 # speedtest
 sudo apt install -y speedtest-cli
 
+# inkscape
+sudo apt install -y inkscape
+
+# gimp
+
+
 # git
 sudo add-apt-repository ppa:git-core/ppa && sudo apt update
 sudo apt install -y git
-    
-# qgis
-sudo gedit /etc/apt/sources.list
-
-deb         https://qgis.org/ubuntu bionic main
-deb-src     https://qgis.org/ubuntu bionic main
-
-wget -O - https://qgis.org/downloads/qgis-2019.gpg.key | gpg --import
-gpg --fingerprint 51F523511C7028C3
-gpg --export --armor 51F523511C7028C3 | sudo apt-key add -
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
-
-sudo apt update
-
-sudo apt install -y qgis qgis-plugin-grass
-
-# grass
-sudo apt install -y grass
 
 # sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt update
 sudo apt install -y sublime-text
-
-# inkscape
-sudo apt install inkscape
-
 
 # java
 sudo apt install -y\
@@ -92,38 +91,27 @@ sudo apt install -y\
   python3-matplotlib\
   python3-scipy
 
-# spyder
-sudo apt install -y spyder3
+# qgis
+sudo gedit /etc/apt/sources.list
 
-# trello
-wget https://github.com/danielchatfield/trello-desktop/releases/download/v0.1.9/Trello-linux-0.1.9.zip -O trello.zip
-sudo mkdir /opt/trello
-sudo unzip trello.zip -d /opt/trello/
-sudo ln -sf /opt/trello/Trello /usr/bin/trello
-echo -e '[Desktop Entry]\n Version=1.0\n Name=trello\n Exec=/opt/trello/Trello\n Icon=/opt/trello/resources/app/static/Icon.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/trello.desktop
-sudo chmod +x /usr/share/applications/trello.desktop
-cp /usr/share/applications/trello.desktop ~/Desktop
+deb         https://qgis.org/ubuntu bionic main
+deb-src     https://qgis.org/ubuntu bionic main
 
-# stacer
-sudo add-apt-repository ppa:oguzhaninan/stacer
+wget -O - https://qgis.org/downloads/qgis-2019.gpg.key | gpg --import
+gpg --fingerprint 51F523511C7028C3
+gpg --export --armor 51F523511C7028C3 | sudo apt-key add -
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
+
 sudo apt update
-sudo apt install stacer
 
-# fonts
-sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
+sudo apt install -y qgis qgis-plugin-grass
 
-# icons
-sudo add-apt-repository ppa:papirus/papirus && sudo apt update
-sudo apt install -y papirus-icon-theme libreoffice-style-papirus
+# grass
+sudo apt install -y grass
 
 ## snaps --------------------------------------------------------------------------------------
 # snap
 sudo apt install -y snap snapd 
-
-
-
-# spotify
-sudo snap install spotify
 
 # skype
 sudo snap install skype --classic
@@ -141,7 +129,7 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
 # libreoffice
-sudo apt remove libreoffice*
+sudo apt remove -y libreoffice*
 wget https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86_64/LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
 tar -xvzf LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
 cd ~/LibreOffice_6.3.3.2_Linux_x86-64_deb/DEBS
@@ -187,13 +175,11 @@ sudo dpkg -i anydesk_5.5.1-1_amd64.deb
 rm anydesk_5.5.1-1_amd64.deb
 
 ## fix broken
-sudo apt clean && sudo apt update
-sudo dpkg --configure -a
 sudo apt install -f
-sudo apt install -y --fix-broken 
 
-## cleanup apt
-sudo apt update
+## finishing, updating and cleaning
+sudo apt update && sudo apt dist-upgrade -y
+flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
 
@@ -217,8 +203,16 @@ sudo snap install gitkraken
 # typora
 sudo snap install typora-alanzanattadev
 
-# nvidia
-sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
-sudo ubuntu-drivers autoinstall
+# spotify
+sudo snap install spotify
+
+# trello
+wget https://github.com/danielchatfield/trello-desktop/releases/download/v0.1.9/Trello-linux-0.1.9.zip -O trello.zip
+sudo mkdir /opt/trello
+sudo unzip trello.zip -d /opt/trello/
+sudo ln -sf /opt/trello/Trello /usr/bin/trello
+echo -e '[Desktop Entry]\n Version=1.0\n Name=trello\n Exec=/opt/trello/Trello\n Icon=/opt/trello/resources/app/static/Icon.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/trello.desktop
+sudo chmod +x /usr/share/applications/trello.desktop
+cp /usr/share/applications/trello.desktop ~/Desktop
 
 # end ----------------------------------------------------------------------
