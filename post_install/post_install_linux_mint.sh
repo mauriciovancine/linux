@@ -5,12 +5,9 @@ sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
 
 # upgrade 
-sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 ## apts --------------------------------------------------------------------------------------
-# nvidia
-sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
-sudo ubuntu-drivers autoinstall
 
 # gparted
 sudo apt install -y gparted
@@ -21,28 +18,13 @@ sudo apt install -y gedit
 # screenfetch
 sudo apt install -y screenfetch
 
-# steam
-sudo apt install -y steam-installer
-
 # speedtest
 sudo apt install -y speedtest-cli
-
-# java
-sudo apt install -y\
- default-jre \
- default-jdk
-sudo R CMD javareconf
 
 # git
 sudo add-apt-repository ppa:git-core/ppa && sudo apt update
 sudo apt install -y git
     
-# gdal
-sudo apt install -y gdal-bin
-
-# gedit
-sudo apt install gedit
-
 # qgis
 sudo gedit /etc/apt/sources.list
 
@@ -66,6 +48,16 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt update
 sudo apt install -y sublime-text
+
+# inkscape
+sudo apt install inkscape
+
+
+# java
+sudo apt install -y\
+ default-jre \
+ default-jdk
+sudo R CMD javareconf
 
 # r
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
@@ -128,11 +120,7 @@ sudo apt install -y papirus-icon-theme libreoffice-style-papirus
 # snap
 sudo apt install -y snap snapd 
 
-# chromium
-sudo snap install chromium
 
-# inkscape
-sudo snap install inkscape
 
 # spotify
 sudo snap install spotify
@@ -140,21 +128,11 @@ sudo snap install spotify
 # skype
 sudo snap install skype --classic
 
-# gitkraken
-sudo snap install gitkraken
-
-# typora
-sudo snap install typora-alanzanattadev
-
 # whatsapp desktop
 sudo snap install whatsdesk
 
 # slack
 sudo snap install slack --classic
-
-# evernote
-sudo snap install evernote-web-client
-# https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
 
 ## dpkgs --------------------------------------------------------------------------------------
 # google chrome
@@ -163,6 +141,7 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
 # libreoffice
+sudo apt remove libreoffice*
 wget https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86_64/LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
 tar -xvzf LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
 cd ~/LibreOffice_6.3.3.2_Linux_x86-64_deb/DEBS
@@ -217,5 +196,29 @@ sudo apt install -y --fix-broken
 sudo apt update
 sudo apt autoclean
 sudo apt autoremove -y
+
+# outhers ------------------------------------------------------------------
+# steam
+sudo apt install -y steam-installer
+
+# evernote
+sudo snap install evernote-web-client
+# https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
+
+# chromium
+sudo snap install chromium
+
+# gdal
+sudo apt install -y gdal-bin
+
+# gitkraken
+sudo snap install gitkraken
+
+# typora
+sudo snap install typora-alanzanattadev
+
+# nvidia
+sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
+sudo ubuntu-drivers autoinstall
 
 # end ----------------------------------------------------------------------
