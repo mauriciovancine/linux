@@ -71,16 +71,12 @@ sudo apt install -y libgsl-dev # gsl
 
 # python
 sudo apt install -y\
-  python-numpy\
-  python-scipy\
-  python-matplotlib\
-  python-pandas\
-  python-sympy\
-  python-nose\
-  ipyth\
+  python3-pip\
+  python3-numpy\
+  python3-scipy\
   python3-matplotlib\
-  python3-scipy
-
+  python3-pandas
+  
 # qgis
 sudo gedit /etc/apt/sources.list
 
@@ -111,7 +107,7 @@ sudo add-apt-repository ppa:alexlarsson/flatpak && sudo apt update
 sudo apt install -y flatpak
 
 # libreoffice
-sudo apt remove libreoffice*
+sudo apt remove -y libreoffice*
 flatpak install -y flathub org.libreoffice.LibreOffice
 
 # sublime
@@ -138,9 +134,6 @@ flatpak install -y flathub com.elsevier.MendeleyDesktop
 # anydesk
 flatpak install -y flathub com.anydesk.Anydesk
 
-# qgis
-flatpak install -y flathub org.qgis.qgis
-
 # games
 flatpak install -y flathub org.gnome.Games
 
@@ -159,7 +152,6 @@ rm rstudio-1.2.5019-amd64.deb
 # google earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
 sudo dpkg -i google-earth-pro-stable_current_amd64.deb
-sudo apt install -fy
 rm google-earth-pro-stable_current_amd64.deb
 
 # simplenote
@@ -172,7 +164,7 @@ sudo apt install -f
 
 ## finishing, updating and cleaning
 sudo apt update && sudo apt dist-upgrade -y
-flatpak update
+flatpak update -y
 sudo apt autoclean
 sudo apt autoremove -y
 
