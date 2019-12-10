@@ -23,6 +23,7 @@ if(!require("lubridate")) install.packages("lubridate")
 if(!require("magrittr")) install.packages("magrittr")
 if(!require("modelr")) install.packages("modelr")
 if(!require("purrr")) install.packages("purrr")
+if(!require("readODS")) install.packages("readODS")
 if(!require("readr")) install.packages("readr")
 if(!require("readxl")) install.packages("readxl")
 if(!require("reprex")) install.packages("reprex")
@@ -35,13 +36,12 @@ if(!require("tidyr")) install.packages("tidyr")
 if(!require("xml2")) install.packages("xml2")
 if(!require("tidyverse")) install.packages("tidyverse") # sudo apt install libssl-dev
 if(!require("writexl")) install.packages("writexl")
-if(!require("tidylog")) devtools::install_github("elbersb/tidylog")
 
 tidyverse_packages(include_self = TRUE)
 
 # ecological analysis -----------------------------------------------------
 if(!require("ade4")) install.packages("ade4")
-if(!require("adespatial")) install.packages("adespatial")
+if(!require("adespatial")) install.packages("adespatial") # sudo apt install -y libudunits2-dev
 if(!require("betapart")) install.packages("betapart") # sudo apt install libgmp3-dev
 if(!require("factoextra")) install.packages("factoextra")
 if(!require("FactoMineR")) install.packages("FactoMineR")
@@ -144,5 +144,8 @@ if(!require("gmailr")) install.packages("gmailr")
 
 # beep --------------------------------------------------------------------
 if(!require("beepr")) install.packages("beepr")
+
+# python ------------------------------------------------------------------
+if(!require("reticulate")) install.packages("reticulate")
 
 # end ---------------------------------------------------------------------
