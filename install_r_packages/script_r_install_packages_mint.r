@@ -56,77 +56,101 @@ if(!require("ggpubr")) install.packages("ggpubr")
 if(!require("cowplot")) install.packages("cowplot")
 if(!require("gridExtra")) install.packages("gridExtra")
 
+# colors ------------------------------------------------------------------
+if(!require(wesanderson)) devtools::install_github("karthik/wesanderson")
+
+
 # data table --------------------------------------------------------------
 if(!require("data.table")) install.packages("data.table")
-
-# googledrive -------------------------------------------------------------
-if(!require("googledrive")) install.packages("googledrive")
 
 # spatial analysis --------------------------------------------------------
 if(!require("sp")) install.packages("sp")
 if(!require("raster")) install.packages("raster")
 if(!require("rgdal")) install.packages("rgdal") # sudo apt install libgdal-dev libproj-dev
 if(!require("rgeos")) install.packages("rgeos")
-if(!require("RStoolbox")) install.packages("RStoolbox")
-if(!require("foreign")) install.packages("foreign")
-if(!require("maptools")) install.packages("maptools")
 if(!require("units")) install.packages("units")
 if(!require("udunits2")) install.packages("udunits2") # sudo apt install libudunits2-dev
 if(!require("sf")) install.packages("sf")
-if(!require("tmaptools")) install.packages("tmaptools")
-if(!require("gdtools")) install.packages("gdtools") # sudo apt install libcairo2-dev
-if(!require("svglite")) install.packages("svglite")
-if(!require("mapview")) install.packages("mapview")
+if(!require("fasterize")) install.packages("fasterize")
+
+# maps --------------------------------------------------------------------
 if(!require("tmap")) install.packages("tmap")
+if(!require("tmaptools")) install.packages("tmaptools")
+if(!require("maptools")) install.packages("maptools")
+if(!require("mapview")) install.packages("mapview")
 if(!require("leaflet")) install.packages("leaflet")
 if(!require("cartography")) install.packages("cartography")
+if(!require("rasterVis")) install.packages("rasterVis")
+
+# landscape metrics -------------------------------------------------------
+if(!require("landscapeverse")) devtools::install_github("r-spatialecology/landscapeverse")
+if(!require("landscapemetrics")) install.packages("landscapemetrics")
+if(!require("NLMR")) install.packages("NLMR")
+if(!require("landscapetools")) install.packages("landscapetools")
+
+# remote sensing ----------------------------------------------------------
+if(!require("getlandsat")) install.packages("getlandsat")
 if(!require("RStoolbox")) install.packages("RStoolbox")
-if(!require("whitebox")) devtools::install_github("giswqs/whiteboxR")
-if(!require("fasterize")) install.packages("fasterize")
-if(!require("leaflet")) install.packages("leaflet")
 
 # species distribution modeling -----------------------------------------------
-if(!require("adehabitatHS")) install.packages("adehabitatHS")
-if(!require("ape")) install.packages("ape")
+# occ
+if(!require("rgbif")) install.packages("rgbif")
+if(!require("spocc")) install.packages("spocc")
+if(!require("CoordinateCleaner")) install.packages("CoordinateCleaner")
+if(!require("speciesgeocodeR")) install_github("azizka/speciesgeocodeR")
+if(!require("sampbias")) install_github("azizka/sampbias")
+if(!require("taxize")) install.packages("taxize")
+
+# var
+if(!require("rnaturalearth")) install.packages("rnaturalearth")
+if(!require("rnaturalearthdata")) install.packages("rnaturalearthdata")
+if(!require("rnaturalearthhires")) devtools::install_github("ropensci/rnaturalearthhires")
+if(!require("geobr")) install.packages("geobr")
+if(!require("sdmpredictors")) install.packages("sdmpredictors")
+if(!require("usdm")) install.packages("usdm")
+
+# algorithms
 if(!require("biomod2")) install.packages("biomod2")
-if(!require("boot")) install.packages("boot")
-if(!require("classInt")) install.packages("classInt")
-if(!require("spDataLarge")) install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/", type = "source")
-if(!require("cowplot")) install.packages("cowplot")
-if(!require("Daim")) install.packages("Daim")
 if(!require("dismo")) install.packages("dismo")
+if(!require("sdm")) install.packages("sdm")
+
+# algorithms only
+if(!require("kernlab")) install.packages("kernlab")
+if(!require("e1071")) install.packages("e1071")
+if(!require("CENFA")) install.packages("CENFA")
 if(!require("earth")) install.packages("earth")
 if(!require("ecospat")) install.packages("ecospat")
-if(!require("fields")) install.packages("fields")
 if(!require("gam")) install.packages("gam")
 if(!require("gbm")) install.packages("gbm")
-if(!require("gridExtra")) install.packages("gridExtra")
-if(!require("Hmisc")) install.packages("Hmisc")
-if(!require("landsat")) install.packages("landsat")
-if(!require("ltm")) install.packages("ltm")
-if(!require("MASS")) install.packages("MASS")
 if(!require("mda")) install.packages("mda")
 if(!require("mgcv")) install.packages("mgcv")
 if(!require("ncf")) install.packages("ncf")
 if(!require("nnet")) install.packages("nnet")
-if(!require("PresenceAbsence")) install.packages("PresenceAbsence")
-if(!require("pROC")) install.packages("pROC")
 if(!require("randomForest")) install.packages("randomForest")
-if(!require("rasterVis")) install.packages("rasterVis")
-if(!require("reshape2")) install.packages("reshape2")
-if(!require("rJava")) install.packages("rJava") # sudo apt install r-cran-rjava 
-if(!require("rpart")) install.packages("rpart")
-if(!require("sdm")) install.packages("sdm")
-if(!require("sdm")) install.packages("sdmpredictors")
-if(!require("snowfall")) install.packages("snowfall")
-if(!require("spocc")) install.packages("spocc")
-if(!require("usdm")) install.packages("usdm")
+if(!require("rJava")) install.packages("rJava")
+if(!require("ENMeval")) install.packages("ENMeval")
+if(!require("maxnet")) install.packages("maxnet")
+if(!require("maxlike")) install.packages("maxlike")
+if(!require("kuenm")) install.packages("kuenm")
 
-# shiny -------------------------------------------------------------------
-if(!require("shiny")) install.packages("shiny")
-if(!require("shinyjs")) install.packages("shinyjs")
-if(!require("shinydashboard")) install.packages("shinydashboard")
-if(!require("DT")) install.packages("DT")
+# ensemble
+if(!require("eSDM")) install.packages("eSDM")
+
+# hierarchical bayesian
+if(!require("hSDM")) install.packages("hSDM")
+
+# joint
+if(!require("jSDM")) install.packages("jSDM") # sudo apt install -y libgsl-dev
+
+# stacked species distribution models
+if(!require("SSDM")) install.packages("SSDM")
+
+# virtual species
+if(!require("sdmvspecies")) install.packages("sdmvspecies")
+if(!require("virtualspecies")) install.packages("virtualspecies")
+
+# euclidean distance
+# https://rpubs.com/Bruno_Vilela/279257
 
 # markdown ----------------------------------------------------------------
 if(!require("rmarkdown")) remotes::install_github("rstudio/rmarkdown")
@@ -134,7 +158,7 @@ if(!require("tinytex")) install.packages("tinytex"); tinytex::install_tinytex()
 if(!require("blogdown")) remotes::install_github("rstudio/blogdown")
 if(!require("pagedown")) remotes::install_github("rstudio/pagedown")
 if(!require("bookdown")) devtools::install_github("rstudio/bookdown")
-if(!require("posterdown")) devtools::install_github("Shedimus/posterdown")
+if(!require("posterdown")) devtools::install_github("brentthorne/posterdown")
 if(!require("xaringan")) remotes::install_github("yihui/xaringan")
 if(!require("xaringanthemer")) devtools::install_github("gadenbuie/xaringanthemer")
 if(!require("icon")) devtools::install_github("ropenscilabs/icon")
@@ -142,10 +166,19 @@ if(!require("icon")) devtools::install_github("ropenscilabs/icon")
 # email -------------------------------------------------------------------
 if(!require("gmailr")) install.packages("gmailr")
 
+# googledrive -------------------------------------------------------------
+if(!require("googledrive")) install.packages("googledrive")
+
 # beep --------------------------------------------------------------------
 if(!require("beepr")) install.packages("beepr")
 
 # python ------------------------------------------------------------------
 if(!require("reticulate")) install.packages("reticulate")
+
+# shiny -------------------------------------------------------------------
+if(!require("shiny")) install.packages("shiny")
+if(!require("shinyjs")) install.packages("shinyjs")
+if(!require("shinydashboard")) install.packages("shinydashboard")
+if(!require("DT")) install.packages("DT")
 
 # end ---------------------------------------------------------------------
