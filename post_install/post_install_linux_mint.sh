@@ -84,8 +84,7 @@ sudo apt install -y\
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
 sudo add-apt-repository "deb https://qgis.org/ubuntu bionic main"
 sudo apt update
-
-sudo apt install -y qgis qgis-plugin-grass
+sudo apt install -y qgis qgis-plugin-grass saga
 
 # grass
 sudo apt install -y grass
@@ -96,6 +95,9 @@ sudo apt install -y snap snapd
 
 # whatsapp desktop
 sudo snap install whatsdesk
+
+# slack
+sudo snap install slack --classic
 
 ## flatpaks -----------------------------------------------------------------------------------
 # flatpak
@@ -111,9 +113,6 @@ flatpak install -y flathub com.sublimetext.three
 
 # skype
 flatpak install -y flathub com.skype.Client
-
-# slack
-flatpak install -y flathub com.slack.Slack
 
 # gimp
 flatpak install -y flathub org.gimp.GIMP
@@ -170,15 +169,6 @@ sudo apt autoremove -y
 # evernote
 sudo snap install evernote-web-client
 # https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
-
-# chromium
-sudo snap install chromium
-
-# gdal
-sudo apt install -y gdal-bin
-
-# typora
-sudo snap install typora-alanzanattadev
 
 # trello
 wget https://github.com/danielchatfield/trello-desktop/releases/download/v0.1.9/Trello-linux-0.1.9.zip -O trello.zip
