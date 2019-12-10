@@ -93,21 +93,35 @@ if(!require("getlandsat")) install.packages("getlandsat")
 if(!require("RStoolbox")) install.packages("RStoolbox")
 
 # species distribution modeling -----------------------------------------------
-# occ
+# occ - download
 if(!require("rgbif")) install.packages("rgbif")
 if(!require("spocc")) install.packages("spocc")
+if(!require("BIEN")) install.packages("BIEN")
+if(!require("marinespeed")) install.packages("marinespeed")
+if(!require("robis")) install.packages("robis")
+
+# occ - taxonomy
+if(!require("worrms")) install.packages("worrms")
+if(!require("rfishbase")) install.packages("rfishbase")
+if(!require("taxize")) install.packages("taxize")
+
+# occ - clear
 if(!require("CoordinateCleaner")) install.packages("CoordinateCleaner")
 if(!require("speciesgeocodeR")) install_github("azizka/speciesgeocodeR")
 if(!require("sampbias")) install_github("azizka/sampbias")
-if(!require("taxize")) install.packages("taxize")
 
-# var
+# var - limits
 if(!require("rnaturalearth")) install.packages("rnaturalearth")
 if(!require("rnaturalearthdata")) install.packages("rnaturalearthdata")
 if(!require("rnaturalearthhires")) devtools::install_github("ropensci/rnaturalearthhires")
 if(!require("geobr")) install.packages("geobr")
+
+# var - download
 if(!require("sdmpredictors")) install.packages("sdmpredictors")
+
+# var - selection
 if(!require("usdm")) install.packages("usdm")
+if(!require("psych")) install.packages("psych")
 
 # algorithms
 if(!require("biomod2")) install.packages("biomod2")
@@ -127,6 +141,7 @@ if(!require("mgcv")) install.packages("mgcv")
 if(!require("ncf")) install.packages("ncf")
 if(!require("nnet")) install.packages("nnet")
 if(!require("randomForest")) install.packages("randomForest")
+if(!require("rpart")) install.packages("rpart")
 if(!require("rJava")) install.packages("rJava")
 if(!require("ENMeval")) install.packages("ENMeval")
 if(!require("maxnet")) install.packages("maxnet")
@@ -137,6 +152,15 @@ if(!require("kuenm")) install.packages("kuenm")
 if(!require("eSDM")) install.packages("eSDM")
 
 # hierarchical bayesian
+# hsdm
+# cd ~/Downloads
+# wget ftp://ftp.gnu.org/gnu/gsl/gsl-latest.tar.gz
+# tar -xvzf gsl-latest.tar.gz
+# cd gsl-2.5
+# ./configure
+# make
+# sudo make install
+
 if(!require("hSDM")) install.packages("hSDM")
 
 # joint
