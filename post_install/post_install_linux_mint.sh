@@ -123,8 +123,8 @@ flatpak install -y flathub org.telegram.desktop
 # nvidia
 flatpak install -y flathub com.leinardi.gwe
 
-# 
-flatpak install -y flathub org.zotero.Zotero
+# mendeley
+flatpak install flathub com.elsevier.MendeleyDesktop
 
 # games
 flatpak install -y flathub org.gnome.Games
