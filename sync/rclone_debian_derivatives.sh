@@ -9,9 +9,9 @@
 
 # install ---------------------------------------------
 # rclone
-wget https://downloads.rclone.org/v1.49.1/rclone-v1.49.1-linux-amd64.deb
-sudo dpkg -i rclone-v1.49.1-linux-amd64.deb
-rm rclone-v1.49.1-linux-amd64.deb
+wget https://downloads.rclone.org/rclone-current-linux-amd64.deb
+sudo dpkg -i rclone-current-linux-amd64.deb
+rm rclone-current-linux-amd64.deb
 
 # rclone browser
 wget https://github.com/mmozeiko/RcloneBrowser/releases/download/1.2/rclone-browser_1.2_amd64.deb
