@@ -8,21 +8,6 @@ sudo rm /var/cache/apt/archives/lock
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 ## apts --------------------------------------------------------------------------------------
-# fonts
-sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
-
-# icons
-sudo add-apt-repository ppa:papirus/papirus && sudo apt update
-sudo apt install -y papirus-icon-theme libreoffice-style-papirus
-
-# nvidia
-sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
-sudo ubuntu-drivers autoinstall
-
-# stacer
-sudo add-apt-repository ppa:oguzhaninan/stacer && sudo apt update
-sudo apt install stacer
-
 # gparted
 sudo apt install -y gparted
 
@@ -36,14 +21,41 @@ sudo apt install -y screenfetch
 sudo apt install -y speedtest-cli
 
 # htop
-sudo apt install htop
+sudo apt install -y htop
 
 # inkscape
 sudo apt install -y inkscape
 
+# fonts
+sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
+
+# icons
+sudo add-apt-repository ppa:papirus/papirus && sudo apt update
+sudo apt install -y papirus-icon-theme libreoffice-style-papirus
+
+# nvidia
+sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
+sudo ubuntu-drivers autoinstall
+
+# stacer
+sudo add-apt-repository ppa:oguzhaninan/stacer && sudo apt update
+sudo apt install -y stacer
+
+# rclone browser
+sudo add-apt-repository ppa:mmozeiko/rclone-browser && sudo apt update
+sudo apt install -y rclone-browser
+
 # git
 sudo add-apt-repository ppa:git-core/ppa && sudo apt update
 sudo apt install -y git
+
+# python
+sudo apt install -y\
+  python3-pip\
+  python3-numpy\
+  python3-scipy\
+  python3-matplotlib\
+  python3-pandas
 
 # java
 sudo apt install -y\
@@ -71,14 +83,6 @@ sudo apt install -y xauth # cairo
 sudo apt install -y xfonts-base # cairo 
 sudo apt install -y libxt-dev # cairo
 sudo apt install -y libgsl-dev # gsl
-
-# python
-sudo apt install -y\
-  python3-pip\
-  python3-numpy\
-  python3-scipy\
-  python3-matplotlib\
-  python3-pandas
   
 # qgis
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
@@ -131,14 +135,19 @@ wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.de
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
+# rclone
+wget -c https://downloads.rclone.org/rclone-current-linux-amd64.deb
+sudo dpkg -i rclone-current-linux-amd64.deb
+rm rclone-current-linux-amd64.deb
+
 # rstudio
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5019-amd64.deb
+wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5019-amd64.deb
 sudo dpkg -i rstudio-1.2.5019-amd64.deb
 sudo apt install -fy
 rm rstudio-1.2.5019-amd64.deb
 
 # google earth
-wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
+wget -c http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
 sudo dpkg -i google-earth-pro-stable_current_amd64.deb
 rm google-earth-pro-stable_current_amd64.deb
 
@@ -163,7 +172,7 @@ cd ..; cd ..
 rm -r LibreOffice_6.3.3.2_Linux_x86-64_deb
 rm LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
 
-wget https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86_64/LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
+wget -c https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86_64/LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
 tar xvzf LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
 cd ~/LibreOffice_6.3.3.2_Linux_x86-64_deb_langpack_pt/DEBS
 sudo dpkg -i *.deb 
@@ -186,7 +195,7 @@ sudo snap install evernote-web-client
 # https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
 
 # trello
-wget https://github.com/danielchatfield/trello-desktop/releases/download/v0.1.9/Trello-linux-0.1.9.zip -O trello.zip
+wget -c https://github.com/danielchatfield/trello-desktop/releases/download/v0.1.9/Trello-linux-0.1.9.zip -O trello.zip
 sudo mkdir /opt/trello
 sudo unzip trello.zip -d /opt/trello/
 sudo ln -sf /opt/trello/Trello /usr/bin/trello
