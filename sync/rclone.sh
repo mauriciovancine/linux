@@ -74,4 +74,8 @@ rclone sync gdrive: o/caminho/da/sua/pasta -P
 # sync from folder to drive ---------------------------
 rclone sync o/caminho/da/sua/pasta gdrive: -P
 
+# pessoal ---------------------------------------------
+rclone sync /home/mude/data/onedrive onedrive: -P
+rclone sync gdrive: /home/mude/data/gdrive_mude -P
+
 # end -------------------------------------------------
