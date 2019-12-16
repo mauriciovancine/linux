@@ -187,6 +187,11 @@ cd ..; cd ..
 rm -r LibreOffice_6.3.3.2_Linux_x86-64_deb_langpack_pt
 rm LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
 
+# warsal - modulo seguranca bb
+wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb
+sudo dpkg -i warsaw_setup64.deb
+rm warsaw_setup64.deb
+
 ## fix broken
 sudo apt install -f
 
