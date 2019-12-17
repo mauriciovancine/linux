@@ -87,6 +87,7 @@ sudo apt install -y xauth # cairo
 sudo apt install -y xfonts-base # cairo 
 sudo apt install -y libxt-dev # cairo
 sudo apt install -y libgsl-dev # gsl
+sudo apt install -y libmagick++-dev # magick
   
 # qgis
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
