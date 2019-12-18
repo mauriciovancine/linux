@@ -108,6 +108,9 @@ sudo snap install whatsdesk
 # slack
 sudo snap install slack --classic
 
+# freemind 
+sudo snap install freemind
+
 ## flatpaks -----------------------------------------------------------------------------------
 # flatpak
 sudo add-apt-repository ppa:alexlarsson/flatpak && sudo apt update
