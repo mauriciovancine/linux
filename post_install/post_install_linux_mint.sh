@@ -144,11 +144,13 @@ flatpak install -y flathub org.gnome.Games
 # google chrome
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt install -fy
 rm google-chrome-stable_current_amd64.deb
 
 # rclone
 wget -c https://downloads.rclone.org/rclone-current-linux-amd64.deb
 sudo dpkg -i rclone-current-linux-amd64.deb
+sudo apt install -fy
 rm rclone-current-linux-amd64.deb
 
 # rstudio
@@ -160,16 +162,19 @@ rm rstudio-1.2.5019-amd64.deb
 # google earth
 wget -c http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
 sudo dpkg -i google-earth-pro-stable_current_amd64.deb
+sudo apt install -fy
 rm google-earth-pro-stable_current_amd64.deb
 
 # simplenote
 wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.12.0/Simplenote-linux-1.12.0-amd64.deb
 sudo dpkg -i Simplenote-linux-1.12.0-amd64.deb
+sudo apt install -fy
 rm Simplenote-linux-1.12.0-amd64.deb
 
 # anydesk
 wget -c https://download.anydesk.com/linux/anydesk_5.5.1-1_amd64.deb
 sudo dpkg -i anydesk_5.5.1-1_amd64.deb
+sudo apt install -fy
 rm anydesk_5.5.1-1_amd64.deb
 
 # libreoffice
@@ -178,7 +183,8 @@ sudo apt remove -y libreoffice*
 wget -c https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86_64/LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
 tar xvzf LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
 cd ~/LibreOffice_6.3.3.2_Linux_x86-64_deb/DEBS
-sudo dpkg -i *.deb 
+sudo dpkg -i *.deb
+sudo apt install -fy
 cd ..; cd ..
 rm -r LibreOffice_6.3.3.2_Linux_x86-64_deb
 rm LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
@@ -187,6 +193,7 @@ wget -c https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86
 tar xvzf LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
 cd ~/LibreOffice_6.3.3.2_Linux_x86-64_deb_langpack_pt/DEBS
 sudo dpkg -i *.deb 
+sudo apt install -fy
 cd ..; cd ..
 rm -r LibreOffice_6.3.3.2_Linux_x86-64_deb_langpack_pt
 rm LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
@@ -194,6 +201,7 @@ rm LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
 # warsal - modulo seguranca bb
 wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb
 sudo dpkg -i warsaw_setup64.deb
+sudo apt install -fy
 rm warsaw_setup64.deb
 
 ## fix broken
