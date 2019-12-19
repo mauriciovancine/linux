@@ -134,10 +134,10 @@ flatpak install -y flathub org.telegram.desktop
 flatpak install -y flathub com.leinardi.gwe
 
 # mendeley
-flatpak install flathub com.elsevier.MendeleyDesktop
+flatpak install -y flathub com.elsevier.MendeleyDesktop
 
 # wps
-flatpak install flathub com.wps.Office
+flatpak install -y flathub com.wps.Office
 
 # games
 flatpak install -y flathub org.gnome.Games
