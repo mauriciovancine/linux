@@ -138,8 +138,8 @@ if(!require("taxize")) install.packages("taxize")
 
 # occ - clear
 if(!require("CoordinateCleaner")) install.packages("CoordinateCleaner")
-if(!require("speciesgeocodeR")) install_github("azizka/speciesgeocodeR")
-if(!require("sampbias")) install_github("azizka/sampbias")
+if(!require("speciesgeocodeR")) devtools::install_github("azizka/speciesgeocodeR")
+if(!require("sampbias")) devtools::install_github("azizka/sampbias")
 
 # var - limits
 if(!require("rnaturalearth")) install.packages("rnaturalearth")
