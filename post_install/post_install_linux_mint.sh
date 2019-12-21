@@ -200,6 +200,12 @@ cd ..; cd ..
 rm -r LibreOffice_6.3.3.2_Linux_x86-64_deb_langpack_pt
 rm LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
 
+# mega
+wget -c https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb
+sudo dpkg -i megasync-xUbuntu_18.04_amd64.deb
+sudo apt install -fy
+rm megasync-xUbuntu_18.04_amd64.deb
+
 # warsal - modulo seguranca bb
 wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb
 sudo dpkg -i warsaw_setup64.deb
