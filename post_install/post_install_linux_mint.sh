@@ -107,9 +107,6 @@ sudo apt install -y snap snapd
 # whatsapp desktop
 sudo snap install whatsdesk
 
-# slack
-sudo snap install slack --classic
-
 # freemind 
 sudo snap install freemind
 
@@ -160,6 +157,12 @@ wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5019-amd6
 sudo dpkg -i rstudio-1.2.5019-amd64.deb
 sudo apt install -fy
 rm rstudio-1.2.5019-amd64.deb
+
+# slack
+wget -c https://downloads.slack-edge.com/linux_releases/slack-desktop-4.2.0-amd64.deb
+sudo dpkg -i slack-desktop-4.2.0-amd64.deb
+sudo apt install -fy
+rm slack-desktop-4.2.0-amd64.deb
 
 # google earth
 wget -c http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
