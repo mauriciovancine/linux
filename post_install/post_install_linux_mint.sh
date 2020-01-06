@@ -29,9 +29,13 @@ sudo apt install -y inkscape
 # fonts
 sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
 
-# icons
+# papirus icons
 sudo add-apt-repository ppa:papirus/papirus && sudo apt update
 sudo apt install -y papirus-icon-theme libreoffice-style-papirus
+
+# paper icons
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo apt install paper-icon-theme
 
 # nvidia
 sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
