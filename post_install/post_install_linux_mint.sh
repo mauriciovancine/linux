@@ -34,7 +34,7 @@ sudo add-apt-repository ppa:papirus/papirus && sudo apt update
 sudo apt install -y papirus-icon-theme libreoffice-style-papirus
 
 # paper icons
-sudo add-apt-repository -u ppa:snwh/ppa
+sudo add-apt-repository ppa:snwh/ppa && sudo apt update
 sudo apt install paper-icon-theme
 
 # nvidia
