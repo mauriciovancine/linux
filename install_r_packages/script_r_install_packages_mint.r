@@ -40,6 +40,7 @@ if(!require("writexl")) install.packages("writexl")
 tidyverse_packages(include_self = TRUE)
 
 # ecological analysis -----------------------------------------------------
+if(!require("iNEXT")) install.packages("iNEXT")
 if(!require("ade4")) install.packages("ade4")
 if(!require("adespatial")) install.packages("adespatial") # sudo apt install -y libudunits2-dev
 if(!require("betapart")) install.packages("betapart") # sudo apt install libgmp3-dev
