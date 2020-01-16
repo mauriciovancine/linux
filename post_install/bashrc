@@ -1,0 +1,5 @@
+if [ ! -f ~/.bashrc ] ; 
+  then
+     cp -i /etc/skel/.bashrc ~/.bashrc ;
+  else ls -la ~/.bashrc; 
+fi || echo " # Auto Generated " >> ~/.bashrc
