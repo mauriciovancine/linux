@@ -1,14 +1,14 @@
 ### install r packages - linux mint ###
 
 # github ------------------------------------------------------------------
-if(!require("devtools")) install.packages("devtools")
+if(!require(devtools)) install.packages("devtools")
 
 # internet ----------------------------------------------------------------
-if(!require("Rcpp")) install.packages("Rcpp")
-if(!require("httpuv")) install.packages("httpuv")
+if(!require(Rcpp)) install.packages("Rcpp")
+if(!require(httpuv)) install.packages("httpuv")
 
 # tidyverse ---------------------------------------------------------------
-if(!require("broom")) install.packages("broom")
+if(!require(broom)) install.packages("broom")
 if(!require("cli")) install.packages("cli")         
 if(!require("crayon")) install.packages("crayon")      
 if(!require("dplyr")) install.packages("dplyr")       
@@ -61,7 +61,7 @@ if(!require("gridExtra")) install.packages("gridExtra")
 if(!require(RColorBrewer)) install.packages("RColorBrewer")
 if(!require(viridis)) devtools::install_github("viridis")
 if(!require(ggsci)) devtools::install_github("ggsci")
-install.packages("cptcity")
+if(!require(cptcity)) install.packages("cptcity")
 install.packages("cartography")
 install.packages("dichromat")
 install.packages("yarrr")
@@ -108,7 +108,7 @@ if(!require("fasterize")) install.packages("fasterize")
 if(!require("tmap")) install.packages("tmap")
 if(!require("tmaptools")) install.packages("tmaptools")
 if(!require("maptools")) install.packages("maptools")
-if(!require("mapview")) install.packages("mapview")
+if(!require("mapview")) install.packages("mapview") # sudo apt install -y libfontconfig1-dev
 if(!require("leaflet")) install.packages("leaflet")
 if(!require("cartography")) install.packages("cartography")
 if(!require("rasterVis")) install.packages("rasterVis")
