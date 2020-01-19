@@ -111,6 +111,9 @@ sudo apt install -y snap snapd
 # whatsapp desktop
 sudo snap install whatsdesk
 
+# spotify
+sudo snap install spotify
+
 # freemind 
 sudo snap install freemind
 
