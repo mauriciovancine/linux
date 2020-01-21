@@ -209,14 +209,15 @@ if(!require("virtualspecies")) install.packages("virtualspecies")
 # https://rpubs.com/Bruno_Vilela/279257
 
 # markdown ----------------------------------------------------------------
-if(!require("rmarkdown")) remotes::install_github("rstudio/rmarkdown")
+if(!require("rmarkdown")) install.packages("rmarkdown")
+if(!require("knitr")) install.packages("knitr")
 if(!require("tinytex")) install.packages("tinytex"); tinytex::install_tinytex()
-if(!require("blogdown")) remotes::install_github("rstudio/blogdown")
+if(!require("blogdown")) install.packages("blogdown")
 blogdown::install_hugo()
-if(!require("pagedown")) remotes::install_github("rstudio/pagedown")
-if(!require("bookdown")) devtools::install_github("rstudio/bookdown")
+if(!require("pagedown")) install.packages("pagedown")
+if(!require("bookdown")) install.packages("bookdown")
 if(!require("posterdown")) devtools::install_github("brentthorne/posterdown")
-if(!require("xaringan")) remotes::install_github("yihui/xaringan")
+if(!require("xaringan")) install.packages("xaringan")
 if(!require("xaringanthemer")) devtools::install_github("gadenbuie/xaringanthemer")
 if(!require("icon")) devtools::install_github("ropenscilabs/icon")
 
