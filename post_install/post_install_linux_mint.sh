@@ -26,6 +26,9 @@ sudo apt install -y htop
 # inkscape
 sudo apt install -y inkscape
 
+# flameshot
+sudo apt install -y flameshot
+
 # fonts
 sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
 
