@@ -225,6 +225,12 @@ sudo dpkg -i warsaw_setup64.deb
 sudo apt install -fy
 rm warsaw_setup64.deb
 
+# geoda
+wget -c https://s3-us-west-2.amazonaws.com/geodasoftware/geoda_1.14-1bionic1_amd64.deb
+sudo dpkg -i geoda_1.14-1bionic1_amd64.deb
+sudo apt install -fy
+rm geoda_1.14-1bionic1_amd64.deb
+
 ## fix broken
 sudo apt install -f
 
