@@ -105,9 +105,6 @@ sudo snap install whatsdesk
 # spotify
 sudo snap install spotify
 
-# freemind 
-sudo snap install freemind
-
 ## flatpaks -----------------------------------------------------------------------------------
 # flatpak
 sudo add-apt-repository ppa:alexlarsson/flatpak && sudo apt update
@@ -223,6 +220,9 @@ sudo apt autoclean
 sudo apt autoremove -y
 
 # others ------------------------------------------------------------------
+# freemind 
+sudo snap install freemind
+
 # mega
 wget -c https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb
 sudo dpkg -i megasync-xUbuntu_18.04_amd64.deb
