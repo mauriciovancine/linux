@@ -32,10 +32,6 @@ sudo apt install -y flameshot
 # fonts
 sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
 
-# papirus icons
-sudo add-apt-repository ppa:papirus/papirus && sudo apt update
-sudo apt install -y papirus-icon-theme libreoffice-style-papirus
-
 # paper icons
 sudo add-apt-repository ppa:snwh/ppa && sudo apt update
 sudo apt install paper-icon-theme
@@ -61,14 +57,6 @@ wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
 sudo add-apt-repository "deb https://typora.io/linux ./"
 sudo apt update
 sudo apt install -y typora
-
-# python
-sudo apt install -y\
-  python3-pip\
-  python3-numpy\
-  python3-scipy\
-  python3-matplotlib\
-  python3-pandas
 
 # java
 sudo apt install -y\
@@ -213,12 +201,6 @@ cd ..; cd ..
 rm -r LibreOffice_6.3.3.2_Linux_x86-64_deb_langpack_pt
 rm LibreOffice_6.3.3_Linux_x86-64_deb_langpack_pt.tar.gz
 
-# mega
-wget -c https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb
-sudo dpkg -i megasync-xUbuntu_18.04_amd64.deb
-sudo apt install -fy
-rm megasync-xUbuntu_18.04_amd64.deb
-
 # warsal - modulo seguranca bb
 wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb
 sudo dpkg -i warsaw_setup64.deb
@@ -241,6 +223,16 @@ sudo apt autoclean
 sudo apt autoremove -y
 
 # others ------------------------------------------------------------------
+# mega
+wget -c https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb
+sudo dpkg -i megasync-xUbuntu_18.04_amd64.deb
+sudo apt install -fy
+rm megasync-xUbuntu_18.04_amd64.deb
+
+# papirus icons
+sudo add-apt-repository ppa:papirus/papirus && sudo apt update
+sudo apt install -y papirus-icon-theme libreoffice-style-papirus
+
 # evernote
 sudo snap install evernote-web-client
 # https://www.diolinux.com.br/2016/03/como-usar-o-evernote-no-linux.html
@@ -253,5 +245,13 @@ sudo ln -sf /opt/trello/Trello /usr/bin/trello
 echo -e '[Desktop Entry]\n Version=1.0\n Name=trello\n Exec=/opt/trello/Trello\n Icon=/opt/trello/resources/app/static/Icon.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/trello.desktop
 sudo chmod +x /usr/share/applications/trello.desktop
 cp /usr/share/applications/trello.desktop ~/Desktop
+
+# python
+sudo apt install -y\
+  python3-pip\
+  python3-numpy\
+  python3-scipy\
+  python3-matplotlib\
+  python3-pandas
 
 # end ----------------------------------------------------------------------
