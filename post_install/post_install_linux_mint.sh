@@ -59,8 +59,8 @@ sudo add-apt-repository ppa:git-core/ppa && sudo apt update
 sudo apt install -y git
 
 # typora
-wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-sudo add-apt-repository "deb https://typora.io/linux ./"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+echo -e "\ndeb https://typora.io/linux ./" | sudo tee -a /etc/apt/sources.list
 sudo apt update
 sudo apt install -y typora
 
@@ -72,7 +72,7 @@ sudo R CMD javareconf
 
 # r
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
+echo -e "\ndeb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/" | sudo tee -a /etc/apt/sources.list
 sudo apt update
 sudo apt install -y r-base-core # r
 sudo apt install -y r-base-dev # devtools
@@ -94,7 +94,7 @@ sudo apt install -y libmagick++-dev # magick
   
 # qgis
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
-sudo add-apt-repository "deb https://qgis.org/ubuntu bionic main"
+echo -e "\ndeb https://qgis.org/ubuntu bionic main" | sudo tee -a /etc/apt/sources.list
 sudo apt update
 sudo apt install -y qgis qgis-plugin-grass saga
 
