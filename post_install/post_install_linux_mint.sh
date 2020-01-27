@@ -29,6 +29,9 @@ sudo apt install -y inkscape
 # flameshot
 sudo apt install -y flameshot
 
+# 32 bits
+sudo dpkg --add-architecture i386
+
 # steam
 sudo apt install -y steam-installer steam-devices steam:i386
 
