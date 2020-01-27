@@ -29,6 +29,9 @@ sudo apt install -y inkscape
 # flameshot
 sudo apt install -y flameshot
 
+# steam
+sudo apt install -y steam-installer steam-devices steam:i386
+
 # fonts
 sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
 
