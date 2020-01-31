@@ -186,23 +186,14 @@ rm anydesk_5.5.1-1_amd64.deb
 # libreoffice
 sudo apt remove -y libreoffice*
 
-wget -c https://download.documentfoundation.org/libreoffice/stable/6.3.4/deb/x86_64/LibreOffice_6.3.4_Linux_x86-64_deb.tar.gz
-tar xvzf LibreOffice_6.3.4_Linux_x86-64_deb.tar.gz
-cd ~/LibreOffice_6.3.4.2_Linux_x86-64_deb/DEBS
+wget -c https://download.documentfoundation.org/libreoffice/stable/6.4.0/deb/x86_64/LibreOffice_6.4.0_Linux_x86-64_deb.tar.gz
+tar xvzf LibreOffice_6.4.0_Linux_x86-64_deb.tar.gz
+cd ~/LibreOffice_6.4.0.3_Linux_x86-64_deb/DEBS
 sudo dpkg -i *.deb
 sudo apt install -fy
 cd ..; cd ..
-rm -r LibreOffice_6.3.4.2_Linux_x86-64_deb
-rm LibreOffice_6.3.4_Linux_x86-64_deb.tar.gz
-
-wget -c https://download.documentfoundation.org/libreoffice/stable/6.3.4/deb/x86_64/LibreOffice_6.3.4_Linux_x86-64_deb_langpack_pt.tar.gz
-tar xvzf LibreOffice_6.3.4_Linux_x86-64_deb_langpack_pt.tar.gz
-cd ~/LibreOffice_6.3.4.2_Linux_x86-64_deb_langpack_pt/DEBS
-sudo dpkg -i *.deb 
-sudo apt install -fy
-cd ..; cd ..
-rm -r LibreOffice_6.3.4.2_Linux_x86-64_deb_langpack_pt
-rm LibreOffice_6.3.4_Linux_x86-64_deb_langpack_pt.tar.gz
+rm -r LibreOffice_6.4.0.3_Linux_x86-64_deb
+rm LibreOffice_6.4.0_Linux_x86-64_deb.tar.gz
 
 # warsal - modulo seguranca bb
 wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb
