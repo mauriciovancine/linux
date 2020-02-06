@@ -134,6 +134,9 @@ flatpak install -y flathub com.leinardi.gwe
 # mendeley
 flatpak install -y flathub com.elsevier.MendeleyDesktop
 
+# vgrive
+flatpak install -y flathub com.github.bcedu.vgrive
+
 # wps
 flatpak install -y flathub com.wps.Office
 
