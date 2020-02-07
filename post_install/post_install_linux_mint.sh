@@ -101,20 +101,13 @@ sudo apt install -y qgis qgis-plugin-grass saga
 # grass
 sudo apt install -y grass
 
-## snaps --------------------------------------------------------------------------------------
-# snap
-sudo apt install -y snap snapd 
-
-# whatsapp desktop
-sudo snap install whatsdesk
-
-# spotify
-sudo snap install spotify
-
 ## flatpaks -----------------------------------------------------------------------------------
 # flatpak
 sudo add-apt-repository ppa:alexlarsson/flatpak && sudo apt update
 sudo apt install -y flatpak
+
+# spotify
+flatpak install -y flathub com.spotify.Client
 
 # sublime
 flatpak install -y flathub com.sublimetext.three
