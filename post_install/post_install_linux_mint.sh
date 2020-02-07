@@ -150,10 +150,10 @@ sudo apt install -fy
 rm rclone-current-linux-amd64.deb
 
 # rstudio
-wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5019-amd64.deb
-sudo dpkg -i rstudio-1.2.5019-amd64.deb
+wget -c https://download1.rstudio.org/desktop/trusty/amd64/rstudio-1.2.5033-amd64.deb
+sudo dpkg -i rstudio-1.2.5033-amd64.deb
 sudo apt install -fy
-rm rstudio-1.2.5019-amd64.deb
+rm rstudio-1.2.5033-amd64.deb
 
 # slack
 wget -c https://downloads.slack-edge.com/linux_releases/slack-desktop-4.2.0-amd64.deb
