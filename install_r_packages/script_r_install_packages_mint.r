@@ -104,6 +104,7 @@ if(!require("units")) install.packages("units")
 if(!require("udunits2")) install.packages("udunits2") # sudo apt install libudunits2-dev
 if(!require("sf")) install.packages("sf")
 if(!require("fasterize")) install.packages("fasterize")
+if(!require("ggspatial")) install.packages("ggspatial")
 
 # maps --------------------------------------------------------------------
 if(!require("tmap")) install.packages("tmap")
