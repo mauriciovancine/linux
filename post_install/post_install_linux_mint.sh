@@ -64,6 +64,14 @@ echo -e "\ndeb https://typora.io/linux ./" | sudo tee -a /etc/apt/sources.list
 sudo apt update
 sudo apt install -y typora
 
+# anydesk
+sudo su - 
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
+echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
+apt update
+apt install anydesk
+exit
+
 # java
 sudo apt install -y\
  default-jre \
@@ -156,10 +164,10 @@ sudo apt install -fy
 rm rstudio-1.2.5033-amd64.deb
 
 # slack
-wget -c https://downloads.slack-edge.com/linux_releases/slack-desktop-4.2.0-amd64.deb
-sudo dpkg -i slack-desktop-4.2.0-amd64.deb
+wget -c https://downloads.slack-edge.com/linux_releases/slack-desktop-4.3.2-amd64.deb
+sudo dpkg -i slack-desktop-4.3.2-amd64.deb
 sudo apt install -fy
-rm slack-desktop-4.2.0-amd64.deb
+rm slack-desktop-4.3.2-amd64.deb
 
 # google earth
 wget -c http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
@@ -168,16 +176,10 @@ sudo apt install -fy
 rm google-earth-pro-stable_current_amd64.deb
 
 # simplenote
-wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.12.0/Simplenote-linux-1.12.0-amd64.deb
-sudo dpkg -i Simplenote-linux-1.12.0-amd64.deb
+wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.14.0/Simplenote-linux-1.14.0-amd64.deb
+sudo dpkg -i Simplenote-linux-1.14.0-amd64.deb
 sudo apt install -fy
-rm Simplenote-linux-1.12.0-amd64.deb
-
-# anydesk
-wget -c https://download.anydesk.com/linux/anydesk_5.5.1-1_amd64.deb
-sudo dpkg -i anydesk_5.5.1-1_amd64.deb
-sudo apt install -fy
-rm anydesk_5.5.1-1_amd64.deb
+rm Simplenote-linux-1.14.0-amd64.deb
 
 # libreoffice
 sudo apt remove -y libreoffice*
