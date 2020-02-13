@@ -94,6 +94,7 @@ sudo apt install -y libcairo2-dev # mapview
 sudo apt install -y libv8-dev # rmapshaper
 sudo apt install -y libprotobuf-dev # rmapshaper 
 sudo apt install -y libjq-dev # rmapshaper 
+sudo apt install -y protobuf-compiler # rmapshaper 
 sudo apt install -y libgmp3-dev # betapart
 sudo apt install -y libgtk2.0-dev # cairo
 sudo apt install -y xvfb # cairo 
