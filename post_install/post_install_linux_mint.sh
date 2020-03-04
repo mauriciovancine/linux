@@ -65,12 +65,12 @@ sudo apt update &&
 sudo apt install -y typora &&
 
 # anydesk
-sudo su - 
-wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
-echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
-apt update
-apt install anydesk -y
-exit
+sudo su - &&
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add - &&
+echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list &&
+apt update &&
+apt install anydesk -y &&
+exit &&
 
 # java
 sudo apt install -y\ &&
@@ -111,111 +111,109 @@ sudo apt update &&
 sudo apt install -y qgis qgis-plugin-grass saga &&
 
 # grass
-sudo apt install -y grass
+sudo apt install -y grass &&
 
 ## flatpaks -----------------------------------------------------------------------------------
 # flatpak
-sudo add-apt-repository ppa:alexlarsson/flatpak && sudo apt update
-sudo apt install -y flatpak
+sudo add-apt-repository ppa:alexlarsson/flatpak && sudo apt update &&
+sudo apt install -y flatpak &&
 
 # spotify
-flatpak install -y flathub com.spotify.Client
+flatpak install -y flathub com.spotify.Client &&
 
 # sublime
-flatpak install -y flathub com.sublimetext.three
+flatpak install -y flathub com.sublimetext.three &&
 
 # skype
-flatpak install -y flathub com.skype.Client
+flatpak install -y flathub com.skype.Client &&
 
 # gimp
-flatpak install -y flathub org.gimp.GIMP
+# flatpak install -y flathub org.gimp.GIMP &&
 
 # telegram
-flatpak install -y flathub org.telegram.desktop
+flatpak install -y flathub org.telegram.desktop &&
 
 # nvidia
-flatpak install -y flathub com.leinardi.gwe
+# flatpak install -y flathub com.leinardi.gwe &&
 
 # mendeley
-flatpak install -y flathub com.elsevier.MendeleyDesktop
-
-# vgrive
-flatpak install -y flathub com.github.bcedu.vgrive
+flatpak install -y flathub com.elsevier.MendeleyDesktop &&
 
 # wps
-flatpak install -y flathub com.wps.Office
+flatpak install -y flathub com.wps.Office &&
 
 # games
-flatpak install -y flathub org.gnome.Games
+# flatpak install -y flathub org.gnome.Games
 
 ## dpkgs --------------------------------------------------------------------------------------
 # google chrome
-wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-sudo apt install -fy
-rm google-chrome-stable_current_amd64.deb
+wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
+sudo dpkg -i google-chrome-stable_current_amd64.deb &&
+sudo apt install -fy &&
+rm google-chrome-stable_current_amd64.deb &&
 
 # rclone
-wget -c https://downloads.rclone.org/rclone-current-linux-amd64.deb
-sudo dpkg -i rclone-current-linux-amd64.deb
-sudo apt install -fy
-rm rclone-current-linux-amd64.deb
+# wget -c https://downloads.rclone.org/rclone-current-linux-amd64.deb
+# sudo dpkg -i rclone-current-linux-amd64.deb
+# sudo apt install -fy
+# rm rclone-current-linux-amd64.deb
 
 # rstudio
-wget -c https://download1.rstudio.org/desktop/trusty/amd64/rstudio-1.2.5033-amd64.deb
-sudo dpkg -i rstudio-1.2.5033-amd64.deb
-sudo apt install -fy
-rm rstudio-1.2.5033-amd64.deb
+wget -c https://download1.rstudio.org/desktop/trusty/amd64/rstudio-1.2.5033-amd64.deb &&
+sudo dpkg -i rstudio-1.2.5033-amd64.deb &&
+sudo apt install -fy &&
+rm rstudio-1.2.5033-amd64.deb &&
 
 # slack
-wget -c https://downloads.slack-edge.com/linux_releases/slack-desktop-4.3.2-amd64.deb
-sudo dpkg -i slack-desktop-4.3.2-amd64.deb
-sudo apt install -fy
-rm slack-desktop-4.3.2-amd64.deb
+wget -c https://downloads.slack-edge.com/linux_releases/slack-desktop-4.3.2-amd64.deb &&
+sudo dpkg -i slack-desktop-4.3.2-amd64.deb &&
+sudo apt install -fy &&
+rm slack-desktop-4.3.2-amd64.deb &&
 
 # google earth
-wget -c http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
-sudo dpkg -i google-earth-pro-stable_current_amd64.deb
-sudo apt install -fy
-rm google-earth-pro-stable_current_amd64.deb
+wget -c http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb &&
+sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
+sudo apt install -fy &&
+rm google-earth-pro-stable_current_amd64.deb &&
 
 # simplenote
-wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.14.0/Simplenote-linux-1.14.0-amd64.deb
-sudo dpkg -i Simplenote-linux-1.14.0-amd64.deb
-sudo apt install -fy
-rm Simplenote-linux-1.14.0-amd64.deb
+wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.14.0/Simplenote-linux-1.14.0-amd64.deb &&
+sudo dpkg -i Simplenote-linux-1.14.0-amd64.deb &&
+sudo apt install -fy &&
+rm Simplenote-linux-1.14.0-amd64.deb &&
 
 # libreoffice
-sudo apt remove -y libreoffice*
+sudo apt remove -y libreoffice* &&
 
-wget -c https://download.documentfoundation.org/libreoffice/stable/6.4.1/deb/x86_64/LibreOffice_6.4.1_Linux_x86-64_deb.tar.gz
-tar xvzf LibreOffice_6.4.1_Linux_x86-64_deb.tar.gz
-cd ~/LibreOffice_6.4.1.2_Linux_x86-64_deb/DEBS
-sudo dpkg -i *.deb
-sudo apt install -fy
-cd ..; cd ..
-rm -r LibreOffice_6.4.1.2_Linux_x86-64_deb
-rm LibreOffice_6.4.1_Linux_x86-64_deb.tar.gz
+wget -c https://download.documentfoundation.org/libreoffice/stable/6.4.1/deb/x86_64/LibreOffice_6.4.1_Linux_x86-64_deb.tar.gz &&
+tar xvzf LibreOffice_6.4.1_Linux_x86-64_deb.tar.gz &&
+cd ~/LibreOffice_6.4.1.2_Linux_x86-64_deb/DEBS &&
+sudo dpkg -i *.deb &&
+sudo apt install -fy &&
+cd ..; cd .. &&
+rm -r LibreOffice_6.4.1.2_Linux_x86-64_deb &&
+rm LibreOffice_6.4.1_Linux_x86-64_deb.tar.gz &&
 
 # warsal - modulo seguranca bb
-wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb
-sudo dpkg -i warsaw_setup64.deb
-sudo apt install -fy
-rm warsaw_setup64.deb
+wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb &&
+sudo dpkg -i warsaw_setup64.deb &&
+sudo apt install -fy &&
+rm warsaw_setup64.deb &&
 
 # geoda
-wget -c https://s3-us-west-2.amazonaws.com/geodasoftware/geoda_1.14-1bionic1_amd64.deb
-sudo dpkg -i geoda_1.14-1bionic1_amd64.deb
-sudo apt install -fy
-rm geoda_1.14-1bionic1_amd64.deb
+wget -c https://s3-us-west-2.amazonaws.com/geodasoftware/geoda_1.14-1bionic1_amd64.deb &&
+sudo dpkg -i geoda_1.14-1bionic1_amd64.deb &&
+sudo apt install -fy &&
+rm geoda_1.14-1bionic1_amd64.deb &&
 
 ## fix broken
-sudo apt install -f
+sudo apt install -f &&
 
 ## finishing, updating and cleaning
-sudo apt update && sudo apt dist-upgrade -y
-flatpak update -y
-sudo apt autoclean
+sudo apt update && 
+sudo apt dist-upgrade -y &&
+flatpak update -y &&
+sudo apt autoclean &&
 sudo apt autoremove -y
 
 # others ------------------------------------------------------------------
