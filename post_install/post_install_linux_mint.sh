@@ -1,68 +1,68 @@
 #!/bin/bash
 
 # remove lock apt
-sudo rm /var/lib/dpkg/lock-frontend
-sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock-frontend &&
+sudo rm /var/cache/apt/archives/lock &&
 
 # upgrade 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 ## apts --------------------------------------------------------------------------------------
 # gparted
-sudo apt install -y gparted
+sudo apt install -y gparted &&
 
 # gedit
-sudo apt install -y gedit
+sudo apt install -y gedit &&
 
 # screenfetch
-sudo apt install -y screenfetch
+sudo apt install -y screenfetch &&
 
 # speedtest
-sudo apt install -y speedtest-cli
+sudo apt install -y speedtest-cli &&
 
 # htop
-sudo apt install -y htop
+sudo apt install -y htop &&
 
 # inkscape
-sudo apt install -y inkscape
+sudo apt install -y inkscape &&
 
 # flameshot
-sudo apt install -y flameshot
+sudo apt install -y flameshot &&
 
 # 32 bits
-sudo dpkg --add-architecture i386
+# sudo dpkg --add-architecture i386 &&
 
 # steam
-sudo apt install -y steam-installer steam-devices steam:i386
+# sudo apt install -y steam-installer steam-devices steam:i386 &&
 
 # fonts
-sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
+sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer &&
 
 # paper icons
-sudo add-apt-repository ppa:snwh/ppa && sudo apt update
-sudo apt install paper-icon-theme
+sudo add-apt-repository ppa:snwh/ppa && sudo apt update &&
+sudo apt install paper-icon-theme &&
 
 # nvidia
-sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
-sudo ubuntu-drivers autoinstall
+# sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update &&
+# sudo ubuntu-drivers autoinstall &&
 
 # stacer
-sudo add-apt-repository ppa:oguzhaninan/stacer && sudo apt update
-sudo apt install -y stacer
+sudo add-apt-repository ppa:oguzhaninan/stacer && sudo apt update &&
+sudo apt install -y stacer &&
 
 # rclone browser
-sudo add-apt-repository ppa:mmozeiko/rclone-browser && sudo apt update
-sudo apt install -y rclone-browser
+# sudo add-apt-repository ppa:mmozeiko/rclone-browser && sudo apt update &&
+# sudo apt install -y rclone-browser &&
 
 # git
-sudo add-apt-repository ppa:git-core/ppa && sudo apt update
-sudo apt install -y git
+sudo add-apt-repository ppa:git-core/ppa && sudo apt update &&
+sudo apt install -y git &&
 
 # typora
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
-echo -e "\ndeb https://typora.io/linux ./" | sudo tee -a /etc/apt/sources.list
-sudo apt update
-sudo apt install -y typora
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE &&
+echo -e "\ndeb https://typora.io/linux ./" | sudo tee -a /etc/apt/sources.list &&
+sudo apt update &&
+sudo apt install -y typora &&
 
 # anydesk
 sudo su - 
@@ -73,42 +73,42 @@ apt install anydesk -y
 exit
 
 # java
-sudo apt install -y\
- default-jre \
- default-jdk
-sudo R CMD javareconf
+sudo apt install -y\ &&
+ default-jre \ &&
+ default-jdk &&
+sudo R CMD javareconf &&
 
 # r
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-echo -e "\ndeb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/" | sudo tee -a /etc/apt/sources.list
-sudo apt update
-sudo apt install -y r-base-core # r
-sudo apt install -y r-base-dev # devtools
-sudo apt install -y libxml2-dev # devtools
-sudo apt install -y libssl-dev # devtools
-sudo apt install -y libcurl4-openssl-dev # devtools
-sudo apt install -y libgdal-dev # gdal
-sudo apt install -y libproj-dev # gdal
-sudo apt install -y libudunits2-dev # units
-sudo apt install -y libcairo2-dev # mapview
-sudo apt install -y libv8-dev # rmapshaper
-sudo apt install -y libprotobuf-dev # rmapshaper 
-sudo apt install -y libjq-dev # rmapshaper 
-sudo apt install -y protobuf-compiler # rmapshaper 
-sudo apt install -y libgmp3-dev # betapart
-sudo apt install -y libgtk2.0-dev # cairo
-sudo apt install -y xvfb # cairo 
-sudo apt install -y xauth # cairo 
-sudo apt install -y xfonts-base # cairo 
-sudo apt install -y libxt-dev # cairo
-sudo apt install -y libgsl-dev # gsl
-sudo apt install -y libmagick++-dev # magick
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 &&
+echo -e "\ndeb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/" | sudo tee -a /etc/apt/sources.list &&
+sudo apt update &&
+sudo apt install -y r-base-core && # r
+sudo apt install -y r-base-dev && # devtools
+sudo apt install -y libxml2-dev && # devtools
+sudo apt install -y libssl-dev && # devtools
+sudo apt install -y libcurl4-openssl-dev && # devtools
+sudo apt install -y libgdal-dev && # gdal
+sudo apt install -y libproj-dev && # gdal
+sudo apt install -y libudunits2-dev && # units
+sudo apt install -y libcairo2-dev && # mapview
+sudo apt install -y libv8-dev && # rmapshaper
+sudo apt install -y libprotobuf-dev && # rmapshaper 
+sudo apt install -y libjq-dev && # rmapshaper 
+sudo apt install -y protobuf-compiler && # rmapshaper 
+sudo apt install -y libgmp3-dev && # betapart
+sudo apt install -y libgtk2.0-dev && # cairo
+sudo apt install -y xvfb && # cairo 
+sudo apt install -y xauth && # cairo 
+sudo apt install -y xfonts-base && # cairo 
+sudo apt install -y libxt-dev && # cairo
+sudo apt install -y libgsl-dev && # gsl
+sudo apt install -y libmagick++-dev && # magick
   
 # qgis
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
-echo -e "\ndeb https://qgis.org/ubuntu bionic main" | sudo tee -a /etc/apt/sources.list
-sudo apt update
-sudo apt install -y qgis qgis-plugin-grass saga
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
+echo -e "\ndeb https://qgis.org/ubuntu bionic main" | sudo tee -a /etc/apt/sources.list &&
+sudo apt update &&
+sudo apt install -y qgis qgis-plugin-grass saga &&
 
 # grass
 sudo apt install -y grass
