@@ -73,8 +73,8 @@ apt install anydesk -y &&
 exit &&
 
 # java
-sudo apt install -y\ &&
- default-jre \ &&
+sudo apt install -y\
+ default-jre \
  default-jdk &&
 sudo R CMD javareconf &&
 
