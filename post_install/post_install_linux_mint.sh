@@ -183,13 +183,13 @@ rm Simplenote-linux-1.14.0-amd64.deb &&
 # libreoffice
 sudo apt remove -y libreoffice* &&
 
-wget -c https://www.libreoffice.org/donate/dl/deb-x86_64/6.4.2/en-US/LibreOffice_6.4.2_Linux_x86-64_deb.tar.gz &&
+wget -c https://download.documentfoundation.org/libreoffice/stable/6.4.2/deb/x86_64/LibreOffice_6.4.2_Linux_x86-64_deb.tar.gz &&
 tar xvzf LibreOffice_6.4.2_Linux_x86-64_deb.tar.gz &&
-cd ~/LibreOffice_6.4.1.2_Linux_x86-64_deb/DEBS &&
+cd ~/LibreOffice_6.4.2.2_Linux_x86-64_deb/DEBS &&
 sudo dpkg -i *.deb &&
 sudo apt install -fy &&
 cd ..; cd .. &&
-rm -r LibreOffice_6.4.1.2_Linux_x86-64_deb &&
+rm -r LibreOffice_6.4.2.2_Linux_x86-64_deb &&
 rm LibreOffice_6.4.2_Linux_x86-64_deb.tar.gz &&
 
 # warsal - modulo seguranca bb
