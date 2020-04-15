@@ -192,6 +192,12 @@ cd ..; cd .. &&
 rm -r LibreOffice_6.4.2.2_Linux_x86-64_deb &&
 rm LibreOffice_6.4.2_Linux_x86-64_deb.tar.gz &&
 
+# wps office
+wget -c http://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/9505/wps-office_11.1.0.9505.XA_amd64.deb &&
+sudo dpkg -i wps-office_11.1.0.9505.XA_amd64.deb &&
+sudo apt install -fy &&
+rm wps-office_11.1.0.9505.XA_amd64.deb &&
+
 # warsal - modulo seguranca bb
 wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb &&
 sudo dpkg -i warsaw_setup64.deb &&
