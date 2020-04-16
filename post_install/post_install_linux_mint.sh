@@ -29,6 +29,9 @@ sudo apt install -y inkscape &&
 # flameshot
 sudo apt install -y flameshot &&
 
+# dropbox
+sudo apt install -y dropbox-nemo &&
+
 # 32 bits
 # sudo dpkg --add-architecture i386 &&
 
