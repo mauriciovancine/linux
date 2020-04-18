@@ -231,6 +231,9 @@ if(!require("googledrive")) install.packages("googledrive")
 # beep --------------------------------------------------------------------
 if(!require("beepr")) install.packages("beepr")
 
+# hexagon -----------------------------------------------------------------
+if(!require("hexSticker")) install.packages("hexSticker")
+
 # python ------------------------------------------------------------------
 if(!require("reticulate")) install.packages("reticulate")
 
