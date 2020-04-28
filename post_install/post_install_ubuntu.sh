@@ -3,9 +3,10 @@
 # upgrade 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 
-# tweeks
+# tweeks and extensions
 sudo apt install -y gnome-tweaks &&
-sudo apt install -y gnome-shell-extensions
+sudo apt install -y gnome-shell-extensions &&
+sudo apt install -y gnome-shell-extension-weather
 
 # git
 sudo add-apt-repository ppa:git-core/ppa && 
@@ -27,6 +28,12 @@ wget -c https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003
 sudo dpkg -i paper*.deb &&
 sudo apt install -f &&
 rm https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb
+
+# shell
+sudo apt install -y autoconf automake libgtk-3-dev &&
+git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme &&
+./autogen.sh --prefix=/usr &&
+sudo make install
 
 # gparted
 sudo apt install -y gparted
@@ -100,7 +107,9 @@ sudo apt install -y ubuntu-restricted-extras
 
 ## flatpak ------------------------------------------------------------------------------------
 # flatpak
-sudo apt install -y flatpak
+sudo apt install -y flatpak &&
+sudo apt install -y gnome-software-plugin-flatpak &&
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # spotify
 flatpak install -y flathub com.spotify.Client
