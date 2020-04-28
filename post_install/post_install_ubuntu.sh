@@ -24,9 +24,10 @@ sudo apt -y update
 sudo apt -y install flat-remix-gtk
 
 # icons
-wget -c
-sudo dpkg -i paper*.deb
-sudo apt install -f
+wget -c https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb &&
+sudo dpkg -i paper*.deb &&
+sudo apt install -f &&
+rm https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb
 
 # gparted
 sudo apt install -y gparted
@@ -105,36 +106,13 @@ sudo apt install -y ubuntu-restricted-extras
 sudo add-apt-repository ppa:papirus/papirus && sudo apt update
 sudo apt install -y papirus-icon-theme libreoffice-style-papirus
 
-## snaps --------------------------------------------------------------------------------------
-# snap
-sudo apt install -y snap snapd 
-
-# inkscape
-sudo snap install inkscape
-
-# libreoffice
-sudo apt remove libreoffice* -y
-sudo snap install libreoffice
-
-# googletools
-sudo snap install googletools-desktop
-
-# simplenote
-sudo snap install simplenote
-
-# skype
-sudo snap install skype --classic
-
-# gitkraken
-sudo snap install gitkraken
-
-# whatsapp desktop
-sudo snap install whatsdesk
-
-# slack
-sudo snap install slack --classic
-
 ## dpkgs --------------------------------------------------------------------------------------
+# chrome
+wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
+sudo dpkg -i google-chrome-stable_current_amd64.deb &&
+sudo apt install -fy &&
+rm google-chrome-stable_current_amd64.deb
+
 # rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5001-amd64.deb
 sudo dpkg -i rstudio-1.2.5001-amd64.deb
