@@ -24,18 +24,18 @@ sudo apt -y update
 sudo apt -y install flat-remix-gtk
 
 # icons
-sudo add-apt-repository ppa:snwh/ppa && 
-sudo apt update &&
-sudo apt install paper-icon-theme &&
+wget -c
+sudo dpkg -i paper*.deb
+sudo apt install -f
 
 # gparted
-sudo apt install -y gparted &&
+sudo apt install -y gparted
 
 # gedit
-sudo apt install -y gedit &&
+sudo apt install -y gedit
 
 # screenfetch
-sudo apt install -y screenfetch &&
+sudo apt install -y screenfetch
 
 # speedtest
 sudo apt install -y speedtest-cli &&
@@ -51,6 +51,9 @@ sudo apt install -y flameshot
   
 # gdal
 sudo apt install -y gdal-bin
+
+# stacer
+
 
 # grass
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B827C12C2D425E227EDCA75089EBE08314DF160
