@@ -116,8 +116,7 @@ sudo apt install -y grass &&
 
 ## flatpaks -----------------------------------------------------------------------------------
 # flatpak
-sudo add-apt-repository ppa:alexlarsson/flatpak && sudo apt update &&
-sudo apt install -y flatpak &&
+sudo apt install -y flatpak
 
 # spotify
 flatpak install -y flathub com.spotify.Client &&
