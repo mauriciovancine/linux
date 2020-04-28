@@ -5,12 +5,12 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 
 ## apts --------------------------------------------------------------------------------------
 # tweeks
-sudo apt install gnome-tweaks
-sudo apt install gnome-shell-extensions
-sudo apt install chrome-gnome-shell
+sudo apt install -y gnome-tweaks &&
+sudo apt install -y gnome-shell-extensions
 
 # git
-sudo add-apt-repository ppa:git-core/ppa && sudo apt update
+sudo add-apt-repository ppa:git-core/ppa && 
+sudo apt update &&
 sudo apt install -y git
 
 # dash-to-dock
@@ -18,12 +18,36 @@ git clone https://github.com/micheleg/dash-to-dock.git
 make
 make install
 
-## apts --------------------------------------------------------------------------------------
+# theme
+sudo add-apt-repository ppa:daniruiz/flat-remix
+sudo apt -y update
+sudo apt -y install flat-remix-gtk
+
+# icons
+sudo add-apt-repository ppa:snwh/ppa && 
+sudo apt update &&
+sudo apt install paper-icon-theme &&
+
+# gparted
+sudo apt install -y gparted &&
+
+# gedit
+sudo apt install -y gedit &&
+
 # screenfetch
-sudo apt install -y screenfetch
+sudo apt install -y screenfetch &&
 
 # speedtest
-sudo apt install -y speedtest-cli
+sudo apt install -y speedtest-cli &&
+
+# htop
+sudo apt install -y htop &&
+
+# inkscape
+sudo apt install -y inkscape &&
+
+# flameshot
+sudo apt install -y flameshot
   
 # gdal
 sudo apt install -y gdal-bin
