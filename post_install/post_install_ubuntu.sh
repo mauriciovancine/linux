@@ -7,6 +7,8 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 sudo apt install -y gnome-tweaks &&
 sudo apt install -y gnome-shell-extensions &&
 sudo apt install -y gnome-shell-extension-weather
+sudo apt install -y x11-utils &&
+sudo apt install -y gir1.2-gtop-2.0 lm-sensors gnome-shell-extension-prefs
 
 # git
 sudo add-apt-repository ppa:git-core/ppa && 
