@@ -3,7 +3,6 @@
 # upgrade 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 
-## apts --------------------------------------------------------------------------------------
 # tweeks
 sudo apt install -y gnome-tweaks &&
 sudo apt install -y gnome-shell-extensions
@@ -53,9 +52,6 @@ sudo apt install -y flameshot
 # gdal
 sudo apt install -y gdal-bin
 
-# stacer
-
-
 # grass
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B827C12C2D425E227EDCA75089EBE08314DF160
 sudo add-apt-repository "deb http://ppa.launchpad.net/ubuntugis/ppa/ubuntu bionic main"
@@ -102,9 +98,27 @@ sudo apt install stacer
 # fonts
 sudo apt install -y ubuntu-restricted-extras
 
-# icons
-sudo add-apt-repository ppa:papirus/papirus && sudo apt update
-sudo apt install -y papirus-icon-theme libreoffice-style-papirus
+## flatpak ------------------------------------------------------------------------------------
+# flatpak
+sudo apt install -y flatpak
+
+# spotify
+flatpak install -y flathub com.spotify.Client
+
+# sublime
+flatpak install -y flathub com.sublimetext.three
+
+# skype
+flatpak install -y flathub com.skype.Client
+
+# gimp
+# flatpak install -y flathub org.gimp.GIMP
+
+# telegram
+flatpak install -y flathub org.telegram.desktop
+
+# mendeley
+flatpak install -y flathub com.elsevier.MendeleyDesktop
 
 ## dpkgs --------------------------------------------------------------------------------------
 # chrome
