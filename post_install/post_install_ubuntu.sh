@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# ubuntu 20.04 (focal)
+
 # upgrade 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 
@@ -63,16 +65,16 @@ sudo apt install -y flameshot
 sudo apt install -y gdal-bin
 
 # grass
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B827C12C2D425E227EDCA75089EBE08314DF160
-sudo add-apt-repository "deb http://ppa.launchpad.net/ubuntugis/ppa/ubuntu bionic main"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
+echo -e "\ndeb https://qgis.org/ubuntu focal main" | sudo tee -a /etc/apt/sources.list &&
 sudo apt update
 sudo apt install -y grass
 
 # qgis
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B827C12C2D425E227EDCA75089EBE08314DF160
-sudo add-apt-repository "deb http://ppa.launchpad.net/ubuntugis/ppa/ubuntu bionic main"
-sudo apt update
-sudo apt install -y qgis qgis-plugin-grass
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
+echo -e "\ndeb https://qgis.org/ubuntu focal main" | sudo tee -a /etc/apt/sources.list &&
+sudo apt update &&
+sudo apt install -y qgis qgis-plugin-grass saga &&
   
 # sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
