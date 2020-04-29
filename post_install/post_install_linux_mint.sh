@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# linux mint 19.3 (ubuntu 18.04)
+
 # remove lock apt
 sudo rm /var/lib/dpkg/lock-frontend &&
 sudo rm /var/cache/apt/archives/lock &&
