@@ -8,7 +8,8 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 # tweeks and extensions
 sudo apt install -y gnome-tweaks &&
 sudo apt install -y gnome-shell-extensions &&
-sudo apt install -y gnome-shell-extension-weather
+sudo apt install -y chrome-gnome-shell &&
+sudo apt install -y gnome-shell-extension-weather &&
 sudo apt install -y x11-utils &&
 sudo apt install -y gir1.2-gtop-2.0 lm-sensors gnome-shell-extension-prefs
 # after: press Alt + F2 and enter r in the box
@@ -68,7 +69,7 @@ sudo apt install -y gdal-bin
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
 echo -e "\ndeb https://qgis.org/ubuntu focal main" | sudo tee -a /etc/apt/sources.list &&
 sudo apt update
-sudo apt install -y grass
+sudo apt install -y grass grass-gui
 
 # qgis
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
@@ -152,12 +153,6 @@ wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_curren
 sudo dpkg -i google-earth-pro-stable_current_amd64.deb
 sudo apt install -fy
 rm google-earth-pro-stable_current_amd64.deb
-
-# teamviewer
-wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
-sudo dpkg -i teamviewer_amd64.deb
-sudo apt install -fy
-rm teamviewer_amd64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update
