@@ -21,13 +21,14 @@ sudo apt install -y git
 
 # dash-to-dock
 git clone https://github.com/micheleg/dash-to-dock.git
+cd dash-to-dock
 make
 make install
 
 # theme
-sudo add-apt-repository ppa:daniruiz/flat-remix
-sudo apt -y update
-sudo apt -y install flat-remix-gtk
+sudo add-apt-repository ppa:daniruiz/flat-remix &&
+sudo apt -y update &&
+sudo apt -y install flat-remix-gtk &&
 
 # icons
 wget -c https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb &&
@@ -36,10 +37,10 @@ sudo apt install -f &&
 rm https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb
 
 # shell
-sudo apt install -y autoconf automake libgtk-3-dev &&
-git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme &&
-./autogen.sh --prefix=/usr &&
-sudo make install
+sudo apt-get install gtk2-engines-murrine gtk2-engines-pixbuf &&
+git clone https://github.com/vinceliuice/Matcha-gtk-theme.git &&
+cd Matcha-gtk-theme &&
+./install.sh
 
 # gparted
 sudo apt install -y gparted
@@ -85,7 +86,7 @@ sudo apt install -y sublime-text
 
 # r
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu disco-cran35/"
+echo -e "\ndeb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" | sudo tee -a /etc/apt/sources.list &&
 sudo apt update
 sudo apt install -y r-base-core # r
 sudo apt install -y r-base-dev # devtools
