@@ -134,6 +134,8 @@ sudo apt install -y xfonts-base && # cairo
 sudo apt install -y libxt-dev && # cairo
 sudo apt install -y libgsl-dev && # gsl
 sudo apt install -y libmagick++-dev # magick
+sudo apt install -y gfortran-7 # ecospat
+sudo apt install -y gcc-7 g++-7 # ecospat
 
 # java
 sudo apt install -y default-jre default-jdk &&
