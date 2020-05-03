@@ -22,10 +22,10 @@ sudo apt update &&
 sudo apt install -y git
 
 # dash-to-dock
-# git clone https://github.com/micheleg/dash-to-dock.git
-# cd dash-to-dock
-# make
-# make install
+git clone https://github.com/micheleg/dash-to-dock.git &&
+cd dash-to-dock &&
+make &&
+make install
 
 # theme
 sudo add-apt-repository ppa:daniruiz/flat-remix &&
