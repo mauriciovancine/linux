@@ -175,6 +175,12 @@ sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 sudo apt install -fy &&
 rm google-earth-pro-stable_current_amd64.deb
 
+# simplenote
+wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.14.0/Simplenote-linux-1.14.0-amd64.deb &&
+sudo dpkg -i Simplenote-linux-1.14.0-amd64.deb &&
+sudo apt install -fy &&
+rm Simplenote-linux-1.14.0-amd64.deb
+
 ## fix broken
 sudo apt clean && sudo apt update &&
 sudo dpkg --configure -a &&
