@@ -109,19 +109,22 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt update &&
 sudo apt install -y sublime-text
 
+# java
+sudo apt install -y default-jre default-jdk &&
+sudo R CMD javareconf
+
 # r
+# https://rtask.thinkr.fr/installation-of-r-4-0-on-ubuntu-20-04-lts-and-tips-for-spatial-packages/
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" &&
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 &&
-echo -e "\ndeb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" | sudo tee -a /etc/apt/sources.list &&
 sudo apt update &&
-sudo apt install -y r-base-core && # r
-sudo apt install -y r-base-dev && # devtools
+sudo apt install -y r-base r-base-core r-recommended r-base-dev && # r
+
+sudo apt install -y libgdal-dev libproj-dev libgeos-dev libudunits2-dev libnode-dev libcairo2-dev libnetcdf-dev &&
+sudo apt install -y libglu1-mesa-dev freeglut3-dev mesa-common-dev
 sudo apt install -y libxml2-dev && # devtools
 sudo apt install -y libssl-dev && # devtools
 sudo apt install -y libcurl4-openssl-dev && # devtools
-sudo apt install -y libgdal-dev && # gdal
-sudo apt install -y libproj-dev && # gdal
-sudo apt install -y libudunits2-dev && # units
-sudo apt install -y libcairo2-dev && # mapview
 sudo apt install -y libv8-dev && # rmapshaper
 sudo apt install -y libprotobuf-dev && # rmapshaper 
 sudo apt install -y libjq-dev && # rmapshaper 
@@ -133,13 +136,9 @@ sudo apt install -y xauth && # cairo
 sudo apt install -y xfonts-base && # cairo 
 sudo apt install -y libxt-dev && # cairo
 sudo apt install -y libgsl-dev && # gsl
-sudo apt install -y libmagick++-dev # magick
-sudo apt install -y gfortran-7 # ecospat
+sudo apt install -y libmagick++-dev && # magick
+sudo apt install -y gfortran-7 && # ecospat
 sudo apt install -y gcc-7 g++-7 # ecospat
-
-# java
-sudo apt install -y default-jre default-jdk &&
-sudo R CMD javareconf
 
 ## flatpak ------------------------------------------------------------------------------------
 # flatpak
