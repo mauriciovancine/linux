@@ -50,31 +50,28 @@ cd Matcha-gtk-theme &&
 ./install.sh
 
 # wallpapers
-sudo apt-get install -y ubuntu-wallpapers*
+sudo apt-get install -y ubuntu-wallpapers* &&
 
 # chromium
-sudo apt install -y chromium-browser
+sudo apt install -y chromium-browser &&
 
 # gparted
-sudo apt install -y gparted
+sudo apt install -y gparted &&
 
 # screenfetch
-sudo apt install -y screenfetch
+sudo apt install -y screenfetch &&
 
 # speedtest
-sudo apt install -y speedtest-cli
+sudo apt install -y speedtest-cli &&
 
 # htop
-sudo apt install -y htop
+sudo apt install -y htop &&
 
 # inkscape
-sudo apt install -y inkscape
+sudo apt install -y inkscape &&
 
 # flameshot
-sudo apt install -y flameshot
-
-# fonts
-sudo apt install -y ubuntu-restricted-extras
+sudo apt install -y flameshot &&
 
 # typora
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE &&
@@ -97,19 +94,21 @@ sudo apt update &&
 sudo apt install -y sublime-text
 
 # java
-sudo apt install -y default-jre default-jdk &&
-sudo R CMD javareconf
+sudo apt install -y default-jre default-jdk
 
 # r
 # https://rtask.thinkr.fr/installation-of-r-4-0-on-ubuntu-20-04-lts-and-tips-for-spatial-packages/
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" &&
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 &&
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" &&
 sudo apt update &&
-sudo apt install -y r-base r-base-core r-recommended r-base-dev && # r
+sudo apt install -y r-base r-base-core r-recommended r-base-dev # r
 
-sudo apt install -y gdal-bin # gdal
-sudo apt install -y libgdal-dev libproj-dev libgeos-dev libudunits2-dev libnode-dev libcairo2-dev libnetcdf-dev &&
-sudo apt install -y libglu1-mesa-dev freeglut3-dev mesa-common-dev
+sudo apt install -y libgdal-dev && # sf
+sudo apt install -y libproj-dev && # sf
+sudo apt install -y libgeos-dev && # sf
+sudo apt install -y libudunits2-dev && # sf
+sudo apt install -y gfortran-7 && # fortran
+sudo apt install -y gcc-7 g++-7 && # just install...
 sudo apt install -y libxml2-dev && # devtools
 sudo apt install -y libssl-dev && # devtools
 sudo apt install -y libcurl4-openssl-dev && # devtools
@@ -125,8 +124,7 @@ sudo apt install -y xfonts-base && # cairo
 sudo apt install -y libxt-dev && # cairo
 sudo apt install -y libgsl-dev && # gsl
 sudo apt install -y libmagick++-dev && # magick
-sudo apt install -y gfortran-7 && # ecospat
-sudo apt install -y gcc-7 g++-7 # ecospat
+sudo R CMD javareconf ## rjava
 
 # qgis
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
@@ -138,25 +136,30 @@ sudo apt install -y qgis qgis-plugin-grass saga
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
 echo -e "\ndeb https://qgis.org/ubuntu focal main" | sudo tee -a /etc/apt/sources.list &&
 sudo apt update &&
-sudo apt install -y grass grass-gui
+sudo apt install -y grass &&
+sudo apt install -y grass-gui
+
+# maybe not?
+# sudo apt install -y ubuntu-restricted-extras
+# sudo apt install -y gdal-bin # gdal
 
 ## flatpak ------------------------------------------------------------------------------------
 # flatpak
 sudo apt install -y flatpak &&
 sudo apt install -y gnome-software-plugin-flatpak &&
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo &&
 
 # spotify
-flatpak install -y flathub com.spotify.Client
+flatpak install -y flathub com.spotify.Client &&
 
 # skype
-flatpak install -y flathub com.skype.Client
+flatpak install -y flathub com.skype.Client &&
 
 # gimp
-# flatpak install -y flathub org.gimp.GIMP
+flatpak install -y flathub org.gimp.GIMP &&
 
 # telegram
-flatpak install -y flathub org.telegram.desktop
+flatpak install -y flathub org.telegram.desktop &&
 
 # mendeley
 flatpak install -y flathub com.elsevier.MendeleyDesktop
@@ -170,19 +173,19 @@ sudo snap install whatsdesk
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5042-amd64.deb &&
 sudo dpkg -i rstudio-1.2.5042-amd64.deb &&
 sudo apt install -fy && 
-rm rstudio-1.2.5042-amd64.deb
+rm rstudio-1.2.5042-amd64.deb &&
 
 # google earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb &&
 sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 sudo apt install -fy &&
-rm google-earth-pro-stable_current_amd64.deb
+rm google-earth-pro-stable_current_amd64.deb &&
 
 # simplenote
 wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.15.1/Simplenote-linux-1.14.0-amd64.deb &&
 sudo dpkg -i Simplenote-linux-1.15.1-amd64.deb &&
 sudo apt install -fy &&
-rm Simplenote-linux-1.15.1-amd64.deb
+rm Simplenote-linux-1.15.1-amd64.deb &&
 
 ## fix broken
 sudo apt clean && sudo apt update &&
@@ -192,7 +195,7 @@ sudo apt install -y --fix-broken
 
 ## cleanup apt
 sudo apt update &&
-sudo apt autoremove -y &&
-sudo apt autoclean -y
+sudo apt autoclean -y &&
+sudo apt autoremove -y
 
 # end ----------------------------------------------------------------------
