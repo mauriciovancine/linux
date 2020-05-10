@@ -5,6 +5,11 @@
 # upgrade 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 
+# nvidia
+sudo apt-add-repository ppa:graphics-drivers/ppa && 
+sudo apt update &&
+sudo ubuntu-drivers autoinstall
+
 # git
 sudo add-apt-repository ppa:git-core/ppa && 
 sudo apt update &&
