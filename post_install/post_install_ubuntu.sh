@@ -171,21 +171,22 @@ sudo snap install whatsdesk
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5042-amd64.deb &&
-sudo dpkg -i rstudio-1.2.5042-amd64.deb &&
+sudo dpkg -i rstudio-1.2.5042-amd64.deb
 sudo apt install -fy && 
 rm rstudio-1.2.5042-amd64.deb &&
 
 # google earth
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13 &&
 wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb &&
-sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
+sudo dpkg -i google-earth-pro-stable_current_amd64.deb
 sudo apt install -fy &&
 rm google-earth-pro-stable_current_amd64.deb &&
 
 # simplenote
-wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.15.1/Simplenote-linux-1.14.0-amd64.deb &&
-sudo dpkg -i Simplenote-linux-1.15.1-amd64.deb &&
+wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.16.0/Simplenote-linux-1.16.0-amd64.deb &&
+sudo dpkg -i Simplenote-linux-1.16.0-amd64.deb
 sudo apt install -fy &&
-rm Simplenote-linux-1.15.1-amd64.deb &&
+rm Simplenote-linux-1.16.0-amd64.deb &&
 
 ## fix broken
 sudo apt clean && sudo apt update &&
