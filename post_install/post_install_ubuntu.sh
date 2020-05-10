@@ -5,6 +5,11 @@
 # upgrade 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 
+# git
+sudo add-apt-repository ppa:git-core/ppa && 
+sudo apt update &&
+sudo apt install -y git
+
 # tweeks and extensions
 sudo apt install -y gnome-tweaks &&
 sudo apt install -y gnome-shell-extensions &&
@@ -16,11 +21,6 @@ mkdir -p ~/.local/share/gnome-shell/extensions &&
 git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com
 # after: press Alt + F2 and enter r in the box
 
-# git
-sudo add-apt-repository ppa:git-core/ppa && 
-sudo apt update &&
-sudo apt install -y git
-
 # dash-to-dock
 git clone https://github.com/micheleg/dash-to-dock.git &&
 cd dash-to-dock &&
@@ -30,7 +30,7 @@ make install
 # theme
 sudo add-apt-repository ppa:daniruiz/flat-remix &&
 sudo apt -y update &&
-sudo apt -y install flat-remix-gtk &&
+sudo apt -y install flat-remix-gtk
 
 # icons
 wget -c https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb &&
@@ -53,9 +53,6 @@ sudo apt install -y chromium-browser
 # gparted
 sudo apt install -y gparted
 
-# gedit
-sudo apt install -y gedit
-
 # screenfetch
 sudo apt install -y screenfetch
 
@@ -70,9 +67,6 @@ sudo apt install -y inkscape
 
 # flameshot
 sudo apt install -y flameshot
-  
-# gdal
-sudo apt install -y gdal-bin
 
 # fonts
 sudo apt install -y ubuntu-restricted-extras
@@ -84,24 +78,12 @@ sudo apt update &&
 sudo apt install -y typora
 
 # anydesk
-sudo su - &&
+sudo su -
 wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add - &&
 echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list &&
 apt update &&
 apt install anydesk -y &&
 exit
-
-# qgis
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
-echo -e "\ndeb https://qgis.org/ubuntu focal main" | sudo tee -a /etc/apt/sources.list &&
-sudo apt update &&
-sudo apt install -y qgis qgis-plugin-grass saga
-
-# grass
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
-echo -e "\ndeb https://qgis.org/ubuntu focal main" | sudo tee -a /etc/apt/sources.list &&
-sudo apt update &&
-sudo apt install -y grass grass-gui
 
 # sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
@@ -120,6 +102,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD
 sudo apt update &&
 sudo apt install -y r-base r-base-core r-recommended r-base-dev && # r
 
+sudo apt install -y gdal-bin # gdal
 sudo apt install -y libgdal-dev libproj-dev libgeos-dev libudunits2-dev libnode-dev libcairo2-dev libnetcdf-dev &&
 sudo apt install -y libglu1-mesa-dev freeglut3-dev mesa-common-dev
 sudo apt install -y libxml2-dev && # devtools
@@ -139,6 +122,18 @@ sudo apt install -y libgsl-dev && # gsl
 sudo apt install -y libmagick++-dev && # magick
 sudo apt install -y gfortran-7 && # ecospat
 sudo apt install -y gcc-7 g++-7 # ecospat
+
+# qgis
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
+echo -e "\ndeb https://qgis.org/ubuntu focal main" | sudo tee -a /etc/apt/sources.list &&
+sudo apt update &&
+sudo apt install -y qgis qgis-plugin-grass saga
+
+# grass
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
+echo -e "\ndeb https://qgis.org/ubuntu focal main" | sudo tee -a /etc/apt/sources.list &&
+sudo apt update &&
+sudo apt install -y grass grass-gui
 
 ## flatpak ------------------------------------------------------------------------------------
 # flatpak
@@ -160,6 +155,10 @@ flatpak install -y flathub org.telegram.desktop
 
 # mendeley
 flatpak install -y flathub com.elsevier.MendeleyDesktop
+
+## snaps --------------------------------------------------------------------------------------
+# whatsdesk
+sudo snap install whatsdesk
 
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
