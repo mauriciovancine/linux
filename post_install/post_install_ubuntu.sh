@@ -34,8 +34,8 @@ make install
 
 # theme
 sudo add-apt-repository ppa:daniruiz/flat-remix &&
-sudo apt -y update &&
-sudo apt -y install flat-remix-gtk
+sudo apt update &&
+sudo apt -y install flat-remix-gnome
 
 # icons
 wget -c https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb &&
