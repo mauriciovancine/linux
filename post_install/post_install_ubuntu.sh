@@ -155,6 +155,9 @@ flatpak install -y flathub com.spotify.Client &&
 # skype
 flatpak install -y flathub com.skype.Client &&
 
+# slack
+flatpak install -y flathub com.slack.Slack &&
+
 # gimp
 flatpak install -y flathub org.gimp.GIMP &&
 
