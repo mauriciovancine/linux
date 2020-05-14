@@ -73,6 +73,9 @@ sudo apt install -y inkscape &&
 # flameshot
 sudo apt install -y flameshot &&
 
+# rclone
+sudo apt install -y rclone &&
+
 # typora
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE &&
 echo -e "\ndeb https://typora.io/linux ./" | sudo tee -a /etc/apt/sources.list &&
