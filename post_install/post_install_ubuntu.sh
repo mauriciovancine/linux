@@ -181,10 +181,10 @@ sudo snap install whatsdesk
 
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5042-amd64.deb &&
-sudo dpkg -i rstudio-1.2.5042-amd64.deb
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.959-amd64.deb &&
+sudo dpkg -i rstudio-1.3.959-amd64.deb
 sudo apt install -fy && 
-rm rstudio-1.2.5042-amd64.deb &&
+rm rstudio-1.3.959-amd64.deb &&
 
 # google earth
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13 &&
