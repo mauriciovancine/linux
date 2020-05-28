@@ -76,6 +76,12 @@ sudo apt install -y flameshot &&
 # rclone
 sudo apt install -y rclone &&
 
+# obs studio
+sudo apt-get install -y ffmpeg &&
+sudo add-apt-repository ppa:obsproject/obs-studio &&
+sudo apt-get update && 
+sudo apt-get install -y obs-studio
+
 # typora
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE &&
 echo -e "\ndeb https://typora.io/linux ./" | sudo tee -a /etc/apt/sources.list &&
