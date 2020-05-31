@@ -204,6 +204,13 @@ sudo dpkg -i Simplenote-linux-1.16.0-amd64.deb
 sudo apt install -fy &&
 rm Simplenote-linux-1.16.0-amd64.deb &&
 
+# woeusb
+wget -c https://github.com/slacka/WoeUSB/files/4622440/woeusb.zip &&
+unzip woeusb.zip &&
+sudo dpkg -i woeusb_3.3.1_amd64.deb &&
+sudo apt install -fy &&
+rm woeusb.zip woeusb_3.3.1_amd64.deb woeusb-dbgsym_3.3.1_amd64.deb woeusb_3.3.1_amd64.changes woeusb_3.3.1_amd64.buildinfo &&
+
 ## fix broken
 sudo apt clean && sudo apt update &&
 sudo dpkg --configure -a &&
