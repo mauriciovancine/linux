@@ -184,6 +184,9 @@ flatpak install -y flathub com.elsevier.MendeleyDesktop
 # whatsdesk
 sudo snap install whatsdesk
 
+# google
+sudo snap install google-webapp
+
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.959-amd64.deb &&
