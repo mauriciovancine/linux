@@ -15,6 +15,12 @@ sudo add-apt-repository ppa:git-core/ppa &&
 sudo apt update &&
 sudo apt install -y git
 
+# make
+sudo apt install -y make
+
+# node-typescript
+sudo apt install -y node-typescript
+
 # tweeks and extensions
 sudo apt install -y gnome-tweaks &&
 sudo apt install -y gnome-shell-extensions &&
@@ -51,6 +57,11 @@ cd Matcha-gtk-theme &&
 
 # wallpapers
 sudo apt-get install -y ubuntu-wallpapers* &&
+
+# tile windows - popos
+git clone https://github.com/pop-os/shell &&
+cd shell/ &&
+./rebuild.sh
 
 # chromium
 sudo apt install -y chromium-browser &&
