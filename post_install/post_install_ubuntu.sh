@@ -30,6 +30,7 @@ sudo apt install -y x11-utils &&
 sudo apt install -y gir1.2-gtop-2.0 lm-sensors gnome-shell-extension-prefs &&
 mkdir -p ~/.local/share/gnome-shell/extensions &&
 git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com
+# https://extensions.gnome.org/extension/1319/gsconnect/
 # after: press Alt + F2 and enter r in the box
 
 # dash-to-dock
