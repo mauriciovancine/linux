@@ -88,6 +88,9 @@ sudo apt install -y flameshot &&
 # rclone
 sudo apt install -y rclone &&
 
+# unrar
+sudo apt install -y unrar &&
+
 # obs studio
 sudo apt-get install -y ffmpeg &&
 sudo add-apt-repository ppa:obsproject/obs-studio &&
