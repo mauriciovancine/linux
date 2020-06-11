@@ -91,6 +91,12 @@ sudo apt install -y rclone &&
 # unrar
 sudo apt install -y unrar &&
 
+# vivaldi
+wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add - &&
+sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main' &&
+sudo apt update && 
+sudo apt install vivaldi-stable &&
+
 # obs studio
 sudo apt-get install -y ffmpeg &&
 sudo add-apt-repository ppa:obsproject/obs-studio &&
