@@ -186,9 +186,6 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # spotify
 flatpak install -y flathub com.spotify.Client &&
 
-# skype
-flatpak install -y flathub com.skype.Client &&
-
 # slack
 flatpak install -y flathub com.slack.Slack &&
 
@@ -197,6 +194,12 @@ flatpak install -y flathub org.gimp.GIMP &&
 
 # telegram
 flatpak install -y flathub org.telegram.desktop &&
+
+# discord
+flatpak install -y flathub com.discordapp.Discord &&
+
+# skype
+flatpak install -y flathub com.skype.Client &&
 
 # mendeley
 flatpak install -y flathub com.elsevier.MendeleyDesktop
