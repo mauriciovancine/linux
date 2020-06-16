@@ -1,0 +1,13 @@
+# install
+sudo apt install npm
+sudo npm install nativefier -g
+
+# create a folder for each webapp
+mkdir googlemeet
+cd googlemeet
+
+# create a webapp
+nativefier https://meet.google.com/
+
+# add icon
+sudo apt install menulibre
