@@ -218,6 +218,12 @@ sudo dpkg -i rstudio-1.3.959-amd64.deb
 sudo apt install -fy && 
 rm rstudio-1.3.959-amd64.deb &&
 
+# google chrome
+wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
+sudo dpkg -i google-chrome-stable_current_amd64.deb &&
+sudo apt install -fy &&
+rm google-chrome-stable_current_amd64.deb
+
 # google earth
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13 &&
 wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb &&
