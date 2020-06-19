@@ -103,7 +103,7 @@ sudo add-apt-repository ppa:obsproject/obs-studio &&
 sudo apt-get update && 
 sudo apt-get install -y obs-studio
 
-# 
+# peek
 sudo add-apt-repository ppa:peek-developers/stable &&
 sudo apt update &&
 sudo apt install -y peek
@@ -172,10 +172,6 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227E
 sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable &&
 sudo apt update &&
 sudo apt install -y grass grass-gui
-
-# maybe not?
-# sudo apt install -y ubuntu-restricted-extras
-# sudo apt install -y gdal-bin # gdal
 
 ## flatpak ------------------------------------------------------------------------------------
 # flatpak
