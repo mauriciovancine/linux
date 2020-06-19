@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# linux mint 19.3 (ubuntu 18.04)
+# linux mint 20 (ubuntu 20.04)
 
 # remove lock apt
 sudo rm /var/lib/dpkg/lock-frontend &&
@@ -83,7 +83,7 @@ sudo R CMD javareconf &&
 
 # r
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 &&
-echo -e "\ndeb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/" | sudo tee -a /etc/apt/sources.list &&
+echo -e "\ndeb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" | sudo tee -a /etc/apt/sources.list &&
 sudo apt update &&
 sudo apt install -y r-base-core && # r
 sudo apt install -y r-base-dev && # devtools
