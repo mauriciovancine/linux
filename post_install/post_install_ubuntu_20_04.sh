@@ -33,12 +33,6 @@ git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/ex
 # https://extensions.gnome.org/extension/1319/gsconnect/
 # after: press Alt + F2 and enter r in the box
 
-# dash-to-dock
-git clone https://github.com/micheleg/dash-to-dock.git &&
-cd dash-to-dock &&
-make &&
-make install
-
 # theme
 sudo add-apt-repository ppa:daniruiz/flat-remix &&
 sudo apt update &&
@@ -57,45 +51,34 @@ cd Matcha-gtk-theme &&
 ./install.sh
 
 # wallpapers
-sudo apt-get install -y ubuntu-wallpapers* &&
-
-# tile windows - popos
-git clone https://github.com/pop-os/shell &&
-cd shell/ &&
-./rebuild.sh
-
-# chromium
-sudo apt install -y chromium-browser &&
+sudo apt-get install -y ubuntu-wallpapers*
 
 # gparted
-sudo apt install -y gparted &&
+sudo apt install -y gparted
 
 # screenfetch
-sudo apt install -y screenfetch &&
+sudo apt install -y screenfetch
 
 # speedtest
-sudo apt install -y speedtest-cli &&
+sudo apt install -y speedtest-cli
 
 # htop
-sudo apt install -y htop &&
+sudo apt install -y htop
 
 # inkscape
-sudo apt install -y inkscape &&
+sudo apt install -y inkscape
 
 # flameshot
-sudo apt install -y flameshot &&
+sudo apt install -y flameshot
 
 # rclone
-sudo apt install -y rclone &&
+sudo apt install -y rclone
 
 # unrar
-sudo apt install -y unrar &&
+sudo apt install -y unrar
 
-# vivaldi
-wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add - &&
-sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main' &&
-sudo apt update && 
-sudo apt install vivaldi-stable &&
+# fonts
+sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
 
 # obs studio
 sudo apt-get install -y ffmpeg &&
@@ -103,7 +86,7 @@ sudo add-apt-repository ppa:obsproject/obs-studio &&
 sudo apt-get update && 
 sudo apt-get install -y obs-studio
 
-# 
+# peek
 sudo add-apt-repository ppa:peek-developers/stable &&
 sudo apt update &&
 sudo apt install -y peek
@@ -171,35 +154,35 @@ sudo apt install -y qgis qgis-plugin-grass saga
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227EDCA75089EBE08314DF160 &&
 sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable &&
 sudo apt update &&
-sudo apt install -y grass grass-gui
-
-# maybe not?
-# sudo apt install -y ubuntu-restricted-extras
-# sudo apt install -y gdal-bin # gdal
+sudo apt install -y grass
 
 ## flatpak ------------------------------------------------------------------------------------
 # flatpak
 sudo apt install -y flatpak &&
 sudo apt install -y gnome-software-plugin-flatpak &&
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo &&
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # spotify
-flatpak install -y flathub com.spotify.Client &&
+flatpak install -y flathub com.spotify.Client
 
 # slack
-flatpak install -y flathub com.slack.Slack &&
+flatpak install -y flathub com.slack.Slack
 
 # gimp
-flatpak install -y flathub org.gimp.GIMP &&
+flatpak install -y flathub org.gimp.GIMP
+
+# photogimp
+wget -c https://github.com/Diolinux/PhotoGIMP/releases/download/1.0/PhotoGIMP.by.Diolinux.v2020.for.Flatpak.zip &&
+unzip PhotoGIMP.by.Diolinux.v2020.for.Flatpak.zip
 
 # telegram
-flatpak install -y flathub org.telegram.desktop &&
+flatpak install -y flathub org.telegram.desktop
 
 # discord
-flatpak install -y flathub com.discordapp.Discord &&
+flatpak install -y flathub com.discordapp.Discord
 
 # skype
-flatpak install -y flathub com.skype.Client &&
+flatpak install -y flathub com.skype.Client
 
 # mendeley
 flatpak install -y flathub com.elsevier.MendeleyDesktop
@@ -211,32 +194,40 @@ sudo snap install whatsdesk
 # google
 sudo snap install google-webapp
 
+# ksnip
+sudo snap install ksnip
+
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.959-amd64.deb &&
 sudo dpkg -i rstudio-1.3.959-amd64.deb
 sudo apt install -fy && 
-rm rstudio-1.3.959-amd64.deb &&
+rm rstudio-1.3.959-amd64.deb
 
 # google earth
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13 &&
 wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb &&
-sudo dpkg -i google-earth-pro-stable_current_amd64.deb
-sudo apt install -fy &&
-rm google-earth-pro-stable_current_amd64.deb &&
+sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
+rm google-earth-pro-stable_current_amd64.deb
 
 # simplenote
-wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.16.0/Simplenote-linux-1.16.0-amd64.deb &&
-sudo dpkg -i Simplenote-linux-1.16.0-amd64.deb
-sudo apt install -fy &&
-rm Simplenote-linux-1.16.0-amd64.deb &&
+wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.18.0/Simplenote-linux-1.18.0-amd64.deb &&
+sudo dpkg -i Simplenote-linux-1.18.0-amd64.deb
+rm Simplenote-linux-1.18.0-amd64.deb
 
-# woeusb
-wget -c https://github.com/slacka/WoeUSB/files/4622440/woeusb.zip &&
-unzip woeusb.zip &&
-sudo dpkg -i woeusb_3.3.1_amd64.deb &&
-sudo apt install -fy &&
-rm woeusb.zip woeusb_3.3.1_amd64.deb woeusb-dbgsym_3.3.1_amd64.deb woeusb_3.3.1_amd64.changes woeusb_3.3.1_amd64.buildinfo &&
+# megasync
+wget https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/megasync-xUbuntu_20.04_amd64.deb &&
+sudo dpkg -i megasync-xUbuntu_20.04_amd64.deb &&
+rm megasync-xUbuntu_20.04_amd64.deb
+
+wget https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/nautilus-megasync-xUbuntu_20.04_amd64.deb &&
+sudo dpkg -i nautilus-megasync-xUbuntu_20.04_amd64.deb &&
+rm nautilus-megasync-xUbuntu_20.04_amd64.deb
+
+# warsal - modulo seguranca bb
+wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb &&
+sudo dpkg -i warsaw_setup64.deb &&
+rm warsaw_setup64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update &&
@@ -248,5 +239,21 @@ sudo apt install -y --fix-broken
 sudo apt update &&
 sudo apt autoclean -y &&
 sudo apt autoremove -y
+
+# extras ------------------------------------------------------------------
+# chromium
+# sudo apt install -y chromium-browser &&
+
+# tile windows - popos
+# git clone https://github.com/pop-os/shell &&
+# d shell/ &&
+#./rebuild.sh
+
+# dash-to-dock
+# git clone https://github.com/micheleg/dash-to-dock.git &&
+# cd dash-to-dock &&
+# make &&
+# make install
+
 
 # end ----------------------------------------------------------------------

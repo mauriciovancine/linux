@@ -52,7 +52,8 @@ sudo apt install paper-icon-theme &&
 # sudo ubuntu-drivers autoinstall &&
 
 # stacer
-sudo add-apt-repository ppa:oguzhaninan/stacer && sudo apt update &&
+sudo add-apt-repository ppa:oguzhaninan/stacer && 
+sudo apt update &&
 sudo apt install -y stacer &&
 
 # rclone browser
@@ -166,12 +167,6 @@ sudo dpkg -i rstudio-1.2.5033-amd64.deb &&
 sudo apt install -fy &&
 rm rstudio-1.2.5033-amd64.deb &&
 
-# slack
-wget -c https://downloads.slack-edge.com/linux_releases/slack-desktop-4.3.2-amd64.deb &&
-sudo dpkg -i slack-desktop-4.3.2-amd64.deb &&
-sudo apt install -fy &&
-rm slack-desktop-4.3.2-amd64.deb &&
-
 # google earth
 wget -c http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb &&
 sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
@@ -184,23 +179,6 @@ sudo dpkg -i Simplenote-linux-1.15.0-amd64.deb &&
 sudo apt install -fy &&
 rm Simplenote-linux-1.15.0-amd64.deb &&
 
-# libreoffice
-sudo apt remove -y libreoffice* &&
-
-wget -c https://download.documentfoundation.org/libreoffice/stable/6.4.3/deb/x86_64/LibreOffice_6.4.3_Linux_x86-64_deb.tar.gz &&
-tar xvzf LibreOffice_6.4.3_Linux_x86-64_deb.tar.gz &&
-cd ~/LibreOffice_6.4.3.2_Linux_x86-64_deb/DEBS &&
-sudo dpkg -i *.deb &&
-sudo apt install -fy &&
-cd ..; cd .. &&
-rm -r LibreOffice_6.4.3.2_Linux_x86-64_deb &&
-rm LibreOffice_6.4.3_Linux_x86-64_deb.tar.gz &&
-
-# wps office
-wget -c http://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/9505/wps-office_11.1.0.9505.XA_amd64.deb &&
-sudo dpkg -i wps-office_11.1.0.9505.XA_amd64.deb &&
-sudo apt install -fy &&
-rm wps-office_11.1.0.9505.XA_amd64.deb &&
 
 # warsal - modulo seguranca bb
 wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb &&

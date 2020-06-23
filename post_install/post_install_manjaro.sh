@@ -8,12 +8,6 @@ sudo pacman -Syyu
 
 
 # packages
-# install chromium
-sudo pacman -Sy chromium
-
-# install rhythmbox
-sudo pacman -Sy rhythmbox
-
 # install r
 sudo pacman -Sy r
 
