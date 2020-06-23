@@ -154,11 +154,7 @@ sudo apt install -y qgis qgis-plugin-grass saga
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227EDCA75089EBE08314DF160 &&
 sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable &&
 sudo apt update &&
-<<<<<<< HEAD:post_install/post_install_ubuntu_20_04.sh
 sudo apt install -y grass
-=======
-sudo apt install -y grass grass-gui
->>>>>>> 6c32961e880166f8b0269a6e0f8bd187043d3f7c:post_install/post_install_ubuntu.sh
 
 ## flatpak ------------------------------------------------------------------------------------
 # flatpak
