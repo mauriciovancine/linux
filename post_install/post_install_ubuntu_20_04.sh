@@ -154,7 +154,11 @@ sudo apt install -y qgis qgis-plugin-grass saga
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227EDCA75089EBE08314DF160 &&
 sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable &&
 sudo apt update &&
+<<<<<<< HEAD:post_install/post_install_ubuntu_20_04.sh
 sudo apt install -y grass
+=======
+sudo apt install -y grass grass-gui
+>>>>>>> 6c32961e880166f8b0269a6e0f8bd187043d3f7c:post_install/post_install_ubuntu.sh
 
 ## flatpak ------------------------------------------------------------------------------------
 # flatpak
@@ -203,6 +207,12 @@ wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.959-amd64.de
 sudo dpkg -i rstudio-1.3.959-amd64.deb
 sudo apt install -fy && 
 rm rstudio-1.3.959-amd64.deb
+
+# google chrome
+wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
+sudo dpkg -i google-chrome-stable_current_amd64.deb &&
+sudo apt install -fy &&
+rm google-chrome-stable_current_amd64.deb
 
 # google earth
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13 &&
