@@ -99,14 +99,14 @@ sudo apt install -y typora
 
 # anydesk
 sudo su -
-wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add - &&
+wget -c -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add - &&
 echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list &&
 apt update &&
 apt install anydesk -y &&
 exit
 
 # sublime
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
+wget -c -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list &&
 sudo apt update &&
 sudo apt install -y sublime-text
@@ -199,7 +199,7 @@ sudo snap install ksnip
 
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.959-amd64.deb &&
+wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.959-amd64.deb &&
 sudo dpkg -i rstudio-1.3.959-amd64.deb
 sudo apt install -fy && 
 rm rstudio-1.3.959-amd64.deb
@@ -212,7 +212,7 @@ rm google-chrome-stable_current_amd64.deb
 
 # google earth
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13 &&
-wget http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb &&
+wget -c http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb &&
 sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 rm google-earth-pro-stable_current_amd64.deb
 
@@ -222,13 +222,19 @@ sudo dpkg -i Simplenote-linux-1.18.0-amd64.deb
 rm Simplenote-linux-1.18.0-amd64.deb
 
 # megasync
-wget https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/megasync-xUbuntu_20.04_amd64.deb &&
+wget -c https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/megasync-xUbuntu_20.04_amd64.deb &&
 sudo dpkg -i megasync-xUbuntu_20.04_amd64.deb &&
 rm megasync-xUbuntu_20.04_amd64.deb
 
-wget https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/nautilus-megasync-xUbuntu_20.04_amd64.deb &&
+wget -c https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/nautilus-megasync-xUbuntu_20.04_amd64.deb &&
 sudo dpkg -i nautilus-megasync-xUbuntu_20.04_amd64.deb &&
 rm nautilus-megasync-xUbuntu_20.04_amd64.deb
+
+# dropbox
+wget -c --output-document=dropbox_2020.03.04_amd64.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
+sudo dpkg -i dropbox_2020.03.04_amd64.deb
+sudo apt install -fy
+rm dropbox_2020.03.04_amd64.deb
 
 # warsal - modulo seguranca bb
 wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb &&
