@@ -216,6 +216,11 @@ wget -c http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_cur
 sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 rm google-earth-pro-stable_current_amd64.deb
 
+# whatdesk
+wget -c https://zerkc.gitlab.io/whatsdesk/whatsdesk_0.3.1_amd64.deb
+sudo dpkg -i whatsdesk_0.3.1_amd64.deb
+rm whatsdesk_0.3.1_amd64.deb
+
 # simplenote
 wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.18.0/Simplenote-linux-1.18.0-amd64.deb &&
 sudo dpkg -i Simplenote-linux-1.18.0-amd64.deb
