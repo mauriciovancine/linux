@@ -33,10 +33,8 @@ git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/ex
 # https://extensions.gnome.org/extension/1319/gsconnect/
 # after: press Alt + F2 and enter r in the box
 
-# theme
-sudo add-apt-repository ppa:daniruiz/flat-remix &&
-sudo apt update &&
-sudo apt install -y flat-remix-gnome
+# themes
+sudo apt install materia-gtk-theme
 
 # icons
 wget -c https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb &&
@@ -272,5 +270,9 @@ sudo apt autoremove -y
 # make &&
 # make install
 
+# thema
+# sudo add-apt-repository ppa:daniruiz/flat-remix &&
+# sudo apt update &&
+# sudo apt install -y flat-remix-gnome
 
 # end ----------------------------------------------------------------------
