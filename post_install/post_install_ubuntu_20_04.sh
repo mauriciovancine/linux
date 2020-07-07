@@ -192,6 +192,9 @@ sudo snap install whatsdesk
 # google
 sudo snap install google-webapp
 
+# simplenote
+sudo snap install simplenote
+
 # ksnip
 sudo snap install ksnip
 
@@ -219,11 +222,6 @@ wget -c https://zerkc.gitlab.io/whatsdesk/whatsdesk_0.3.1_amd64.deb
 sudo dpkg -i whatsdesk_0.3.1_amd64.deb
 rm whatsdesk_0.3.1_amd64.deb
 
-# simplenote
-wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.18.0/Simplenote-linux-1.18.0-amd64.deb &&
-sudo dpkg -i Simplenote-linux-1.18.0-amd64.deb
-rm Simplenote-linux-1.18.0-amd64.deb
-
 # megasync
 wget -c https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/megasync-xUbuntu_20.04_amd64.deb &&
 sudo dpkg -i megasync-xUbuntu_20.04_amd64.deb &&
@@ -240,9 +238,9 @@ sudo apt install -fy
 rm dropbox_2020.03.04_amd64.deb
 
 # warsal - modulo seguranca bb
-wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb &&
-sudo dpkg -i warsaw_setup64.deb &&
-rm warsaw_setup64.deb
+wget https://cloud.gastecnologia.com.br/cef/warsaw/install/GBPCEFwr64.deb &&
+sudo dpkg -i GBPCEFwr64.deb &&
+rm GBPCEFwr64.deb
 
 ## fix broken
 sudo apt clean && sudo apt update &&
