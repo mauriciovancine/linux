@@ -75,6 +75,9 @@ sudo apt install -y rclone
 # unrar
 sudo apt install -y unrar
 
+# adobe
+sudo apt install -y flashplugin-installer
+
 # fonts
 sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
 
@@ -184,6 +187,9 @@ flatpak install -y flathub com.skype.Client
 
 # mendeley
 flatpak install -y flathub com.elsevier.MendeleyDesktop
+
+# toggl
+flatpak install flathub com.toggl.TogglDesktop
 
 ## snaps --------------------------------------------------------------------------------------
 # whatsdesk
