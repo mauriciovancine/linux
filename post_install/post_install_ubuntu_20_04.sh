@@ -87,6 +87,11 @@ sudo add-apt-repository ppa:obsproject/obs-studio &&
 sudo apt-get update && 
 sudo apt-get install -y obs-studio
 
+# openshot
+sudo add-apt-repository ppa:openshot.developers/ppa &&
+sudo apt update &&
+sudo apt install -y openshot-qt
+
 # peek
 sudo add-apt-repository ppa:peek-developers/stable &&
 sudo apt update &&
