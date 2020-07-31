@@ -109,13 +109,16 @@ sudo apt install -y libgsl-dev && # gsl
 sudo apt install -y libmagick++-dev && # magick
   
 # qgis
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3 &&
-echo -e "\ndeb https://qgis.org/ubuntu bionic main" | sudo tee -a /etc/apt/sources.list &&
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227EDCA75089EBE08314DF160 &&
+sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable &&
 sudo apt update &&
-sudo apt install -y qgis qgis-plugin-grass saga &&
+sudo apt install -y qgis qgis-plugin-grass saga
 
 # grass
-sudo apt install -y grass &&
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227EDCA75089EBE08314DF160 &&
+sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable &&
+sudo apt update &&
+sudo apt install -y grass
 
 ## flatpaks -----------------------------------------------------------------------------------
 # flatpak
@@ -162,23 +165,16 @@ rm google-chrome-stable_current_amd64.deb &&
 # rm rclone-current-linux-amd64.deb
 
 # rstudio
-wget -c https://download1.rstudio.org/desktop/trusty/amd64/rstudio-1.2.5033-amd64.deb &&
-sudo dpkg -i rstudio-1.2.5033-amd64.deb &&
+wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1056-amd64.deb &&
+sudo dpkg -i rstudio-1.3.1056-amd64.deb &&
 sudo apt install -fy &&
-rm rstudio-1.2.5033-amd64.deb &&
+rm rstudio-1.3.1056-amd64.deb &&
 
 # google earth
 wget -c http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb &&
 sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 sudo apt install -fy &&
 rm google-earth-pro-stable_current_amd64.deb &&
-
-# simplenote
-wget -c https://github.com/Automattic/simplenote-electron/releases/download/v1.15.1/Simplenote-linux-1.15.1-amd64.deb &&
-sudo dpkg -i Simplenote-linux-1.15.0-amd64.deb &&
-sudo apt install -fy &&
-rm Simplenote-linux-1.15.0-amd64.deb &&
-
 
 # warsal - modulo seguranca bb
 wget -c https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb &&
