@@ -197,6 +197,9 @@ flatpak install -y flathub com.elsevier.MendeleyDesktop
 flatpak install flathub com.toggl.TogglDesktop
 
 ## snaps --------------------------------------------------------------------------------------
+# install
+sudo apt install -y snapd
+
 # whatsdesk
 sudo snap install whatsdesk
 
