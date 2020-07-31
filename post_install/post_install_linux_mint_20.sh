@@ -151,6 +151,20 @@ flatpak install -y flathub com.wps.Office &&
 # games
 # flatpak install -y flathub org.gnome.Games
 
+## snaps --------------------------------------------------------------------------------------
+# install
+sudo rm /etc/apt/preferences.d/nosnap.pref
+sudo apt install -y snapd
+
+# whatsdesk
+sudo snap install whatsdesk
+
+# google
+sudo snap install google-webapp
+
+# simplenote
+sudo snap install simplenote
+
 ## dpkgs --------------------------------------------------------------------------------------
 # google chrome
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
