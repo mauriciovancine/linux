@@ -66,6 +66,9 @@ sudo apt install -y htop
 # inkscape
 sudo apt install -y inkscape
 
+# audacity
+sudo apt install -y audacity
+
 # flameshot
 sudo apt install -y flameshot
 
@@ -98,6 +101,11 @@ sudo apt update &&
 sudo apt install -y peek
 
 # typora
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt update
+sudo apt install typora
+
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE &&
 echo -e "\ndeb https://typora.io/linux ./" | sudo tee -a /etc/apt/sources.list &&
 sudo apt update &&
@@ -167,6 +175,10 @@ sudo apt install -y grass
 sudo apt install -y flatpak &&
 sudo apt install -y gnome-software-plugin-flatpak &&
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# libreoffice
+sudo apt-get remove --purge libreoffice* &&
+flatpak install -y flathub org.libreoffice.LibreOffice
 
 # spotify
 flatpak install -y flathub com.spotify.Client
