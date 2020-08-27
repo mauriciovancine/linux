@@ -209,6 +209,9 @@ flatpak install -y flathub com.elsevier.MendeleyDesktop
 flatpak install flathub com.toggl.TogglDesktop
 
 ## snaps --------------------------------------------------------------------------------------
+# install
+sudo apt install -y snapd
+
 # whatsdesk
 sudo snap install whatsdesk
 
@@ -223,10 +226,10 @@ sudo snap install ksnip
 
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
-wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.959-amd64.deb &&
-sudo dpkg -i rstudio-1.3.959-amd64.deb
+wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1056-amd64.deb &&
+sudo dpkg -i rstudio-1.3.1056-amd64.deb
 sudo apt install -fy && 
-rm rstudio-1.3.959-amd64.deb
+rm rstudio-1.3.1056-amd64.deb
 
 # google chrome
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
