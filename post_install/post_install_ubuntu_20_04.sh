@@ -35,18 +35,19 @@ git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/ex
 
 # themes
 sudo apt install materia-gtk-theme
-
-# icons
-wget -c https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb &&
-sudo dpkg -i paper*.deb &&
-sudo apt install -f &&
-rm paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb
-
-# shell
 sudo apt-get install gtk2-engines-murrine gtk2-engines-pixbuf &&
 git clone https://github.com/vinceliuice/Matcha-gtk-theme.git &&
 cd Matcha-gtk-theme &&
 ./install.sh
+
+# icons
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo apt install paper-icon-theme
+
+wget -c https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb &&
+sudo dpkg -i paper*.deb &&
+sudo apt install -f &&
+rm paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb
 
 # wallpapers
 sudo apt-get install -y ubuntu-wallpapers*
@@ -133,30 +134,35 @@ sudo apt install -y default-jre default-jdk
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 &&
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" &&
 sudo apt update &&
-sudo apt install -y r-base r-base-core r-recommended r-base-dev # r
+sudo apt install -y r-base r-base-core r-recommended r-base-dev r-cran-rcpp # r
 
-sudo apt install -y libgdal-dev && # sf
-sudo apt install -y libproj-dev && # sf
-sudo apt install -y libgeos-dev && # sf
-sudo apt install -y libudunits2-dev && # sf
-sudo apt install -y gfortran-7 && # fortran
-sudo apt install -y gcc-7 g++-7 && # just install...
-sudo apt install -y libxml2-dev && # devtools
-sudo apt install -y libssl-dev && # devtools
-sudo apt install -y libcurl4-openssl-dev && # devtools
-sudo apt install -y libv8-dev && # rmapshaper
-sudo apt install -y libprotobuf-dev && # rmapshaper 
-sudo apt install -y libjq-dev && # rmapshaper 
-sudo apt install -y protobuf-compiler && # rmapshaper 
-sudo apt install -y libgmp3-dev && # betapart
-sudo apt install -y libgtk2.0-dev && # cairo
-sudo apt install -y xvfb && # cairo 
-sudo apt install -y xauth && # cairo 
-sudo apt install -y xfonts-base && # cairo 
-sudo apt install -y libxt-dev && # cairo
-sudo apt install -y libgsl-dev && # gsl
-sudo apt install -y libmagick++-dev && # magick
-sudo R CMD javareconf ## rjava
+sudo apt install -y gdal-bin &&
+sudo apt install -y libgdal-dev && 
+sudo apt install -y libproj-dev && 
+sudo apt install -y libssl && 
+sudo apt install -y libssl-dev && 
+sudo apt install -y xml2 && 
+sudo apt install -y libxml2-dev && 
+sudo apt install -y libgeos-dev && 
+sudo apt install -y libudunits2-dev && 
+sudo apt install -y gfortran-7 && 
+sudo apt install -y gcc-7 g++-7 && 
+sudo apt install -y libxml2-dev && 
+sudo apt install -y libssl-dev && 
+sudo apt install -y libcurl4-openssl-dev && 
+sudo apt install -y libv8-dev && 
+sudo apt install -y libprotobuf-dev && 
+sudo apt install -y libjq-dev && 
+sudo apt install -y protobuf-compiler && 
+sudo apt install -y libgmp3-dev && 
+sudo apt install -y libgtk2.0-dev && 
+sudo apt install -y xvfb && 
+sudo apt install -y xauth && 
+sudo apt install -y xfonts-base && 
+sudo apt install -y libxt-dev && 
+sudo apt install -y libgsl-dev && 
+sudo apt install -y libmagick++-dev && 
+sudo R CMD javareconf
 
 # qgis
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227EDCA75089EBE08314DF160 &&
