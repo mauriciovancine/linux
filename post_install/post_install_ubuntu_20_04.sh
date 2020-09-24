@@ -134,7 +134,7 @@ sudo apt install -y default-jre default-jdk
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 &&
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" &&
 sudo apt update &&
-sudo apt install -y r-base r-base-core r-recommended r-base-dev r-cran-rcpp # r
+sudo apt install -y r-base r-base-core r-recommended r-base-dev # r
 
 sudo apt install -y gdal-bin &&
 sudo apt install -y libgdal-dev && 
