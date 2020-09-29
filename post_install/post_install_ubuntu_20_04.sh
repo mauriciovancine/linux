@@ -73,6 +73,10 @@ sudo apt install -y audacity
 # flameshot
 sudo apt install -y flameshot
 
+# epub reader
+sudo apt install -y fbreader
+sudo apt install -y okular
+
 # rclone
 sudo apt install -y rclone
 
@@ -209,6 +213,9 @@ flatpak install -y flathub com.skype.Client
 
 # mendeley
 flatpak install -y flathub com.elsevier.MendeleyDesktop
+
+# bookworm
+flatpak install -y flathub com.github.babluboy.bookworm
 
 # toggl
 flatpak install flathub com.toggl.TogglDesktop
