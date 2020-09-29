@@ -41,7 +41,11 @@ rm jre-8u261-linux-x64.rpm
 sudo dnf install -y R
 
 sudo dnf install -y udunits2-devel
-sudo dnf
+sudo dnf install -y libproj
+sudo dnf install -y gdal-devel
+sudo dnf install -y proj-devel
+sudo dnf install -y sqlite-devel
+sudo dnf install -y geos-devel
 
 sudo R CMD javareconf
 
