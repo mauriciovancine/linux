@@ -211,6 +211,9 @@ flatpak install -y flathub com.discordapp.Discord
 # skype
 flatpak install -y flathub com.skype.Client
 
+# zotero
+flatpak install -y flathub org.zotero.Zotero
+
 # mendeley
 flatpak install -y flathub com.elsevier.MendeleyDesktop
 
