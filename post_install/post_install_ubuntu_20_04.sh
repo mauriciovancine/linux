@@ -211,12 +211,6 @@ flatpak install -y flathub com.discordapp.Discord
 # skype
 flatpak install -y flathub com.skype.Client
 
-# zotero
-flatpak install -y flathub org.zotero.Zotero
-
-# mendeley
-flatpak install -y flathub com.elsevier.MendeleyDesktop
-
 # bookworm
 flatpak install -y flathub com.github.babluboy.bookworm
 
@@ -246,6 +240,15 @@ sudo dpkg -i rstudio-1.3.1056-amd64.deb
 sudo apt install -fy && 
 rm rstudio-1.3.1056-amd64.deb
 
+# libreoffice
+wget https://download.documentfoundation.org/libreoffice/stable/6.4.6/deb/x86_64/LibreOffice_6.4.6_Linux_x86-64_deb.tar.gz
+tar -xvf LibreOffice_6.4.6_Linux_x86-64_deb.tar.gz
+cd ~/LibreOffice_6.4.6.2_Linux_x86-64_deb/DEBS
+sudo dpkg -i *.deb 
+cd ..; cd ..
+rm -r LibreOffice_6.4.6.2_Linux_x86-64_deb
+rm LibreOffice_6.4.6_Linux_x86-64_deb.tar.gz
+
 # google chrome
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
 sudo dpkg -i google-chrome-stable_current_amd64.deb &&
@@ -262,6 +265,11 @@ rm google-earth-pro-stable_current_amd64.deb
 wget -c https://zerkc.gitlab.io/whatsdesk/whatsdesk_0.3.1_amd64.deb
 sudo dpkg -i whatsdesk_0.3.1_amd64.deb
 rm whatsdesk_0.3.1_amd64.deb
+
+# mendeley
+wget -c https://desktop-download.mendeley.com/download/apt/pool/main/m/mendeleydesktop/mendeleydesktop_1.19.4-stable_amd64.deb
+sudo dpkg -i mendeleydesktop_1.19.4-stable_amd64.deb
+rm mendeleydesktop_1.19.4-stable_amd64.deb
 
 # megasync
 wget -c https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/megasync-xUbuntu_20.04_amd64.deb &&
