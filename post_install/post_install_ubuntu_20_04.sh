@@ -144,6 +144,7 @@ sudo apt install -y gdal-bin &&
 sudo apt install -y libgdal-dev && 
 sudo apt install -y libproj-dev && 
 sudo apt install -y libssl-dev && 
+sudo apt install -y libavfilter-dev &&
 sudo apt install -y xml2 && 
 sudo apt install -y libxml2-dev && 
 sudo apt install -y libgeos-dev && 
