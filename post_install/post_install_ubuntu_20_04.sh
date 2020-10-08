@@ -35,18 +35,19 @@ git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/ex
 
 # themes
 sudo apt install materia-gtk-theme
-
-# icons
-wget -c https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb &&
-sudo dpkg -i paper*.deb &&
-sudo apt install -f &&
-rm paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb
-
-# shell
 sudo apt-get install gtk2-engines-murrine gtk2-engines-pixbuf &&
 git clone https://github.com/vinceliuice/Matcha-gtk-theme.git &&
 cd Matcha-gtk-theme &&
 ./install.sh
+
+# icons
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo apt install paper-icon-theme
+
+wget -c https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb &&
+sudo dpkg -i paper*.deb &&
+sudo apt install -f &&
+rm paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb
 
 # wallpapers
 sudo apt-get install -y ubuntu-wallpapers*
@@ -71,6 +72,10 @@ sudo apt install -y audacity
 
 # flameshot
 sudo apt install -y flameshot
+
+# epub reader
+sudo apt install -y fbreader
+sudo apt install -y okular
 
 # rclone
 sudo apt install -y rclone
@@ -135,28 +140,33 @@ sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-
 sudo apt update &&
 sudo apt install -y r-base r-base-core r-recommended r-base-dev # r
 
-sudo apt install -y libgdal-dev && # sf
-sudo apt install -y libproj-dev && # sf
-sudo apt install -y libgeos-dev && # sf
-sudo apt install -y libudunits2-dev && # sf
-sudo apt install -y gfortran-7 && # fortran
-sudo apt install -y gcc-7 g++-7 && # just install...
-sudo apt install -y libxml2-dev && # devtools
-sudo apt install -y libssl-dev && # devtools
-sudo apt install -y libcurl4-openssl-dev && # devtools
-sudo apt install -y libv8-dev && # rmapshaper
-sudo apt install -y libprotobuf-dev && # rmapshaper 
-sudo apt install -y libjq-dev && # rmapshaper 
-sudo apt install -y protobuf-compiler && # rmapshaper 
-sudo apt install -y libgmp3-dev && # betapart
-sudo apt install -y libgtk2.0-dev && # cairo
-sudo apt install -y xvfb && # cairo 
-sudo apt install -y xauth && # cairo 
-sudo apt install -y xfonts-base && # cairo 
-sudo apt install -y libxt-dev && # cairo
-sudo apt install -y libgsl-dev && # gsl
-sudo apt install -y libmagick++-dev && # magick
-sudo R CMD javareconf ## rjava
+sudo apt install -y gdal-bin &&
+sudo apt install -y libgdal-dev && 
+sudo apt install -y libproj-dev && 
+sudo apt install -y libssl-dev && 
+sudo apt install -y libavfilter-dev &&
+sudo apt install -y xml2 && 
+sudo apt install -y libxml2-dev && 
+sudo apt install -y libgeos-dev && 
+sudo apt install -y libudunits2-dev && 
+sudo apt install -y gfortran-7 && 
+sudo apt install -y gcc-7 g++-7 && 
+sudo apt install -y libxml2-dev && 
+sudo apt install -y libssl-dev && 
+sudo apt install -y libcurl4-openssl-dev && 
+sudo apt install -y libv8-dev && 
+sudo apt install -y libprotobuf-dev && 
+sudo apt install -y libjq-dev && 
+sudo apt install -y protobuf-compiler && 
+sudo apt install -y libgmp3-dev && 
+sudo apt install -y libgtk2.0-dev && 
+sudo apt install -y xvfb && 
+sudo apt install -y xauth && 
+sudo apt install -y xfonts-base && 
+sudo apt install -y libxt-dev && 
+sudo apt install -y libgsl-dev && 
+sudo apt install -y libmagick++-dev && 
+sudo R CMD javareconf
 
 # qgis
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227EDCA75089EBE08314DF160 &&
@@ -202,8 +212,8 @@ flatpak install -y flathub com.discordapp.Discord
 # skype
 flatpak install -y flathub com.skype.Client
 
-# mendeley
-flatpak install -y flathub com.elsevier.MendeleyDesktop
+# bookworm
+flatpak install -y flathub com.github.babluboy.bookworm
 
 # toggl
 flatpak install flathub com.toggl.TogglDesktop
@@ -234,6 +244,15 @@ sudo dpkg -i rstudio-1.3.1093-amd64.deb
 sudo apt install -fy && 
 rm rstudio-1.3.1093-amd64.deb
 
+# libreoffice
+wget https://download.documentfoundation.org/libreoffice/stable/6.4.6/deb/x86_64/LibreOffice_6.4.6_Linux_x86-64_deb.tar.gz
+tar -xvf LibreOffice_6.4.6_Linux_x86-64_deb.tar.gz
+cd ~/LibreOffice_6.4.6.2_Linux_x86-64_deb/DEBS
+sudo dpkg -i *.deb 
+cd ..; cd ..
+rm -r LibreOffice_6.4.6.2_Linux_x86-64_deb
+rm LibreOffice_6.4.6_Linux_x86-64_deb.tar.gz
+
 # google chrome
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
 sudo dpkg -i google-chrome-stable_current_amd64.deb &&
@@ -250,6 +269,11 @@ rm google-earth-pro-stable_current_amd64.deb
 wget -c https://zerkc.gitlab.io/whatsdesk/whatsdesk_0.3.1_amd64.deb
 sudo dpkg -i whatsdesk_0.3.1_amd64.deb
 rm whatsdesk_0.3.1_amd64.deb
+
+# mendeley
+wget -c https://desktop-download.mendeley.com/download/apt/pool/main/m/mendeleydesktop/mendeleydesktop_1.19.4-stable_amd64.deb
+sudo dpkg -i mendeleydesktop_1.19.4-stable_amd64.deb
+rm mendeleydesktop_1.19.4-stable_amd64.deb
 
 # megasync
 wget -c https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/megasync-xUbuntu_20.04_amd64.deb &&
