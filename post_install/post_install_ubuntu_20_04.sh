@@ -86,19 +86,21 @@ sudo apt install -y unrar
 # adobe
 sudo apt install -y flashplugin-installer
 
+# darktable
+sudo apt install -y darktable
+
 # fonts
 sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
+
+# alacritty
+sudo add-apt-repository ppa:mmstick76/alacritty &&
+sudo apt install -y alacritty
 
 # obs studio
 sudo apt-get install -y ffmpeg &&
 sudo add-apt-repository ppa:obsproject/obs-studio &&
 sudo apt-get update && 
 sudo apt-get install -y obs-studio
-
-# openshot
-sudo add-apt-repository ppa:openshot.developers/ppa &&
-sudo apt update &&
-sudo apt install -y openshot-qt
 
 # peek
 sudo add-apt-repository ppa:peek-developers/stable &&
@@ -136,6 +138,8 @@ sudo apt install -y default-jre default-jdk
 # r
 # https://rtask.thinkr.fr/installation-of-r-4-0-on-ubuntu-20-04-lts-and-tips-for-spatial-packages/
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 &&
+gpg --keyserver keyserver.ubuntu.com --recv-key E298A3A825C0D65DFD57CBB651716619E084DAB9 &&
+gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add - &&
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" &&
 sudo apt update &&
 sudo apt install -y r-base r-base-core r-recommended r-base-dev # r
@@ -212,6 +216,9 @@ flatpak install -y flathub com.discordapp.Discord
 # skype
 flatpak install -y flathub com.skype.Client
 
+# fondo
+flatpak install flathub com.github.calo001.fondo
+
 # bookworm
 flatpak install -y flathub com.github.babluboy.bookworm
 
@@ -228,14 +235,11 @@ sudo apt install -y snapd
 # whatsdesk
 sudo snap install whatsdesk
 
-# google
-sudo snap install google-webapp
-
 # simplenote
 sudo snap install simplenote
 
-# ksnip
-sudo snap install ksnip
+# kcolorchooser
+sudo snap install kcolorchooser
 
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
@@ -252,6 +256,12 @@ sudo dpkg -i *.deb
 cd ..; cd ..
 rm -r LibreOffice_6.4.6.2_Linux_x86-64_deb
 rm LibreOffice_6.4.6_Linux_x86-64_deb.tar.gz
+
+# pdfsam
+wget -c https://github.com/torakiki/pdfsam/releases/download/v4.2.0/pdfsam_4.2.0-1_amd64.deb &&
+sudo dpkg -i pdfsam_4.2.0-1_amd64.deb &&
+sudo apt install -fy &&
+rm pdfsam_4.2.0-1_amd64.deb
 
 # google chrome
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
