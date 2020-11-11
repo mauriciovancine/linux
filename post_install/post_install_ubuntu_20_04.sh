@@ -217,16 +217,19 @@ flatpak install -y flathub com.discordapp.Discord
 flatpak install -y flathub com.skype.Client
 
 # fondo
-flatpak install flathub com.github.calo001.fondo
+flatpak install -y flathub com.github.calo001.fondo
 
 # bookworm
 flatpak install -y flathub com.github.babluboy.bookworm
 
 # toggl
-flatpak install flathub com.toggl.TogglDesktop
+flatpak install -y flathub com.toggl.TogglDesktop
 
 # vlc
-flatpak install flathub org.videolan.VLC
+flatpak install -y flathub org.videolan.VLC
+
+# gydl
+flatpak install -y flathub com.github.JannikHv.Gydl
 
 ## snaps --------------------------------------------------------------------------------------
 # install
@@ -243,10 +246,10 @@ sudo snap install kcolorchooser
 
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
-wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1093-amd64.deb &&
-sudo dpkg -i rstudio-1.3.1093-amd64.deb
+wget -c https://s3.amazonaws.com/rstudio-ide-build/desktop/bionic/amd64/rstudio-1.4.1010-amd64.deb &&
+sudo dpkg -i rstudio-1.4.1010-amd64.deb
 sudo apt install -fy && 
-rm rstudio-1.3.1093-amd64.deb
+rm rstudio-1.4.1010-amd64.deb
 
 # libreoffice
 wget https://download.documentfoundation.org/libreoffice/stable/6.4.6/deb/x86_64/LibreOffice_6.4.6_Linux_x86-64_deb.tar.gz
