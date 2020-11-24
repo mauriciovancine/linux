@@ -184,15 +184,20 @@ sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable &&
 sudo apt update &&
 sudo apt install -y grass
 
+# wine
+sudo dpkg --add-architecture i386 &&
+wget -nc https://dl.winehq.org/wine-builds/winehq.key &&
+sudo apt-key add winehq.key &&
+sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' &&
+sudo apt update &&
+sudo apt install -y --install-recommends winehq-stable
+winecfg
+
 ## flatpak ------------------------------------------------------------------------------------
 # flatpak
 sudo apt install -y flatpak &&
 sudo apt install -y gnome-software-plugin-flatpak &&
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-# libreoffice
-sudo apt-get remove --purge libreoffice* &&
-flatpak install -y flathub org.libreoffice.LibreOffice
 
 # spotify
 flatpak install -y flathub com.spotify.Client
@@ -252,13 +257,13 @@ sudo apt install -fy &&
 rm rstudio-1.4.1010-amd64.deb
 
 # libreoffice
-wget https://download.documentfoundation.org/libreoffice/stable/6.4.6/deb/x86_64/LibreOffice_6.4.6_Linux_x86-64_deb.tar.gz
-tar -xvf LibreOffice_6.4.6_Linux_x86-64_deb.tar.gz
-cd ~/LibreOffice_6.4.6.2_Linux_x86-64_deb/DEBS
+wget https://download.documentfoundation.org/libreoffice/stable/6.4.7/deb/x86_64/LibreOffice_6.4.7_Linux_x86-64_deb.tar.gz
+tar -xvf LibreOffice_6.4.7_Linux_x86-64_deb.tar.gz
+cd ~/LibreOffice_6.4.7.2_Linux_x86-64_deb/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
-rm -r LibreOffice_6.4.6.2_Linux_x86-64_deb
-rm LibreOffice_6.4.6_Linux_x86-64_deb.tar.gz
+rm -r LibreOffice_6.4.7.2_Linux_x86-64_deb
+rm LibreOffice_6.4.7_Linux_x86-64_deb.tar.gz
 
 # pdfsam
 wget -c https://github.com/torakiki/pdfsam/releases/download/v4.2.0/pdfsam_4.2.0-1_amd64.deb &&
