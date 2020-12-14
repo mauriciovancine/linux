@@ -34,20 +34,15 @@ git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/ex
 # after: press Alt + F2 and enter r in the box
 
 # themes
-sudo apt install materia-gtk-theme
-sudo apt-get install gtk2-engines-murrine gtk2-engines-pixbuf &&
+# sudo apt install materia-gtk-theme
+# sudo apt-get install gtk2-engines-murrine gtk2-engines-pixbuf &&
 git clone https://github.com/vinceliuice/Matcha-gtk-theme.git &&
 cd Matcha-gtk-theme &&
 ./install.sh
 
 # icons
-sudo add-apt-repository -u ppa:snwh/ppa
+sudo add-apt-repository -u ppa:snwh/ppa &&
 sudo apt install paper-icon-theme
-
-wget -c https://launchpadlibrarian.net/468844787/paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb &&
-sudo dpkg -i paper*.deb &&
-sudo apt install -f &&
-rm paper-icon-theme_1.5.728-202003121505~daily~ubuntu18.04.1_all.deb
 
 # wallpapers
 sudo apt-get install -y ubuntu-wallpapers*
@@ -83,7 +78,7 @@ sudo apt install -y rclone
 # unrar
 sudo apt install -y unrar
 
-# adobe
+# adobe flash
 sudo apt install -y flashplugin-installer
 
 # darktable
@@ -91,10 +86,6 @@ sudo apt install -y darktable
 
 # fonts
 sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
-
-# alacritty
-sudo add-apt-repository ppa:mmstick76/alacritty &&
-sudo apt install -y alacritty
 
 # obs studio
 sudo apt-get install -y ffmpeg &&
@@ -193,6 +184,9 @@ sudo apt update &&
 sudo apt install -y --install-recommends winehq-stable
 winecfg
 
+# steam
+sudo apt install -y steam
+
 ## flatpak ------------------------------------------------------------------------------------
 # flatpak
 sudo apt install -y flatpak &&
@@ -227,9 +221,6 @@ flatpak install -y flathub com.github.calo001.fondo
 # bookworm
 flatpak install -y flathub com.github.babluboy.bookworm
 
-# toggl
-flatpak install -y flathub com.toggl.TogglDesktop
-
 # vlc
 flatpak install -y flathub org.videolan.VLC
 
@@ -251,19 +242,27 @@ sudo snap install kcolorchooser
 
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
-wget -c https://s3.amazonaws.com/rstudio-ide-build/desktop/bionic/amd64/rstudio-1.4.1010-amd64.deb &&
-sudo dpkg -i rstudio-1.4.1010-amd64.deb
+wget -c https://s3.amazonaws.com/rstudio-ide-build/desktop/bionic/amd64/rstudio-1.4.1087-amd64.deb &&
+sudo dpkg -i rstudio-1.4.1087-amd64.deb
 sudo apt install -fy && 
-rm rstudio-1.4.1010-amd64.deb
+rm rstudio-1.4.1087-amd64.deb
 
 # libreoffice
 wget https://download.documentfoundation.org/libreoffice/stable/6.4.7/deb/x86_64/LibreOffice_6.4.7_Linux_x86-64_deb.tar.gz
 tar -xvf LibreOffice_6.4.7_Linux_x86-64_deb.tar.gz
-cd ~/LibreOffice_6.4.7.2_Linux_x86-64_deb/DEBS
+cd LibreOffice_6.4.7.2_Linux_x86-64_deb/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
 rm -r LibreOffice_6.4.7.2_Linux_x86-64_deb
 rm LibreOffice_6.4.7_Linux_x86-64_deb.tar.gz
+
+wget http://download.documentfoundation.org/libreoffice/stable/6.4.7/deb/x86_64/LibreOffice_6.4.7_Linux_x86-64_deb_langpack_pt-BR.tar.gz
+tar -xvf LibreOffice_6.4.7_Linux_x86-64_deb_langpack_pt-BR.tar.gz
+cd LibreOffice_6.4.7.2_Linux_x86-64_deb_langpack_pt-BR/DEBS
+sudo dpkg -i *.deb 
+cd ..; cd ..
+rm -r LibreOffice_6.4.7.2_Linux_x86-64_deb_langpack_pt-BR
+rm LibreOffice_6.4.7_Linux_x86-64_deb_langpack_pt-BR.tar.gz
 
 # pdfsam
 wget -c https://github.com/torakiki/pdfsam/releases/download/v4.2.0/pdfsam_4.2.0-1_amd64.deb &&
@@ -282,11 +281,6 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13 &
 wget -c http://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb &&
 sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 rm google-earth-pro-stable_current_amd64.deb
-
-# whatdesk
-wget -c https://zerkc.gitlab.io/whatsdesk/whatsdesk_0.3.1_amd64.deb
-sudo dpkg -i whatsdesk_0.3.1_amd64.deb
-rm whatsdesk_0.3.1_amd64.deb
 
 # mendeley
 wget -c https://desktop-download.mendeley.com/download/apt/pool/main/m/mendeleydesktop/mendeleydesktop_1.19.4-stable_amd64.deb
@@ -343,5 +337,12 @@ sudo apt autoremove -y
 # sudo add-apt-repository ppa:daniruiz/flat-remix &&
 # sudo apt update &&
 # sudo apt install -y flat-remix-gnome
+
+# tikzit
+# sudo apt install -y tikzit
+
+# lutris
+# sudo add-apt-repository ppa:lutris-team/lutris
+# sudo apt install -y lutris
 
 # end ----------------------------------------------------------------------
