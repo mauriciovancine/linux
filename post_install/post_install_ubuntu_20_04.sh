@@ -187,6 +187,11 @@ winecfg
 # steam
 sudo apt install -y steam
 
+# retroarch
+sudo add-apt-repository ppa:libretro/stable && 
+sudo apt update && 
+sudo apt-get install retroarch*
+
 ## flatpak ------------------------------------------------------------------------------------
 # flatpak
 sudo apt install -y flatpak &&
@@ -242,10 +247,10 @@ sudo snap install kcolorchooser
 
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
-wget -c https://s3.amazonaws.com/rstudio-ide-build/desktop/bionic/amd64/rstudio-1.4.1087-amd64.deb &&
-sudo dpkg -i rstudio-1.4.1087-amd64.deb
+wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1103-amd64.deb
+sudo dpkg -i rstudio-1.4.1103-amd64.deb
 sudo apt install -fy && 
-rm rstudio-1.4.1087-amd64.deb
+rm rstudio-1.4.1103-amd64.deb
 
 # libreoffice
 wget https://download.documentfoundation.org/libreoffice/stable/6.4.7/deb/x86_64/LibreOffice_6.4.7_Linux_x86-64_deb.tar.gz
