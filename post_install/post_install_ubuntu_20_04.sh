@@ -10,6 +10,8 @@ sudo apt-add-repository ppa:graphics-drivers/ppa &&
 sudo apt update &&
 sudo ubuntu-drivers autoinstall
 
+sudo apt install -y nvidia-prime
+
 # git
 sudo add-apt-repository ppa:git-core/ppa && 
 sudo apt update &&
@@ -86,6 +88,12 @@ sudo apt install -y darktable
 
 # fonts
 sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
+
+# abiword
+sudo apt install -y abiword
+
+# gnumeric
+sudo apt install -y gnumeric
 
 # obs studio
 sudo apt-get install -y ffmpeg &&
