@@ -95,6 +95,9 @@ sudo apt install -y abiword
 # gnumeric
 sudo apt install -y gnumeric
 
+# vym
+apt-get install vym
+
 # obs studio
 sudo apt-get install -y ffmpeg &&
 sudo add-apt-repository ppa:obsproject/obs-studio &&
@@ -130,6 +133,12 @@ wget -c -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key 
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list &&
 sudo apt update &&
 sudo apt install -y sublime-text
+
+# insync
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C &&
+sudo add-apt-repository "deb http://apt.insync.io/ubuntu focal non-free contrib" &&
+sudo apt update &&
+sudo apt install -y insync
 
 # java
 sudo apt install -y default-jre default-jdk
@@ -240,6 +249,15 @@ flatpak install -y flathub org.videolan.VLC
 # gydl
 flatpak install -y flathub com.github.JannikHv.Gydl
 
+# stremio
+flatpak install -y flathub com.stremio.Stremio
+
+# apostrophe
+flatpak install -y flathub org.gnome.gitlab.somas.Apostrophe
+
+# gnome photos
+flatpak install -y flathub org.gnome.Photos
+
 ## snaps --------------------------------------------------------------------------------------
 # install
 sudo apt install -y snapd
@@ -252,6 +270,9 @@ sudo snap install simplenote
 
 # kcolorchooser
 sudo snap install kcolorchooser
+
+# newton
+sudo snap install newton
 
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
