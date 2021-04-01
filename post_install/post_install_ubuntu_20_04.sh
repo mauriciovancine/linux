@@ -61,9 +61,6 @@ sudo apt install -y speedtest-cli
 # htop
 sudo apt install -y htop
 
-# inkscape
-sudo apt install -y inkscape
-
 # audacity
 sudo apt install -y audacity
 
@@ -214,6 +211,9 @@ sudo apt-get install retroarch*
 sudo apt install -y flatpak &&
 sudo apt install -y gnome-software-plugin-flatpak &&
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# inkscape
+flatpak install -y flathub org.inkscape.Inkscape
 
 # spotify
 flatpak install -y flathub com.spotify.Client
