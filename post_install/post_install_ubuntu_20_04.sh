@@ -282,21 +282,13 @@ sudo apt install -fy &&
 rm rstudio-1.4.1103-amd64.deb
 
 # libreoffice
-wget https://download.documentfoundation.org/libreoffice/stable/6.4.7/deb/x86_64/LibreOffice_6.4.7_Linux_x86-64_deb.tar.gz
-tar -xvf LibreOffice_6.4.7_Linux_x86-64_deb.tar.gz
-cd LibreOffice_6.4.7.2_Linux_x86-64_deb/DEBS
+wget https://download.documentfoundation.org/libreoffice/stable/7.0.5/deb/x86_64/LibreOffice_7.0.5_Linux_x86-64_deb.tar.gz
+tar -xvf LibreOffice_7.0.5_Linux_x86-64_deb.tar.gz
+cd LibreOffice_7.0.5.2_Linux_x86-64_deb/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
-rm -r LibreOffice_6.4.7.2_Linux_x86-64_deb
-rm LibreOffice_6.4.7_Linux_x86-64_deb.tar.gz
-
-wget http://download.documentfoundation.org/libreoffice/stable/6.4.7/deb/x86_64/LibreOffice_6.4.7_Linux_x86-64_deb_langpack_pt-BR.tar.gz
-tar -xvf LibreOffice_6.4.7_Linux_x86-64_deb_langpack_pt-BR.tar.gz
-cd LibreOffice_6.4.7.2_Linux_x86-64_deb_langpack_pt-BR/DEBS
-sudo dpkg -i *.deb 
-cd ..; cd ..
-rm -r LibreOffice_6.4.7.2_Linux_x86-64_deb_langpack_pt-BR
-rm LibreOffice_6.4.7_Linux_x86-64_deb_langpack_pt-BR.tar.gz
+rm -r LibreOffice_7.0.5.2_Linux_x86-64_deb
+rm LibreOffice_7.0.5_Linux_x86-64_deb.tar.gz
 
 # pdfsam
 wget -c https://github.com/torakiki/pdfsam/releases/download/v4.2.0/pdfsam_4.2.0-1_amd64.deb &&
