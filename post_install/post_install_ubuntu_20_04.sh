@@ -290,6 +290,22 @@ cd ..; cd ..
 rm -r LibreOffice_7.0.5.2_Linux_x86-64_deb
 rm LibreOffice_7.0.5_Linux_x86-64_deb.tar.gz
 
+wget https://download.documentfoundation.org/libreoffice/stable/7.0.5/deb/x86_64/LibreOffice_7.0.5_Linux_x86-64_deb_langpack_pt-BR.tar.gz
+tar -xvf LibreOffice_7.0.5_Linux_x86-64_deb_langpack_pt-BR.tar.gz
+cd LibreOffice_7.0.5.2_Linux_x86-64_deb_langpack_pt-BR/DEBS
+sudo dpkg -i *.deb 
+cd ..; cd ..
+rm -r LibreOffice_7.0.5.2_Linux_x86-64_deb_langpack_pt-BR
+rm LibreOffice_7.0.5_Linux_x86-64_deb_langpack_pt-BR.tar.gz
+
+wget https://download.documentfoundation.org/libreoffice/stable/7.0.5/deb/x86_64/LibreOffice_7.0.5_Linux_x86-64_deb_helppack_pt-BR.tar.gz
+tar -xvf LibreOffice_7.0.5_Linux_x86-64_deb_helppack_pt-BR.tar.gz
+cd LibreOffice_7.0.5.2_Linux_x86-64_deb_helppack_pt-BR/DEBS
+sudo dpkg -i *.deb 
+cd ..; cd ..
+rm -r LibreOffice_7.0.5.2_Linux_x86-64_deb_helppack_pt-BR
+rm LibreOffice_7.0.5_Linux_x86-64_deb_helppack_pt-BR.tar.gz
+
 # pdfsam
 wget -c https://github.com/torakiki/pdfsam/releases/download/v4.2.0/pdfsam_4.2.0-1_amd64.deb &&
 sudo dpkg -i pdfsam_4.2.0-1_amd64.deb &&
