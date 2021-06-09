@@ -276,10 +276,10 @@ sudo snap install newton
 
 ## dpkgs --------------------------------------------------------------------------------------
 # rstudio
-wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1103-amd64.deb
-sudo dpkg -i rstudio-1.4.1103-amd64.deb
+wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.deb
+sudo dpkg -i rstudio-1.4.1717-amd64.deb
 sudo apt install -fy && 
-rm rstudio-1.4.1103-amd64.deb
+rm rstudio-1.4.1717-amd64.deb
 
 # libreoffice
 wget https://download.documentfoundation.org/libreoffice/stable/7.0.5/deb/x86_64/LibreOffice_7.0.5_Linux_x86-64_deb.tar.gz

@@ -1,0 +1,1 @@
+https://dotjunior.blogspot.com/2020/01/kvm-e-win-spice-guest-tools.html
