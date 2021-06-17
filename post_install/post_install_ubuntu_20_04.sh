@@ -177,6 +177,11 @@ sudo apt install -y libgsl-dev &&
 sudo apt install -y libmagick++-dev && 
 sudo R CMD javareconf
 
+# octave
+sudo apt install -y octave
+sudo apt install -y octave-control octave-image octave-io octave-optim octave-signal octave-statistics
+
+
 # qgis
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227EDCA75089EBE08314DF160 &&
 sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable &&
