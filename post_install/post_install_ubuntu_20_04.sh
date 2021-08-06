@@ -64,15 +64,9 @@ sudo apt install -y htop
 # audacity
 sudo apt install -y audacity
 
-# flameshot
-sudo apt install -y flameshot
-
 # epub reader
 sudo apt install -y fbreader
 sudo apt install -y okular
-
-# rclone
-sudo apt install -y rclone
 
 # unrar
 sudo apt install -y unrar
@@ -80,17 +74,8 @@ sudo apt install -y unrar
 # adobe flash
 sudo apt install -y flashplugin-installer
 
-# darktable
-sudo apt install -y darktable
-
 # fonts
 sudo apt install -y ubuntu-restricted-extras ttf-mscorefonts-installer
-
-# abiword
-sudo apt install -y abiword
-
-# gnumeric
-sudo apt install -y gnumeric
 
 # vym
 apt-get install vym
@@ -107,15 +92,10 @@ sudo apt update &&
 sudo apt install -y peek
 
 # typora
-wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-sudo add-apt-repository 'deb https://typora.io/linux ./'
-sudo apt update
-sudo apt install typora
-
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE &&
-echo -e "\ndeb https://typora.io/linux ./" | sudo tee -a /etc/apt/sources.list &&
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add - &&
+sudo add-apt-repository 'deb https://typora.io/linux ./' &&
 sudo apt update &&
-sudo apt install -y typora
+sudo apt install -y typora pandoc
 
 # anydesk
 sudo su -
@@ -126,7 +106,7 @@ apt install anydesk -y &&
 exit
 
 # sublime
-wget -c -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list &&
 sudo apt update &&
 sudo apt install -y sublime-text
@@ -181,12 +161,11 @@ sudo R CMD javareconf
 sudo apt install -y octave
 sudo apt install -y octave-control octave-image octave-io octave-optim octave-signal octave-statistics
 
-
 # qgis
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227EDCA75089EBE08314DF160 &&
 sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable &&
 sudo apt update &&
-sudo apt install -y qgis qgis-plugin-grass saga
+sudo apt install -y qgis grass qgis-plugin-grass saga
 
 # grass
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227EDCA75089EBE08314DF160 &&
@@ -217,8 +196,14 @@ sudo apt install -y flatpak &&
 sudo apt install -y gnome-software-plugin-flatpak &&
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+# flameshot
+flatpak install -y flathub org.flameshot.Flameshot
+
 # inkscape
 flatpak install -y flathub org.inkscape.Inkscape
+
+# gcolor3
+flatpak install -y flathub nl.hjdskes.gcolor3
 
 # spotify
 flatpak install -y flathub com.spotify.Client
@@ -273,9 +258,6 @@ sudo snap install whatsdesk
 # simplenote
 sudo snap install simplenote
 
-# kcolorchooser
-sudo snap install kcolorchooser
-
 # newton
 sudo snap install newton
 
@@ -287,29 +269,29 @@ sudo apt install -fy &&
 rm rstudio-1.4.1717-amd64.deb
 
 # libreoffice
-wget https://download.documentfoundation.org/libreoffice/stable/7.0.5/deb/x86_64/LibreOffice_7.0.5_Linux_x86-64_deb.tar.gz
-tar -xvf LibreOffice_7.0.5_Linux_x86-64_deb.tar.gz
-cd LibreOffice_7.0.5.2_Linux_x86-64_deb/DEBS
+wget https://download.documentfoundation.org/libreoffice/stable/7.0.6/deb/x86_64/LibreOffice_7.0.6_Linux_x86-64_deb.tar.gz
+tar -xvf LibreOffice_7.0.6_Linux_x86-64_deb.tar.gz
+cd LibreOffice_7.0.6.2_Linux_x86-64_deb/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
-rm -r LibreOffice_7.0.5.2_Linux_x86-64_deb
-rm LibreOffice_7.0.5_Linux_x86-64_deb.tar.gz
+rm -r LibreOffice_7.0.6.2_Linux_x86-64_deb
+rm LibreOffice_7.0.6_Linux_x86-64_deb.tar.gz
 
-wget https://download.documentfoundation.org/libreoffice/stable/7.0.5/deb/x86_64/LibreOffice_7.0.5_Linux_x86-64_deb_langpack_pt-BR.tar.gz
-tar -xvf LibreOffice_7.0.5_Linux_x86-64_deb_langpack_pt-BR.tar.gz
-cd LibreOffice_7.0.5.2_Linux_x86-64_deb_langpack_pt-BR/DEBS
+wget https://download.documentfoundation.org/libreoffice/stable/7.0.6/deb/x86_64/LibreOffice_7.0.6_Linux_x86-64_deb_langpack_pt-BR.tar.gz
+tar -xvf LibreOffice_7.0.6_Linux_x86-64_deb_langpack_pt-BR.tar.gz
+cd LibreOffice_7.0.6.2_Linux_x86-64_deb_langpack_pt-BR/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
-rm -r LibreOffice_7.0.5.2_Linux_x86-64_deb_langpack_pt-BR
-rm LibreOffice_7.0.5_Linux_x86-64_deb_langpack_pt-BR.tar.gz
+rm -r LibreOffice_7.0.6.2_Linux_x86-64_deb_langpack_pt-BR
+rm LibreOffice_7.0.6_Linux_x86-64_deb_langpack_pt-BR.tar.gz
 
-wget https://download.documentfoundation.org/libreoffice/stable/7.0.5/deb/x86_64/LibreOffice_7.0.5_Linux_x86-64_deb_helppack_pt-BR.tar.gz
-tar -xvf LibreOffice_7.0.5_Linux_x86-64_deb_helppack_pt-BR.tar.gz
-cd LibreOffice_7.0.5.2_Linux_x86-64_deb_helppack_pt-BR/DEBS
+wget https://download.documentfoundation.org/libreoffice/stable/7.0.6/deb/x86_64/LibreOffice_7.0.6_Linux_x86-64_deb_helppack_pt-BR.tar.gz
+tar -xvf LibreOffice_7.0.6_Linux_x86-64_deb_helppack_pt-BR.tar.gz
+cd LibreOffice_7.0.6.2_Linux_x86-64_deb_helppack_pt-BR/DEBS
 sudo dpkg -i *.deb 
 cd ..; cd ..
-rm -r LibreOffice_7.0.5.2_Linux_x86-64_deb_helppack_pt-BR
-rm LibreOffice_7.0.5_Linux_x86-64_deb_helppack_pt-BR.tar.gz
+rm -r LibreOffice_7.0.6.2_Linux_x86-64_deb_helppack_pt-BR
+rm LibreOffice_7.0.6_Linux_x86-64_deb_helppack_pt-BR.tar.gz
 
 # pdfsam
 wget -c https://github.com/torakiki/pdfsam/releases/download/v4.2.0/pdfsam_4.2.0-1_amd64.deb &&
@@ -355,7 +337,8 @@ sudo dpkg -i GBPCEFwr64.deb &&
 rm GBPCEFwr64.deb
 
 ## fix broken
-sudo apt clean && sudo apt update &&
+sudo apt clean && 
+sudo apt update &&
 sudo dpkg --configure -a &&
 sudo apt install -f &&
 sudo apt install -y --fix-broken 
