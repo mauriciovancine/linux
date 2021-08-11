@@ -120,6 +120,9 @@ flatpak install -y flathub org.telegram.desktop
 # discord
 flatpak install -y flathub com.discordapp.Discord
 
+# zoom
+flatpak install -y flathub us.zoom.Zoom
+
 # flameshot
 flatpak install -y flathub org.flameshot.Flameshot
 
