@@ -107,6 +107,10 @@ sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable &&
 sudo apt update &&
 sudo apt install -y qgis grass qgis-plugin-grass saga
 
+# youtube-dl
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
 ## flatpak ------------------------------------------------------------------------------------
 # spotify
 flatpak install -y flathub com.spotify.Client
@@ -161,10 +165,10 @@ sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 rm google-earth-pro-stable_current_amd64.deb
 
 # rstudio
-wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.deb
-sudo dpkg -i rstudio-1.4.1717-amd64.deb
+wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2021.09.0%2B351-amd64.deb &&
+sudo dpkg -i rstudio-2021.09.0+351-amd64.deb &&
 sudo apt install -fy && 
-rm rstudio-1.4.1717-amd64.deb
+rm rstudio-2021.09.0+351-amd64.deb
 
 # megasync
 wget -c https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/megasync-xUbuntu_20.04_amd64.deb &&
