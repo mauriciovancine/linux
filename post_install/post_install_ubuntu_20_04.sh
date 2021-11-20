@@ -3,7 +3,7 @@
 # ubuntu 20.04 (focal)
 
 # upgrade 
-sudo apt update && sudo apt upgrade -y && sudo apt autoremove
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 # nvidia
 sudo apt-add-repository ppa:graphics-drivers/ppa && 

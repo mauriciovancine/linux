@@ -27,6 +27,9 @@ sudo apt install -y unrar
 # java
 sudo apt install -y default-jre default-jdk
 
+# vitals
+sudo apt install -y gir1.2-gtop-2.0 lm-sensors
+
 # git
 sudo add-apt-repository ppa:git-core/ppa && 
 sudo apt update &&
@@ -102,8 +105,9 @@ sudo apt install -y libmagick++-dev &&
 sudo R CMD javareconf
 
 # qgis
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 6B827C12C2D425E227EDCA75089EBE08314DF160 &&
-sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable &&
+sudo apt install -y gnupg software-properties-common &&
+wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import &&
+sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg &&
 sudo apt update &&
 sudo apt install -y qgis grass qgis-plugin-grass saga
 
@@ -114,9 +118,6 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 ## flatpak ------------------------------------------------------------------------------------
 # spotify
 flatpak install -y flathub com.spotify.Client
-
-# whatsapp
-flatpak install -y flathub io.bit3.WhatsAppQT
 
 # telegram
 flatpak install -y flathub org.telegram.desktop
@@ -150,6 +151,13 @@ flatpak install -y flathub com.stremio.Stremio
 
 # zotero
 flatpak install -y flathub org.zotero.Zotero
+
+## snaps --------------------------------------------------------------------------------------
+# install
+sudo apt install -y snapd
+
+# whatsdesk
+sudo snap install whatsdesk
 
 ## dpkgs --------------------------------------------------------------------------------------
 # google chrome
