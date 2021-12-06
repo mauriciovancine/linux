@@ -30,10 +30,16 @@ sudo apt install -y default-jre default-jdk
 # vitals
 sudo apt install -y gir1.2-gtop-2.0 lm-sensors
 
+# vpn unesp
+sudo apt install -y network-manager-openvpn-gnome
+
 # git
 sudo add-apt-repository ppa:git-core/ppa && 
 sudo apt update &&
 sudo apt install -y git
+
+# emacs
+sudo apt install -y emacs
 
 # sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
@@ -66,6 +72,13 @@ echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-st
 apt update &&
 apt install anydesk -y &&
 exit
+
+# brave
+sudo apt install -y apt-transport-https curl &&
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg &&
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list &&
+sudo apt update &&
+sudo apt install -y brave-browser
 
 # r
 # https://rtask.thinkr.fr/installation-of-r-4-0-on-ubuntu-20-04-lts-and-tips-for-spatial-packages/
@@ -152,6 +165,12 @@ flatpak install -y flathub com.stremio.Stremio
 # zotero
 flatpak install -y flathub org.zotero.Zotero
 
+# visual studio
+flatpak install -y flathub com.visualstudio.code
+
+# filezilla
+flatpak install -y flathub org.filezillaproject.Filezilla
+
 ## snaps --------------------------------------------------------------------------------------
 # install
 sudo apt install -y snapd
@@ -177,6 +196,12 @@ wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2021.09.0%2B3
 sudo dpkg -i rstudio-2021.09.0+351-amd64.deb &&
 sudo apt install -fy && 
 rm rstudio-2021.09.0+351-amd64.deb
+
+# jupyterab
+wget -c https://github.com/jupyterlab/jupyterlab-desktop/releases/latest/download/JupyterLab-Setup-Debian.deb &&
+sudo dpkg -i JupyterLab-Setup-Debian.deb &&
+sudo apt install -fy && 
+rm JupyterLab-Setup-Debian.deb
 
 # megasync
 wget -c https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/megasync-xUbuntu_20.04_amd64.deb &&
