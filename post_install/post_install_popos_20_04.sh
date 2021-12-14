@@ -33,6 +33,12 @@ sudo apt install -y gir1.2-gtop-2.0 lm-sensors
 # vpn unesp
 sudo apt install -y network-manager-openvpn-gnome
 
+# fonts
+sudo add-apt-repository multiverse &&
+sudo apt update && 
+sudo apt install -y ttf-mscorefonts-installer &&
+sudo fc-cache -f -v
+
 # git
 sudo add-apt-repository ppa:git-core/ppa && 
 sudo apt update &&
@@ -170,6 +176,9 @@ flatpak install -y flathub com.visualstudio.code
 
 # filezilla
 flatpak install -y flathub org.filezillaproject.Filezilla
+
+# xournal
+flatpak install -y flathub com.github.xournalpp.xournalpp
 
 ## snaps --------------------------------------------------------------------------------------
 # install
