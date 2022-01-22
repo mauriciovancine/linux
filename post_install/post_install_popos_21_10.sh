@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# popos 20.04
+# popos 21.10
 
 # upgrade 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
@@ -33,6 +33,12 @@ sudo apt install -y gir1.2-gtop-2.0 lm-sensors
 # vpn unesp
 sudo apt install -y network-manager-openvpn-gnome
 
+# virt-manager
+sudo apt install -y virt-manager
+
+# emacs
+sudo apt install -y emacs
+
 # fonts
 sudo add-apt-repository multiverse &&
 sudo apt update && 
@@ -43,9 +49,6 @@ sudo fc-cache -f -v
 sudo add-apt-repository ppa:git-core/ppa && 
 sudo apt update &&
 sudo apt install -y git
-
-# emacs
-sudo apt install -y emacs
 
 # sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
@@ -73,10 +76,10 @@ sudo apt-get install -y obs-studio
 
 # anydesk
 sudo su -
-wget -c -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add - &&
-echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list &&
-apt update &&
-apt install anydesk -y &&
+wget -c -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
+echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
+apt update
+apt install anydesk -y
 exit
 
 # brave
@@ -88,12 +91,11 @@ sudo apt install -y brave-browser
 
 # r
 # https://rtask.thinkr.fr/installation-of-r-4-0-on-ubuntu-20-04-lts-and-tips-for-spatial-packages/
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 &&
-gpg --keyserver keyserver.ubuntu.com --recv-key E298A3A825C0D65DFD57CBB651716619E084DAB9 &&
-gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add - &&
+sudo apt update -qq &&
+sudo apt install --no-install-recommends software-properties-common dirmngr &&
+sudo wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc &&
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" &&
-sudo apt update &&
-sudo apt install -y r-base r-base-core r-recommended r-base-dev # r
+sudo apt install --no-install-recommends r-base
 
 sudo apt install -y gdal-bin &&
 sudo apt install -y libgdal-dev && 
@@ -123,12 +125,17 @@ sudo apt install -y libgsl-dev &&
 sudo apt install -y libmagick++-dev && 
 sudo R CMD javareconf
 
+# grass 
+sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+sudo apt update &&
+sudo apt install grass grass-dev
+
 # qgis
 sudo apt install -y gnupg software-properties-common &&
 wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import &&
 sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg &&
 sudo apt update &&
-sudo apt install -y qgis grass qgis-plugin-grass saga
+sudo apt install -y qgis qgis-plugin-grass saga
 
 # youtube-dl
 sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
@@ -185,7 +192,10 @@ flatpak install -y flathub com.github.xournalpp.xournalpp
 sudo apt install -y snapd
 
 # whatsdesk
-sudo snap install whatsdesk
+sudo snap install -y whatsdesk
+
+# selflessheroes
+sudo snap install -y selflessheroes
 
 ## dpkgs --------------------------------------------------------------------------------------
 # google chrome
@@ -201,10 +211,10 @@ sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 rm google-earth-pro-stable_current_amd64.deb
 
 # rstudio
-wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2021.09.0%2B351-amd64.deb &&
-sudo dpkg -i rstudio-2021.09.0+351-amd64.deb &&
+wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2021.09.1-372-amd64.deb &&
+sudo dpkg -i rstudio-2021.09.1-372-amd64.deb &&
 sudo apt install -fy && 
-rm rstudio-2021.09.0+351-amd64.deb
+rm rstudio-2021.09.1-372-amd64.deb
 
 # jupyterab
 wget -c https://github.com/jupyterlab/jupyterlab-desktop/releases/latest/download/JupyterLab-Setup-Debian.deb &&
@@ -213,10 +223,15 @@ sudo apt install -fy &&
 rm JupyterLab-Setup-Debian.deb
 
 # megasync
-wget -c https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/megasync-xUbuntu_20.04_amd64.deb &&
-sudo dpkg -i megasync-xUbuntu_20.04_amd64.deb &&
+wget -c https://mega.nz/linux/MEGAsync/xUbuntu_21.10/amd64/megasync-xUbuntu_21.10_amd64.deb &&
+sudo dpkg -i megasync-xUbuntu_21.10_amd64.deb &&
 sudo apt install -fy &&
-rm megasync-xUbuntu_20.04_amd64.deb
+rm megasync-xUbuntu_21.10_amd64.deb
+
+wget -c https://mega.nz/linux/MEGAsync/xUbuntu_21.10/amd64/nautilus-megasync-xUbuntu_21.10_amd64.deb &&
+sudo dpkg -i nautilus-megasync-xUbuntu_21.10_amd64.deb &&
+sudo apt install -fy &&
+rm nautilus-megasync-xUbuntu_21.10_amd64.deb
 
 # dropbox
 wget -c --output-document=dropbox_2020.03.04_amd64.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
@@ -228,6 +243,12 @@ rm dropbox_2020.03.04_amd64.deb
 wget https://cloud.gastecnologia.com.br/cef/warsaw/install/GBPCEFwr64.deb &&
 sudo dpkg -i GBPCEFwr64.deb &&
 rm GBPCEFwr64.deb
+
+# steam
+wget -c https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb &&
+sudo dpkg -i steam.deb &&
+sudo apt install -fy &&
+rm steam.deb
 
 ## fix broken
 sudo apt clean && 
