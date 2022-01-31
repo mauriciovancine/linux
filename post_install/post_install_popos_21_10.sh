@@ -125,23 +125,22 @@ sudo apt install -y libgsl-dev &&
 sudo apt install -y libmagick++-dev && 
 sudo R CMD javareconf
 
-# grass 
-sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-sudo apt update &&
-sudo apt install grass grass-dev
-
 # qgis
 sudo apt install -y gnupg software-properties-common &&
 wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import &&
 sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg &&
 sudo apt update &&
-sudo apt install -y qgis qgis-plugin-grass saga
+sudo apt install -y qgis grass qgis-plugin-grass saga
 
 # youtube-dl
-sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl
+sudo apt install -y python3-pip ffmpeg
+sudo pip3 install youtube-dl
 
 ## flatpak ------------------------------------------------------------------------------------
+
+# onlyoffice
+flatpak install -y flathub org.onlyoffice.desktopeditors
+
 # spotify
 flatpak install -y flathub com.spotify.Client
 
