@@ -25,7 +25,7 @@ sudo apt install -y okular
 sudo apt install -y unrar
 
 # java
-sudo apt install -y default-jre default-jdk
+sudo apt install -y default-jre default-jdk libreoffice-java-common
 
 # vitals
 sudo apt install -y gir1.2-gtop-2.0 lm-sensors
@@ -39,16 +39,13 @@ sudo apt install -y virt-manager
 # emacs
 sudo apt install -y emacs
 
-# fonts
-sudo add-apt-repository multiverse &&
-sudo apt update && 
-sudo apt install -y ttf-mscorefonts-installer &&
-sudo fc-cache -f -v
-
 # git
 sudo add-apt-repository ppa:git-core/ppa && 
 sudo apt update &&
 sudo apt install -y git
+
+# gnome text editor
+sudo apt install gnome-text-editor
 
 # sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
@@ -125,18 +122,14 @@ sudo apt install -y libgsl-dev &&
 sudo apt install -y libmagick++-dev && 
 sudo R CMD javareconf
 
-# qgis
-sudo apt install -y gnupg software-properties-common &&
-wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import &&
-sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg &&
-sudo apt update &&
-sudo apt install -y qgis grass qgis-plugin-grass saga
-
 # youtube-dl
 sudo apt install -y python3-pip ffmpeg
 sudo pip3 install youtube-dl
 
 ## flatpak ------------------------------------------------------------------------------------
+
+# qgis
+# flatpak install -y flathub org.qgis.qgis
 
 # onlyoffice
 flatpak install -y flathub org.onlyoffice.desktopeditors
@@ -150,6 +143,9 @@ flatpak install -y flathub org.telegram.desktop
 # discord
 flatpak install -y flathub com.discordapp.Discord
 
+# signal
+flatpak install -y flathub org.signal.Signal
+
 # zoom
 flatpak install -y flathub us.zoom.Zoom
 
@@ -161,6 +157,15 @@ flatpak install -y flathub com.simplenote.Simplenote
 
 # gcolor3
 flatpak install -y flathub nl.hjdskes.gcolor3
+
+# colorway
+flatpak install -y flathub io.github.lainsce.Colorway
+
+# emulsion
+flatpak install -y flathub io.github.lainsce.Emulsion
+
+# backup
+flatpak install -y flathub io.kopia.KopiaUI
 
 # inkscape
 flatpak install -y flathub org.inkscape.Inkscape
@@ -177,6 +182,9 @@ flatpak install -y flathub com.stremio.Stremio
 # zotero
 flatpak install -y flathub org.zotero.Zotero
 
+# mendeley
+flatpak install -y flathub com.elsevier.MendeleyDesktop
+
 # visual studio
 flatpak install -y flathub com.visualstudio.code
 
@@ -187,6 +195,7 @@ flatpak install -y flathub org.filezillaproject.Filezilla
 flatpak install -y flathub com.github.xournalpp.xournalpp
 
 ## snaps --------------------------------------------------------------------------------------
+
 # install
 sudo apt install -y snapd
 
@@ -197,6 +206,12 @@ sudo snap install -y whatsdesk
 sudo snap install -y selflessheroes
 
 ## dpkgs --------------------------------------------------------------------------------------
+
+# fonts
+wget http://ftp.us.debian.org/debian/pool/contrib/m/msttcorefonts/ttf-mscorefonts-installer_3.8_all.deb
+sudo dpkg -i ttf-mscorefonts-installer_3.8_all.deb
+rm ttf-mscorefonts-installer_3.8_all.deb
+
 # google chrome
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
 sudo dpkg -i google-chrome-stable_current_amd64.deb &&
@@ -210,12 +225,12 @@ sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 rm google-earth-pro-stable_current_amd64.deb
 
 # rstudio
-wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2021.09.1-372-amd64.deb &&
-sudo dpkg -i rstudio-2021.09.1-372-amd64.deb &&
+wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.0-443-amd64.deb &&
+sudo dpkg -i rstudio-2022.02.0-443-amd64.deb &&
 sudo apt install -fy && 
-rm rstudio-2021.09.1-372-amd64.deb
+rm rstudio-2022.02.0-443-amd64.deb
 
-# jupyterab
+# jupyterlab
 wget -c https://github.com/jupyterlab/jupyterlab-desktop/releases/latest/download/JupyterLab-Setup-Debian.deb &&
 sudo dpkg -i JupyterLab-Setup-Debian.deb &&
 sudo apt install -fy && 
