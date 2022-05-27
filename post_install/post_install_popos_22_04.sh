@@ -1,13 +1,9 @@
 #!/bin/bash
 
-# popos 21.10
+# popos 22.04
 
 # upgrade 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
-
-# tweeks and extensions
-sudo apt install -y gnome-tweaks &&
-sudo apt install -y gnome-shell-extensions
 
 # speedtest
 sudo apt install -y speedtest-cli
@@ -17,9 +13,6 @@ sudo apt install -y htop
 
 # audacity
 sudo apt install -y audacity
-
-# epub reader
-sudo apt install -y okular
 
 # unrar
 sudo apt install -y unrar
@@ -36,6 +29,9 @@ sudo apt install -y network-manager-openvpn-gnome
 # virt-manager
 sudo apt install -y virt-manager
 
+# solaar
+sudo apt install -y solaar
+
 # emacs
 sudo apt install -y emacs
 
@@ -47,23 +43,11 @@ sudo apt install -y git
 # gnome text editor
 sudo apt install gnome-text-editor
 
-# sublime
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list &&
-sudo apt update &&
-sudo apt install -y sublime-text
-
 # insync
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C &&
 sudo add-apt-repository "deb http://apt.insync.io/ubuntu focal non-free contrib" &&
 sudo apt update &&
 sudo apt install -y insync
-
-# typora
-wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add - &&
-sudo add-apt-repository 'deb https://typora.io/linux ./' &&
-sudo apt update &&
-sudo apt install -y typora pandoc
 
 # obs studio
 sudo apt-get install -y ffmpeg &&
@@ -71,30 +55,16 @@ sudo add-apt-repository ppa:obsproject/obs-studio &&
 sudo apt-get update && 
 sudo apt-get install -y obs-studio
 
-# anydesk
-sudo su -
-wget -c -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
-echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
-apt update
-apt install anydesk -y
-exit
-
-# brave
-sudo apt install -y apt-transport-https curl &&
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg &&
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list &&
-sudo apt update &&
-sudo apt install -y brave-browser
-
 # r
-# https://rtask.thinkr.fr/installation-of-r-4-0-on-ubuntu-20-04-lts-and-tips-for-spatial-packages/
-sudo apt update -qq &&
-sudo apt install --no-install-recommends software-properties-common dirmngr &&
-sudo wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc &&
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" &&
+sudo apt update -qq
+apt install --no-install-recommends software-properties-common dirmngr
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+
 sudo apt install --no-install-recommends r-base
 
 sudo apt install -y gdal-bin &&
+sudo apt install -y cmake  &&
 sudo apt install -y libgdal-dev && 
 sudo apt install -y libproj-dev && 
 sudo apt install -y libssl-dev && 
@@ -128,23 +98,20 @@ sudo pip3 install youtube-dl
 
 ## flatpak ------------------------------------------------------------------------------------
 
-# qgis
-# flatpak install -y flathub org.qgis.qgis
-
-# onlyoffice
-flatpak install -y flathub org.onlyoffice.desktopeditors
+# sublimetext
+flatpak install flathub com.sublimetext.three
 
 # spotify
 flatpak install -y flathub com.spotify.Client
+
+# whatsapp
+flatpak install -y flathub io.github.mimbrero.WhatsAppDesktop
 
 # telegram
 flatpak install -y flathub org.telegram.desktop
 
 # discord
 flatpak install -y flathub com.discordapp.Discord
-
-# signal
-flatpak install -y flathub org.signal.Signal
 
 # zoom
 flatpak install -y flathub us.zoom.Zoom
@@ -154,6 +121,9 @@ flatpak install -y flathub org.flameshot.Flameshot
 
 # simplenote
 flatpak install -y flathub com.simplenote.Simplenote
+
+# anydesk
+flatpak install -y flathub com.anydesk.Anydesk
 
 # gcolor3
 flatpak install -y flathub nl.hjdskes.gcolor3
@@ -194,22 +164,11 @@ flatpak install -y flathub org.filezillaproject.Filezilla
 # xournal
 flatpak install -y flathub com.github.xournalpp.xournalpp
 
-## snaps --------------------------------------------------------------------------------------
-
-# install
-sudo apt install -y snapd
-
-# whatsdesk
-sudo snap install -y whatsdesk
-
-# selflessheroes
-sudo snap install -y selflessheroes
-
 ## dpkgs --------------------------------------------------------------------------------------
 
 # fonts
-wget http://ftp.us.debian.org/debian/pool/contrib/m/msttcorefonts/ttf-mscorefonts-installer_3.8_all.deb
-sudo dpkg -i ttf-mscorefonts-installer_3.8_all.deb
+wget -c http://ftp.us.debian.org/debian/pool/contrib/m/msttcorefonts/ttf-mscorefonts-installer_3.8_all.deb &&
+sudo dpkg -i ttf-mscorefonts-installer_3.8_all.deb &&
 rm ttf-mscorefonts-installer_3.8_all.deb
 
 # google chrome
@@ -225,10 +184,10 @@ sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 rm google-earth-pro-stable_current_amd64.deb
 
 # rstudio
-wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.0-443-amd64.deb &&
-sudo dpkg -i rstudio-2022.02.0-443-amd64.deb &&
+wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.2-485-amd64.deb &&
+sudo dpkg -i rstudio-2022.02.2-485-amd64.deb &&
 sudo apt install -fy && 
-rm rstudio-2022.02.0-443-amd64.deb
+rm rstudio-2022.02.2-485-amd64.deb
 
 # jupyterlab
 wget -c https://github.com/jupyterlab/jupyterlab-desktop/releases/latest/download/JupyterLab-Setup-Debian.deb &&
@@ -241,11 +200,6 @@ wget -c https://mega.nz/linux/MEGAsync/xUbuntu_21.10/amd64/megasync-xUbuntu_21.1
 sudo dpkg -i megasync-xUbuntu_21.10_amd64.deb &&
 sudo apt install -fy &&
 rm megasync-xUbuntu_21.10_amd64.deb
-
-wget -c https://mega.nz/linux/MEGAsync/xUbuntu_21.10/amd64/nautilus-megasync-xUbuntu_21.10_amd64.deb &&
-sudo dpkg -i nautilus-megasync-xUbuntu_21.10_amd64.deb &&
-sudo apt install -fy &&
-rm nautilus-megasync-xUbuntu_21.10_amd64.deb
 
 # dropbox
 wget -c --output-document=dropbox_2020.03.04_amd64.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb

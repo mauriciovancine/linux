@@ -1,20 +1,9 @@
 #!/bin/bash
 
-# ubuntu 22.04
+# popos 21.10
 
 # upgrade 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
-
-# firefox
-# https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-from-mozilla-builds-for-advanced-users
-cd ~/Downloads
-tar xjf firefox-*.tar.bz2
-sudo mv firefox /opt
-sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
-sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications 
-/usr/local/bin/firefox
-
-sudo snap remove firefox
 
 # tweeks and extensions
 sudo apt install -y gnome-tweaks &&
