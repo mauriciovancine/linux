@@ -92,6 +92,13 @@ sudo apt install -y libgsl-dev &&
 sudo apt install -y libmagick++-dev && 
 sudo R CMD javareconf
 
+# julia
+cd ~/Downloads
+wget https://julialang-s3.julialang.org/bin/linux/x64/1.7/julia-1.7.3-linux-x86_64.tar.gz
+tar -xvzf julia-1.7.3-linux-x86_64.tar.gz
+sudo cp -r julia-1.7.3 /opt/
+sudo ln -s /opt/julia-1.7.3/bin/julia /usr/local/bin/julia
+
 # youtube-dl
 sudo apt install -y python3-pip ffmpeg
 sudo pip3 install youtube-dl
@@ -99,10 +106,13 @@ sudo pip3 install youtube-dl
 ## flatpak ------------------------------------------------------------------------------------
 
 # sublimetext
-flatpak install flathub com.sublimetext.three
+flatpak install -y flathub com.sublimetext.three
 
 # spotify
 flatpak install -y flathub com.spotify.Client
+
+# amberol
+flatpak install -y flathub io.bassi.Amberol
 
 # whatsapp
 flatpak install -y flathub io.github.mimbrero.WhatsAppDesktop
@@ -184,10 +194,16 @@ sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 rm google-earth-pro-stable_current_amd64.deb
 
 # rstudio
-wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.2-485-amd64.deb &&
-sudo dpkg -i rstudio-2022.02.2-485-amd64.deb &&
+wget -c https://download1.rstudio.org/desktop/jammy/amd64/rstudio-2022.07.2-576-amd64.deb &&
+sudo dpkg -i rstudio-2022.07.2-576-amd64.deb &&
 sudo apt install -fy && 
-rm rstudio-2022.02.2-485-amd64.deb
+rm rstudio-2022.07.2-576-amd64.deb
+
+# quarto
+wget -c https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.483/quarto-0.9.483-linux-amd64.deb &&
+sudo dpkg -i quarto-0.9.483-linux-amd64.deb &&
+sudo apt install -fy && 
+rm quarto-0.9.483-linux-amd64.deb
 
 # jupyterlab
 wget -c https://github.com/jupyterlab/jupyterlab-desktop/releases/latest/download/JupyterLab-Setup-Debian.deb &&
