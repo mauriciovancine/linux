@@ -191,6 +191,7 @@ sudo apt update &&
 sudo apt-get install retroarch*
 
 ## flatpak ------------------------------------------------------------------------------------
+
 # flatpak
 sudo apt install -y flatpak &&
 sudo apt install -y gnome-software-plugin-flatpak &&
@@ -249,19 +250,18 @@ flatpak install -y flathub org.gnome.gitlab.somas.Apostrophe
 flatpak install -y flathub org.gnome.Photos
 
 ## snaps --------------------------------------------------------------------------------------
+
 # install
 sudo apt install -y snapd
-
-# whatsdesk
-sudo snap install whatsdesk
-
-# simplenote
-sudo snap install simplenote
 
 # newton
 sudo snap install newton
 
+# bitwarden
+sudo snap install bitwarden
+
 ## dpkgs --------------------------------------------------------------------------------------
+
 # rstudio
 wget -c https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.deb
 sudo dpkg -i rstudio-1.4.1717-amd64.deb
