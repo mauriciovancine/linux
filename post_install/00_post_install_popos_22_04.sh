@@ -92,6 +92,20 @@ sudo apt install -y libgsl-dev &&
 sudo apt install -y libmagick++-dev && 
 sudo R CMD javareconf
 
+# qgis
+sudo apt install gnupg software-properties-common
+sudo mkdir -m755 -p /etc/apt/keyrings  # not needed since apt version 2.4.0 like Debian 12 and Ubuntu 22 or newer
+sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
+sudo apt install qgis qgis-plugin-grass
+
+# grass gis
+sudo apt install grass grass-core grass-gui grass-dev
+
+sudo apt install libsdl2-2.0-0
+pip install -U \
+-f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04 \
+wxPython
+
 # julia
 cd ~/Downloads
 wget https://julialang-s3.julialang.org/bin/linux/x64/1.7/julia-1.7.3-linux-x86_64.tar.gz
@@ -194,19 +208,19 @@ sudo dpkg -i google-earth-pro-stable_current_amd64.deb &&
 rm google-earth-pro-stable_current_amd64.deb
 
 # rstudio
-wget -c https://download1.rstudio.org/desktop/jammy/amd64/rstudio-2022.07.2-576-amd64.deb &&
-sudo dpkg -i rstudio-2022.07.2-576-amd64.deb &&
+wget -c https://download1.rstudio.org/electron/bionic/amd64/rstudio-2023.03.0-386-amd64.deb &&
+sudo dpkg -i rstudio-2023.03.0-386-amd64.deb &&
 sudo apt install -fy && 
-rm rstudio-2022.07.2-576-amd64.deb
+rm rstudio-2023.03.0-386-amd64.deb
 
 # quarto
-wget -c https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.483/quarto-0.9.483-linux-amd64.deb &&
-sudo dpkg -i quarto-0.9.483-linux-amd64.deb &&
+wget -c https://github.com/quarto-dev/quarto-cli/releases/download/v1.2.335/quarto-1.2.335-linux-amd64.deb &&
+sudo dpkg -i quarto-1.2.335-linux-amd64.deb &&
 sudo apt install -fy && 
-rm quarto-0.9.483-linux-amd64.deb
+rm quarto-1.2.335-linux-amd64.deb
 
 # jupyterlab
-wget -c https://github.com/jupyterlab/jupyterlab-desktop/releases/latest/download/JupyterLab-Setup-Debian.deb &&
+wget -c https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v3.6.1-2/JupyterLab-Setup-Debian.deb &&
 sudo dpkg -i JupyterLab-Setup-Debian.deb &&
 sudo apt install -fy && 
 rm JupyterLab-Setup-Debian.deb
